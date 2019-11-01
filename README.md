@@ -2,5 +2,7 @@
 My 4th Year Project for Software Development in GMIT.
 
 ## Entropy
-First person shooter developed in Unity 3D.
+The idea of this game is to be a first person shooter developed in Unity 3D.
+
+
 
