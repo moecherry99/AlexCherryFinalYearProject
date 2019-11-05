@@ -5,6 +5,6 @@ My 4th Year Project for Software Development in GMIT.
 The idea of this game is to be a first person shooter developed in Unity 3D.
 
 ### Map Inspiration 
-![alt test](screenshots/MercuryMap)
+![alt test](readmescreenshots/MercuryMap)
 
 
