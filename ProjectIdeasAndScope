@@ -10,3 +10,15 @@ Multiplayer : Mission select on pause screen.
 
 Leaderboards : Most damage done per mission?
 
+Develop an AI that can be a partner to the player. This can be applied to matchmaking for the online system in case the game doesn't get filled (3 players, only 2 join, fill with 1).
+
+Skill System : Cooldowns, make an interface.
+
+Interface : Compass up top, as seen in design document.
+
+Singleplayer : Open world, develop quests from a select amount of NPCs. (3-5).
+
+Aesthetics are not very important, functionality is key. Make a basic scene with proper players and work on functionality straight away.
+
+
+
