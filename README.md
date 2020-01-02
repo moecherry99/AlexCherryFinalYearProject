@@ -13,7 +13,7 @@ The purpose of creating a map without massive graphical quality is that it does 
 
 ### Multiplayer 
 
-Will create a server with Unity. Testing purposes will be done on same computer with two Unity clients at first. 
+Will create a server with Unity using Photon 2 (One laptop will host). Testing purposes will be done on same computer with two Unity clients at first, and secondly will be done with a second laptop. 
 
 ### AI Partner System
 
