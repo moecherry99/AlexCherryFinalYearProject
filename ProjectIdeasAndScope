@@ -22,6 +22,12 @@ Aesthetics are not very important, functionality is key. Make a basic scene with
 
 Multiplayer map : Collosseum like design with boss in middle.
 
+Level System : Level 1 to 5 for game testing.
+
+Stat System : Paired with Level System. Stats raise as you level (HP, Strength and Defense).
+
+Map : A map used to track the players location.
+
 
 
 
