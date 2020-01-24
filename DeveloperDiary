@@ -43,6 +43,12 @@ Supervisor meeting #2.
 -Completed Photon setup.
 -To do : Add player movement to PhotonPlayer objects and test with standalone/quickstart builds.
 
+24th Jan
+-Unity-chan player model added with associated scripts. Downloaded model from asset store, currently adjusting code to fit project. 
+-Very basic scene was downloaded with Unity-chan model, will build on top of that. 
+-Photon set up still needs adjusting. Player is duplicating but not in seperate builds. Currently testing seperate movements with 2 player objects (cloned and normal).
+
+
 
 
 
