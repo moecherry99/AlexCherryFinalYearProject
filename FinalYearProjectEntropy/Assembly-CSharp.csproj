@@ -95,19 +95,19 @@
     <None Include="Assets\Photon\PhotonUnityNetworking\readme.txt" />
     <None Include="Assets\Photon\PhotonUnityNetworking\changelog.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/moech/Desktop/FYPMain/AlexCherryFinalYearProject/FinalYearProjectEntropy/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/moech/Desktop/FYP/AlexCherryFinalYearProject/FinalYearProjectEntropy/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/moech/Desktop/FYPMain/AlexCherryFinalYearProject/FinalYearProjectEntropy/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/moech/Desktop/FYP/AlexCherryFinalYearProject/FinalYearProjectEntropy/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/moech/Desktop/FYPMain/AlexCherryFinalYearProject/FinalYearProjectEntropy/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/moech/Desktop/FYP/AlexCherryFinalYearProject/FinalYearProjectEntropy/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/moech/Desktop/FYPMain/AlexCherryFinalYearProject/FinalYearProjectEntropy/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/moech/Desktop/FYP/AlexCherryFinalYearProject/FinalYearProjectEntropy/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/moech/Desktop/FYPMain/AlexCherryFinalYearProject/FinalYearProjectEntropy/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/moech/Desktop/FYP/AlexCherryFinalYearProject/FinalYearProjectEntropy/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -311,19 +311,19 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.9f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Photon3Unity3D">
-      <HintPath>C:/Users/moech/Desktop/FYPMain/AlexCherryFinalYearProject/FinalYearProjectEntropy/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
+      <HintPath>C:/Users/moech/Desktop/FYP/AlexCherryFinalYearProject/FinalYearProjectEntropy/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>C:/Users/moech/Desktop/FYPMain/AlexCherryFinalYearProject/FinalYearProjectEntropy/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+      <HintPath>C:/Users/moech/Desktop/FYP/AlexCherryFinalYearProject/FinalYearProjectEntropy/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/moech/Desktop/FYPMain/AlexCherryFinalYearProject/FinalYearProjectEntropy/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/moech/Desktop/FYP/AlexCherryFinalYearProject/FinalYearProjectEntropy/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/moech/Desktop/FYPMain/AlexCherryFinalYearProject/FinalYearProjectEntropy/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/moech/Desktop/FYP/AlexCherryFinalYearProject/FinalYearProjectEntropy/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/moech/Desktop/FYPMain/AlexCherryFinalYearProject/FinalYearProjectEntropy/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/moech/Desktop/FYP/AlexCherryFinalYearProject/FinalYearProjectEntropy/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.9f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

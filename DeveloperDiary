@@ -48,6 +48,11 @@ Supervisor meeting #2.
 -Very basic scene was downloaded with Unity-chan model, will build on top of that. 
 -Photon set up still needs adjusting. Player is duplicating but not in seperate builds. Currently testing seperate movements with 2 player objects (cloned and normal).
 
+29th Jan
+-Adjusting the Scope of the project.
+-Scheduled meeting with supervisor for next week (meeting #4)
+-Added and took away functions. Still adjusting Photon and may need to switch to other Multiplayer method. 
+
 
 
 
