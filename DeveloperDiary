@@ -60,6 +60,11 @@ Supervisor meeting #2.
 -Added several game assets from the Unity store.
 -Started a simple scene with a ground plane and a player. Adding movement script for player soon.
 
+6th February
+-Updated README with proper design layout and functions in game. 
+-AI system should be developed next as it may cause problems if not developed soon.
+-To do : Movement for player(s).
+
 
 
 
