@@ -65,6 +65,10 @@ Supervisor meeting #2.
 -AI system should be developed next as it may cause problems if not developed soon.
 -To do : Movement for player(s).
 
+7th February
+-Added full movement script with mouse look and jumping functions.
+-To do : Add with multiplayer function and check to see if both players can be controlled + other functionality.
+
 
 
 
