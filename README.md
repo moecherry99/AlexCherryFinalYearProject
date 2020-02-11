@@ -29,7 +29,7 @@ Each of the two classes have their own attack styles and can use different skill
 A short level system with stats (Attack, Defense, Health) is designed (levels 1 to 5 are designed for Beta). Stats go up when the player levels by defeating enemies.
 
 ### Mini Map and Compass System
-A mini map to track the player, their allies and the enemies is designed for pinpointing. A compass on the top of the screen is also designed and serves the same purpose except it has accurate measurements for precise communication between players.
+A mini map to track the player, their allies and the enemies is designed for pinpointing. A compass on the top of the screen is also designed and serves the same purpose except it has accurate measurements for precise communication between players. The mini map is done by using a seperate camera that hovers over the player and uses an image and a texture to track the image in real time.
 
 
 
