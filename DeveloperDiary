@@ -75,6 +75,12 @@ Supervisor meeting #2.
 11th February
 -Made a mini map that follows player perfectly. 
 
+13th February
+-Added a small town with front gate and trees/proper textures to items in area.
+-To do : Fully develop a suitable scene to navigate in and change ground texture. 
+-Add fences, more walls, an interactable door, npc(with quest) and pause menu by 16th (Sunday night). Possibly a player sprite with animations or character stats if not possible. Get a rock sprite off Unity store.
+
+
 
 
 
