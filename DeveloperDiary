@@ -80,6 +80,12 @@ Supervisor meeting #2.
 -To do : Fully develop a suitable scene to navigate in and change ground texture. 
 -Add fences, more walls, an interactable door, npc(with quest) and pause menu by 16th (Sunday night). Possibly a player sprite with animations or character stats if not possible. Get a rock sprite off Unity store.
 
+16th February
+-Made Town scene usable. Added fences and full walls/ramps (simple design).
+-To do : Add NPC in corner for interaction, block off surrounding area so player can't get out of bounds and add interactable door.
+
+
+
 
 
 
