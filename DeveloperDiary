@@ -78,12 +78,21 @@ Supervisor meeting #2.
 13th February
 -Added a small town with front gate and trees/proper textures to items in area.
 -To do : Fully develop a suitable scene to navigate in and change ground texture. 
--Add fences, more walls, an interactable door, npc(with quest) and pause menu by 16th (Sunday night). Possibly a player sprite with animations or character stats if not possible. Get a rock sprite off Unity store.
+-Add fences, more walls, an interactable door, npc(with quest) and pause menu by 16th (Sunday night). 
+Possibly a player sprite with animations or character stats if not possible. Get a rock sprite off Unity store.
 
 16th February
 -Made Town scene usable. Added fences and full walls/ramps (simple design).
--To do : Add NPC in corner for interaction, block off surrounding area so player can't get out of bounds and add interactable door.
 
+19th February
+-Changed jump height to prevent out of bounds (not allowed to enter other side of town yet)
+-To do : Add NPC in corner for interaction, block off surrounding area so player can't get out of bounds and add interactable door.
+-Character stats, enemy stats, character attack and die, enemy die.
+
+20th February
+-Added health bar and developer tool to reduce health. Also added respawn function, although it is a bit flawed as it resets full level and all progress. 
+Working on a "player.transform" function in future, using functionality as it is.
+-To do : Pause menu, character stats, enemy AI and stats, npc panel functionality, npc quests for killing enemies.
 
 
 
