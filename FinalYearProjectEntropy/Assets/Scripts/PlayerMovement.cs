@@ -20,8 +20,6 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
-
-
     bool isGrounded;
     Vector3 velocity;
 

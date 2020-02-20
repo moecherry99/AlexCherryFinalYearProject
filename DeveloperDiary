@@ -91,8 +91,10 @@ Possibly a player sprite with animations or character stats if not possible. Get
 
 20th February
 -Added health bar and developer tool to reduce health. Also added respawn function, although it is a bit flawed as it resets full level and all progress. 
+-Added Pause menu
 Working on a "player.transform" function in future, using functionality as it is.
--To do : Pause menu, character stats, enemy AI and stats, npc panel functionality, npc quests for killing enemies.
+-To do : Character stats, enemy AI and stats, npc panel functionality, npc quests for killing enemies.
+
 
 
 
