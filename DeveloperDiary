@@ -95,6 +95,11 @@ Possibly a player sprite with animations or character stats if not possible. Get
 Working on a "player.transform" function in future, using functionality as it is.
 -To do : Character stats, enemy AI and stats, npc panel functionality, npc quests for killing enemies.
 
+23rd February
+-Added a simple defense stat for the player, which eventually will increase upon leveling. Function working properly, must be added into Enemy AI.
+-Started the Enemy AI. Will work on combat next to try out the damage multipliers along with health and defense.
+To do : Finish enemy AI, add a quest system for killing these AI after combat works successfully.
+
 
 
 

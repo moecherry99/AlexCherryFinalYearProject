@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Script to handle players Health
-// Reference : https://www.youtube.com/watch?v=BLfNP4Sc_iA
+// References : https://www.youtube.com/watch?v=BLfNP4Sc_iA, https://www.youtube.com/watch?v=e8GmfoaOB4Y&t=132s
 public class PlayerHealthScript : MonoBehaviour
 {
-
+    
     public GameObject player;
     public GameObject respawn;
 
     // variables
     public int maxHealth = 100;
     public int currentHealth;
+
+    // this will be changed by items in the game in future
+    public int defense;
+    public int damage;
 
     public HealthBarScr healthBar;
 
@@ -21,7 +25,6 @@ public class PlayerHealthScript : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth); 
-
         
     }
 
@@ -48,8 +51,8 @@ public class PlayerHealthScript : MonoBehaviour
     // damage is taken from current health
     void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-
+        currentHealth -= damage / defense;
+        
         healthBar.SetHealth(currentHealth);
     }
 
