@@ -100,6 +100,10 @@ Working on a "player.transform" function in future, using functionality as it is
 -Started the Enemy AI. Will work on combat next to try out the damage multipliers along with health and defense.
 To do : Finish enemy AI, add a quest system for killing these AI after combat works successfully.
 
+24th February
+-Added proper AI movement, "baked" the ground as had problems with NavMesh and is working properly now.
+-To do : Add stats for enemy and some form of combat/kill methods. Add quest system for doing so as well (add NPC panel for this to work)
+
 
 
 
