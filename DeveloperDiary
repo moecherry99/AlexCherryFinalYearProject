@@ -102,7 +102,9 @@ To do : Finish enemy AI, add a quest system for killing these AI after combat wo
 
 24th February
 -Added proper AI movement, "baked" the ground as had problems with NavMesh and is working properly now.
--To do : Add stats for enemy and some form of combat/kill methods. Add quest system for doing so as well (add NPC panel for this to work)
+-Added a weapon that follows the main camera. Access this object to use it for combat with attack animations.
+-To do : Add stats for enemy and some form of combat/kill methods. Add quest system for doing so as well (add NPC panel for this to work) and add interactable door for town gate.
+
 
 
 
