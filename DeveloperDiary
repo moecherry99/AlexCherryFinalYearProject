@@ -108,8 +108,12 @@ To do : Finish enemy AI, add a quest system for killing these AI after combat wo
 26th February
 -Made a quick stats menu which can be toggled by the "C" character, not a good UI but good for temporary use. Working on linking the character stats to these values so they are 
 accurate and not static.
--Meeting #5 with Dominic.
+-Meeting #5 with Dominic, went over planning. Planned meeting for next week, must show progress.
 
+27th February
+-Did some basic combat, enemy does not attack player yet but attack animation and player damage/kill working on enemy with correct stat multipliers.
+-Added a proper sprite for the sword used by the player.
+-To do : make sure enemy can attack player and add proper sprites to enemy and player.
 
 
 

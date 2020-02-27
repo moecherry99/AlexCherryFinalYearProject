@@ -49,7 +49,7 @@ public class PlayerHealthScript : MonoBehaviour
     }
 
     // damage is taken from current health
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage / defense;
         

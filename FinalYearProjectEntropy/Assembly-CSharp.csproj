@@ -60,9 +60,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\HealthBarScript.cs" />
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
     <Compile Include="Assets\Scripts\CharacterStat.cs" />
+    <Compile Include="Assets\Scripts\Combat.cs" />
     <Compile Include="Assets\Scripts\Controllers\EnemyController.cs" />
     <Compile Include="Assets\Scripts\EnemyStats.cs" />
     <Compile Include="Assets\Scripts\GameSetupController.cs" />
@@ -92,6 +92,9 @@
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\ThirdPersonCamera.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs" />
+    <Compile Include="Assets\Warrior Pack Bundle 3 FREE\Code\IKHands.cs" />
+    <Compile Include="Assets\Warrior Pack Bundle 3 FREE\Code\SmoothFollow.cs" />
+    <Compile Include="Assets\Warrior Pack Bundle 3 FREE\Code\WarriorAnimationDemoFREE.cs" />
     <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
     <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
     <None Include="Assets\Photon\PhotonLibs\changes-library.txt" />
