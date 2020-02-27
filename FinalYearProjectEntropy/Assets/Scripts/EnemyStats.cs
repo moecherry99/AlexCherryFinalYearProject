@@ -7,7 +7,6 @@ public class EnemyStats : MonoBehaviour
 
     public GameObject enemy;
 
-
     // variables
     public int maxHealth = 50;
     public int currentHealth;
@@ -22,8 +21,6 @@ public class EnemyStats : MonoBehaviour
         currentHealth = maxHealth;
 
     }
-
-    
     
     void Update()
     {
@@ -31,7 +28,6 @@ public class EnemyStats : MonoBehaviour
         {
             // die if 0 health
             Die();
-         
         }
 
         // developer tool, will be removed
@@ -62,4 +58,5 @@ public class EnemyStats : MonoBehaviour
         Destroy(enemy.gameObject);
 
     }
+
 }

@@ -112,7 +112,7 @@ accurate and not static.
 
 27th February
 -Did some basic combat, enemy does not attack player yet but attack animation and player damage/kill working on enemy with correct stat multipliers.
--Added a proper sprite for the sword used by the player.
+-Added a proper sprite for the sword used by the player. Also made stat page directly reflect players current health, damage and defense.
 -To do : make sure enemy can attack player and add proper sprites to enemy and player.
 
 

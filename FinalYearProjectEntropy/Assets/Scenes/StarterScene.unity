@@ -7081,7 +7081,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Defense : 2'
+  m_Text: 
 --- !u!222 &604790256
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7523,7 +7523,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   optionsMenu: {fileID: 1490083112}
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 1207900617}
+  textBox1: {fileID: 779207506}
+  textBox2: {fileID: 1331765878}
+  textBox3: {fileID: 604790253}
 --- !u!1 &638165285
 GameObject:
   m_ObjectHideFlags: 0
@@ -9484,8 +9487,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.4000025, y: 8.5}
-  m_SizeDelta: {x: 78.95, y: 12.99}
+  m_AnchoredPosition: {x: -0.77, y: 8.5}
+  m_SizeDelta: {x: 90.21, y: 12.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &779207508
 MonoBehaviour:
@@ -9518,7 +9521,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Health : 0/100'
+  m_Text: 
 --- !u!222 &779207509
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13369,9 +13372,6 @@ MonoBehaviour:
   player: {fileID: 0}
   respawn: {fileID: 0}
   maxHealth: 100
-  currentHealth: 0
-  defense: 2
-  damage: 5
   healthBar: {fileID: 210361221}
 --- !u!114 &1207900618
 MonoBehaviour:
@@ -15193,7 +15193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Damage : 5'
+  m_Text: 
 --- !u!222 &1331765881
 CanvasRenderer:
   m_ObjectHideFlags: 0

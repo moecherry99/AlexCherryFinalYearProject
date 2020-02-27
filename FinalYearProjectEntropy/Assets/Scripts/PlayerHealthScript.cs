@@ -12,16 +12,16 @@ public class PlayerHealthScript : MonoBehaviour
 
     // variables
     public int maxHealth = 100;
-    public int currentHealth;
+    public static int currentHealth;
 
     // this will be changed by items in the game in future
-    public int defense;
-    public int damage;
+    public static int defense = 2;
+    public static int damage = 5;
 
     public HealthBarScr healthBar;
 
     // current health is max health (don't want to spawn with lower than max health)
-    void Start()
+    public void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth); 
@@ -29,7 +29,7 @@ public class PlayerHealthScript : MonoBehaviour
     }
 
     // if press Tab, take damage (developer tool)
-    void Update()
+    public void Update()
     {
         if (currentHealth <= 0)
         {
