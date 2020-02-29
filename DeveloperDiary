@@ -115,6 +115,9 @@ accurate and not static.
 -Added a proper sprite for the sword used by the player. Also made stat page directly reflect players current health, damage and defense.
 -To do : make sure enemy can attack player and add proper sprites to enemy and player.
 
+29th February
+-Did some basic asset changes, added clouds and rock sprites with a proper grass texture on the ground terrain. 
+
 
 
 
