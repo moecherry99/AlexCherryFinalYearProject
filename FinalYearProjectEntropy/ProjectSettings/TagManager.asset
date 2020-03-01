@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Weapon
+  - RockOb1
+  - BossSkel1
+  - SmallMonster
+  - MediumMonster
+  - FinalMonster
+  - RockFinal
   layers:
   - Default
   - TransparentFX

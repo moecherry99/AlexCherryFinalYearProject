@@ -19,6 +19,7 @@ public class PlayerHealthScript : MonoBehaviour
     public static int damage = 5;
 
     public HealthBarScr healthBar;
+    public EnemyStats enemyHeal;
 
     // current health is max health (don't want to spawn with lower than max health)
     public void Start()

@@ -21,16 +21,31 @@ public class Combat : MonoBehaviour
     public float attackRange = 0.5f;
 
     public GameObject swordSwing;
+
+    public GameObject en1;
+    public GameObject en2;
+    public GameObject en3;
+
     private GameObject MainCamera;
 
     void Awake()
     {
         // find our main camera for our sword swing animation
         MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        en1 = GameObject.FindGameObjectWithTag("SmallMonster");
+        en2 = GameObject.FindGameObjectWithTag("MediumMonster");
+        en3 = GameObject.FindGameObjectWithTag("BossSkel1");     
     }
 
     void Start()
     {
+        // function to show level is cleared, destroying the object blocking the gate
+        if(GameObject.FindGameObjectWithTag("SmallMonster") == null && GameObject.FindGameObjectWithTag("MediumMonster") == null && GameObject.FindGameObjectWithTag("BossSkel1") == null)
+        {
+
+            Debug.Log("Level Cleared");
+        }
+
         // get weapon for animation
         swordSwing = GameObject.FindWithTag("Weapon");
         myStats = GetComponent<PlayerHealthScript>(); // stat finder for player

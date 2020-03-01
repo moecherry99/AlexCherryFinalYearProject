@@ -118,6 +118,11 @@ accurate and not static.
 29th February
 -Did some basic asset changes, added clouds and rock sprites with a proper grass texture on the ground terrain. 
 
+1st March
+-Made some game logic such as destroying enemies will create paths for player to enter. 
+-Added a lot of sprites and level design to single player scene.
+-To do : Add enemy combat so there is proper gameplay.
+
 
 
 
