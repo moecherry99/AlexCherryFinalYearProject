@@ -124,8 +124,19 @@ accurate and not static.
 -To do : Add enemy combat so there is proper gameplay.
 
 2nd March
+(1:00 am)
 -Added combat system, enemy will damage player as long as they are in range. Player regeneration added for health and proper stats applied to each mob with seperate scripts.
 -To do : Add inventory system with loot so potions can be used (game balance must be adjusted as currently difficult) and finish single player level design.
+
+(5:00 pm)
+-Added power attack which heals player and can only be used every so often (skill system for combat)
+-Added camera change colour if player is on low health to show they are in danger.
+-Finished single player level design, can add a few finishing touches near end if necessary.
+-To do : Add inventory system with potions to make gameplay easier.
+
+(7:00 pm)
+-Added simple potion system which heals player only if they have potions available. 
+-Added UI text to show number of potions in players inventory and added developer tool to add potions which will be removed at final stages.
 
 
 

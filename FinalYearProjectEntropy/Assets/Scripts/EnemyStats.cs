@@ -6,7 +6,7 @@ public class EnemyStats : MonoBehaviour
 {
 
     public PlayerHealthScript playerhealth;
-    public HealthBarScr health;
+    public HealthBarScr healthBar;
 
     public GameObject enemy;
 
@@ -57,12 +57,6 @@ public class EnemyStats : MonoBehaviour
             Die();
         }
 
-        // developer tool, will be removed
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            TakeDamage(20);
-        }
-
     }
 
     // damage is taken from current health
@@ -89,8 +83,11 @@ public class EnemyStats : MonoBehaviour
         if(gameObject.tag == "BossSkel1")
         {
             Destroy(object1.gameObject);
-                
+                         
         }
+
+        
+       
 
         // finds obstacle 2 and destroys if boss 2 is killed
         if (gameObject.tag == "BossSkel2")
@@ -110,15 +107,7 @@ public class EnemyStats : MonoBehaviour
     }
 
     // Test function for healing player when small mob is killed
-    void Heal()
-    {
-        if (gameObject.tag == "SmallMonster")
-        {
-            PlayerHealthScript.currentHealth += 10;
-
-
-        }
-    }
+  
 
     
 

@@ -18,20 +18,22 @@ public class MenuManager : MonoBehaviour
     public GameObject textBox1;
     public GameObject textBox2;
     public GameObject textBox3;
+    public GameObject textBox4;
 
-    public static float health;
+    public static float health = (float)Mathf.Round(health * 100f) / 100f;
     public static int def;
     public static int dmg;
-    // Start is called before the first frame update
+    public static int potion;
+
+
     void Start()
     {
         
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-
+        potion = PlayerHealthScript.potionCount;
         health = PlayerHealthScript.currentHealth;
         def = PlayerHealthScript.defense;
         dmg = PlayerHealthScript.damage;
@@ -40,6 +42,7 @@ public class MenuManager : MonoBehaviour
         textBox1.GetComponent<UnityEngine.UI.Text>().text = "Health : " + health.ToString() + " / 100";
         textBox2.GetComponent<UnityEngine.UI.Text>().text = "Damage : " + dmg.ToString();
         textBox3.GetComponent<UnityEngine.UI.Text>().text = "Defense : " + def.ToString();
+        textBox4.GetComponent<UnityEngine.UI.Text>().text = "Potions : " + potion.ToString();
 
         // if press C
         if (Input.GetKeyDown(KeyCode.C))

@@ -5,6 +5,7 @@ using UnityEngine;
 // Script to handle players Health
 // References : https://www.youtube.com/watch?v=BLfNP4Sc_iA, https://www.youtube.com/watch?v=e8GmfoaOB4Y&t=132s
 // https://answers.unity.com/questions/177137/regenerating-health-script.html - health regeneration
+// https://forum.unity.com/threads/using-my-potion-c.412307/ - potion functionality for inventory system
 public class PlayerHealthScript : MonoBehaviour
 {
     
@@ -12,9 +13,12 @@ public class PlayerHealthScript : MonoBehaviour
     public GameObject respawn;
 
     // variables
+    public static int potionCount = 1;
     public float maxHealth = 100f;
     public static float currentHealth;
     public float regeneration = 1f;
+    public float attackRatePower = 1f;
+    float nextAttackTime = 0f;
 
     // this will be changed by items in the game in future
     public static int defense = 2;
@@ -61,7 +65,61 @@ public class PlayerHealthScript : MonoBehaviour
             TakeDamage(20);
         }
 
-       
+        // developer tool to heal and test level
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            currentHealth += 20;
+            healthBar.SetHealth(currentHealth);
+            if (currentHealth >= maxHealth)
+            {
+                currentHealth = maxHealth;
+
+            }
+        }
+
+        if (Time.time >= nextAttackTime)
+        {
+            // for drain attack
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                currentHealth += 25;
+                healthBar.SetHealth(currentHealth);
+                nextAttackTime = Time.time + 12f / attackRatePower;
+                if (currentHealth >= maxHealth)
+                {
+                    
+                    currentHealth = maxHealth;
+                    nextAttackTime = Time.time + 12f / attackRatePower;
+                    
+                }
+            }
+        }
+
+        // potion count 
+        
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            // if more than 1 potion, call UsePotion
+            if (potionCount > 0)
+            {
+                UsePotion();
+                   
+            }
+
+            // if 0 potions, call DontUsePotion and do nothing
+            if (potionCount == 0)
+            {
+                DontUsePotion();
+            }
+
+        }
+
+        // developer tool for adding potions to inventory, remove after development
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            potionCount++;
+        }
+
     }
 
     // damage is taken from current health
@@ -80,5 +138,36 @@ public class PlayerHealthScript : MonoBehaviour
 
     }
 
-   
+    // call this function if potion count is over 1
+    public void UsePotion()
+    {
+        if (potionCount >= 1)
+        {           
+            currentHealth += 20;
+            healthBar.SetHealth(currentHealth);
+            potionCount--;
+        }
+
+        // if potion count is 0, don't allow it to drop below 0 as negative potions 
+        // means picking up potions doesn't award the player with any
+        if (potionCount <= 0)
+        {
+            potionCount = 0;
+
+        }
+        
+        // set health
+        if (currentHealth >= maxHealth)
+        {
+            currentHealth = maxHealth;
+
+        }
+    }
+
+    // call this function if player doesn't have potions
+    public void DontUsePotion()
+    {
+        return;
+    }
+  
 }

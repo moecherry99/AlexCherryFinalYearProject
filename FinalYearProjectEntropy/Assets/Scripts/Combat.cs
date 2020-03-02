@@ -20,9 +20,11 @@ public class Combat : MonoBehaviour
     public int attackDamage = 40;
     public float attackRange = 0.5f;
     public float attackRate = 0.4f;
+    public float attackRatePower = 1f;
 
     public float distanceDamage = 1f;
     float nextAttackTime = 0f;
+    float nextAttackTimePower = 0f;
 
     public GameObject swordSwing;
 
@@ -86,7 +88,30 @@ public class Combat : MonoBehaviour
                 //swordSwing.transform.rotation = Quaternion.Euler(40, 0, 0);
                 Attack();
 
+                // Delays attack accordingly (trial and error)
                 nextAttackTime = Time.time + 0.4f / attackRate;
+
+
+            }
+
+           
+        }
+        if (Time.time >= nextAttackTimePower)
+        {
+            // if press Q, do attack animation and damage if in range of enemy
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                // sets sword position relative to our main camera, as to follow rotation
+                swordSwing.transform.rotation = Quaternion.Euler(40, Camera.main.transform.eulerAngles.y, 0);
+
+                // Delay for 0.1 seconds so we can reset the sword position before attacking again
+                Invoke("Delay1", 0.1f);
+
+                //swordSwing.transform.rotation = Quaternion.Euler(40, 0, 0);
+                PowerAttack();
+
+                // Delays attack accordingly (trial and error)
+                nextAttackTimePower = Time.time + 12f / attackRatePower;
 
 
             }
@@ -107,9 +132,24 @@ public class Combat : MonoBehaviour
             Debug.Log("Hit " + enemy.name);
             enemy.GetComponent<EnemyStats>().TakeDamage(attackDamage / 2);
         }
+             
+    }
 
-       
-        
+    // Method for drain attack
+    void PowerAttack()
+    {
+
+        // animator.SetTrigger("Attack");
+
+        // array for our enemies in enemy tag layer
+        Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
+
+        // if several enemies are in range we can hit all at once
+        foreach (Collider enemy in hitEnemies)
+        {
+            Debug.Log("Hit " + enemy.name);
+            enemy.GetComponent<EnemyStats>().TakeDamage(attackDamage / 1);
+        }
 
     }
 
@@ -130,7 +170,6 @@ public class Combat : MonoBehaviour
         // Delay method changes sword back to original position after attacking
         swordSwing.transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
         
-    }
-   
+    } 
 
 }

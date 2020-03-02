@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Reference : https://www.youtube.com/watch?v=_QajrabyTJc&t=324s
+// https://answers.unity.com/questions/1227628/changing-camera-background-color.html - change camera background when on low health
 // Script used for looking around with the first person character
 public class MouseLook : MonoBehaviour
 {
+
+    public PlayerHealthScript currentHealth;
+    public Color red = Color.red;
+    public Color blue = Color.blue;
+    Camera cam;
 
     // Change speed of sensitivity
     public float mouseSensitivity = 100f;
@@ -16,6 +22,7 @@ public class MouseLook : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        cam = GetComponent<Camera>();
         // Locks Cursor to middle of screen
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -23,6 +30,16 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // change colour of camera to alert player they are on low health
+        if(PlayerHealthScript.currentHealth <= 100)
+        {
+            cam.backgroundColor = red;
+        }
+        else
+        {
+            cam.backgroundColor = blue;
+        }
+
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
