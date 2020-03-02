@@ -11,6 +11,8 @@ TagManager:
   - MediumMonster
   - FinalMonster
   - RockFinal
+  - RockOb2
+  - BossSkel2
   layers:
   - Default
   - TransparentFX

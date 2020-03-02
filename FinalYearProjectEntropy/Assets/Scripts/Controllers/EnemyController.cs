@@ -4,12 +4,24 @@ using UnityEngine;
 using UnityEngine.AI;
 
 // Script for enemy AI look radius (to chase player if in range)
-// Reference : https://www.youtube.com/watch?v=xppompv1DBg
+// References : https://www.youtube.com/watch?v=xppompv1DBg
+// https://answers.unity.com/questions/1611499/how-do-i-make-an-enemy-deal-damage-after-5-seconds.html - damage over time if in radius
 public class EnemyController : MonoBehaviour
 {
+    public PlayerHealthScript health;
+    public GameObject player;
+    
+    
+    void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     // radius
     public float lookRadius = 10f;
+    public float damageRadius = 1f;
+    public float damageDelay = 0.8f;
+    private float damageTimer = 0f;
 
     Transform target;
     NavMeshAgent agent;
@@ -34,6 +46,28 @@ public class EnemyController : MonoBehaviour
             {
                 // attack/face target
                 FaceTarget();
+
+            }
+
+            float attackDistance = 0.1f;
+
+            // some form of combat, not optimal yet
+            if (attackDistance <= distance)
+            {
+                damageTimer += Time.deltaTime;
+                if (damageTimer > damageDelay)
+                {
+                    damageTimer -= damageDelay;
+                    PlayerHealthScript player = target.GetComponent<PlayerHealthScript>();
+                    if (player != null)
+                        player.TakeDamage(20);
+                    Debug.Log("Player took");
+                }
+            
+            }
+            else
+            {
+                damageTimer = 0;
             }
         }
     }

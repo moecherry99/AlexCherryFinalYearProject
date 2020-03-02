@@ -12,14 +12,14 @@ public class HealthBarScr : MonoBehaviour
     public Slider slider;
     
     // set max health on slider to full value
-    public void SetMaxHealth(int health)
+    public void SetMaxHealth(float health)
     {
         slider.maxValue = health;
         slider.value = health;
     }
 
     // value of slider is the health of the player
-    public void SetHealth(int health)
+    public void SetHealth(float health)
     {
         slider.value = health;
     }

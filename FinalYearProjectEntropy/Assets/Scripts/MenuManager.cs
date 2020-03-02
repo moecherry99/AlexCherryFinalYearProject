@@ -19,7 +19,7 @@ public class MenuManager : MonoBehaviour
     public GameObject textBox2;
     public GameObject textBox3;
 
-    public static int health;
+    public static float health;
     public static int def;
     public static int dmg;
     // Start is called before the first frame update

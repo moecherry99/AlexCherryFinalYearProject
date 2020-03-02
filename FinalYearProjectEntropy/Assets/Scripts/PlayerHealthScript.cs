@@ -4,6 +4,7 @@ using UnityEngine;
 
 // Script to handle players Health
 // References : https://www.youtube.com/watch?v=BLfNP4Sc_iA, https://www.youtube.com/watch?v=e8GmfoaOB4Y&t=132s
+// https://answers.unity.com/questions/177137/regenerating-health-script.html - health regeneration
 public class PlayerHealthScript : MonoBehaviour
 {
     
@@ -11,8 +12,9 @@ public class PlayerHealthScript : MonoBehaviour
     public GameObject respawn;
 
     // variables
-    public int maxHealth = 100;
-    public static int currentHealth;
+    public float maxHealth = 100f;
+    public static float currentHealth;
+    public float regeneration = 1f;
 
     // this will be changed by items in the game in future
     public static int defense = 2;
@@ -25,13 +27,24 @@ public class PlayerHealthScript : MonoBehaviour
     public void Start()
     {
         currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth); 
-        
+        healthBar.SetMaxHealth(maxHealth);
+
     }
 
     // if press Tab, take damage (developer tool)
     public void Update()
     {
+        // health regeneration
+        if(currentHealth <= maxHealth)
+        {
+            currentHealth += regeneration * Time.deltaTime;
+            healthBar.SetHealth(currentHealth);
+            if (currentHealth >= maxHealth)
+            {
+                currentHealth = maxHealth;
+                
+            }
+        }
         if (currentHealth <= 0)
         {
             Die();
@@ -47,6 +60,8 @@ public class PlayerHealthScript : MonoBehaviour
         {
             TakeDamage(20);
         }
+
+       
     }
 
     // damage is taken from current health
@@ -64,4 +79,6 @@ public class PlayerHealthScript : MonoBehaviour
         Application.LoadLevel(Application.loadedLevel);
 
     }
+
+   
 }

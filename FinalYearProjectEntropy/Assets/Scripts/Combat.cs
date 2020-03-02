@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // References : https://answers.unity.com/questions/796881/c-how-can-i-let-something-happen-after-a-small-del.html - Delay mechanic for animation
-// https://www.youtube.com/watch?v=sPiVz1k-fEs - Video for attacking/damaging enemies with attacks/setting stats by Brackeys
+// https://www.youtube.com/watch?v=sPiVz1k-fEs - Video for attacking/damaging enemies with attacks/setting stats by Brackeys and attack delay system
 // https://forum.unity.com/threads/rotate-gameobject-to-where-camera-is-facing.501460/ - Rotate sword around the main camera
 
 [RequireComponent(typeof(PlayerHealthScript))]
@@ -19,12 +19,16 @@ public class Combat : MonoBehaviour
 
     public int attackDamage = 40;
     public float attackRange = 0.5f;
+    public float attackRate = 0.4f;
+
+    public float distanceDamage = 1f;
+    float nextAttackTime = 0f;
 
     public GameObject swordSwing;
 
-    public GameObject en1;
-    public GameObject en2;
-    public GameObject en3;
+    GameObject en1;
+    GameObject en2;
+    GameObject en3;
 
     private GameObject MainCamera;
 
@@ -39,10 +43,10 @@ public class Combat : MonoBehaviour
 
     void Start()
     {
+        
         // function to show level is cleared, destroying the object blocking the gate
-        if(GameObject.FindGameObjectWithTag("SmallMonster") == null && GameObject.FindGameObjectWithTag("MediumMonster") == null && GameObject.FindGameObjectWithTag("BossSkel1") == null)
+        if (GameObject.FindGameObjectWithTag("SmallMonster") == null && GameObject.FindGameObjectWithTag("MediumMonster") == null && GameObject.FindGameObjectWithTag("BossSkel1") == null)
         {
-
             Debug.Log("Level Cleared");
         }
 
@@ -60,30 +64,38 @@ public class Combat : MonoBehaviour
 
     // get enemy stats
     public void AttackEnemy(EnemyStats enemyStats1)
-    {
+    {    
         enemyStats1.TakeDamage(20);
     }
 
     void Update()
     {
-        
-        // if press Q, do attack animation and damage if in range of enemy
-        if (Input.GetKeyDown(KeyCode.Q))
+        // attack delay
+        if (Time.time >= nextAttackTime)
         {
-            // sets sword position relative to our main camera, as to follow rotation
-            swordSwing.transform.rotation = Quaternion.Euler(40, Camera.main.transform.eulerAngles.y, 0);
 
-            // Delay for 0.1 seconds so we can reset the sword position before attacking again
-            Invoke("Delay1", 0.1f);
+            // if press Q, do attack animation and damage if in range of enemy
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                // sets sword position relative to our main camera, as to follow rotation
+                swordSwing.transform.rotation = Quaternion.Euler(40, Camera.main.transform.eulerAngles.y, 0);
 
-            //swordSwing.transform.rotation = Quaternion.Euler(40, 0, 0);
-            Attack();
-            
+                // Delay for 0.1 seconds so we can reset the sword position before attacking again
+                Invoke("Delay1", 0.1f);
+
+                //swordSwing.transform.rotation = Quaternion.Euler(40, 0, 0);
+                Attack();
+
+                nextAttackTime = Time.time + 0.4f / attackRate;
+
+
+            }
         }
     }
 
     void Attack()
     {
+        
         // animator.SetTrigger("Attack");
 
         // array for our enemies in enemy tag layer
@@ -95,6 +107,10 @@ public class Combat : MonoBehaviour
             Debug.Log("Hit " + enemy.name);
             enemy.GetComponent<EnemyStats>().TakeDamage(attackDamage / 2);
         }
+
+       
+        
+
     }
 
     // shows in editor our attack range for easy adjustments
@@ -112,7 +128,9 @@ public class Combat : MonoBehaviour
     void Delay1()
     {
         // Delay method changes sword back to original position after attacking
-        swordSwing.transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);           
+        swordSwing.transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
+        
     }
+   
 
 }

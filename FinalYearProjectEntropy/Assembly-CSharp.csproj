@@ -63,6 +63,9 @@
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
     <Compile Include="Assets\Scripts\Combat.cs" />
     <Compile Include="Assets\Scripts\Controllers\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\EnemyControllerBoss.cs" />
+    <Compile Include="Assets\Scripts\Controllers\EnemyControllerLarge.cs" />
+    <Compile Include="Assets\Scripts\Controllers\EnemyControllerMed.cs" />
     <Compile Include="Assets\Scripts\EnemyStats.cs" />
     <Compile Include="Assets\Scripts\GameSetupController.cs" />
     <Compile Include="Assets\Scripts\HealthBarScr.cs" />

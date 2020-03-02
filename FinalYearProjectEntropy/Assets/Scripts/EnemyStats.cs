@@ -11,9 +11,15 @@ public class EnemyStats : MonoBehaviour
     public GameObject enemy;
 
     // don't need to be public if not assigning game objects in editor
+
+    // rock obstacles
     GameObject object1;
+    GameObject object2;
     GameObject objectFinal;
+
+    // enemy obstacle triggers
     GameObject enemyLarge;
+    GameObject enemyLarge2;
     GameObject finalMonster;
 
     // variables
@@ -28,10 +34,17 @@ public class EnemyStats : MonoBehaviour
     void Start()
     {
 
+        // find rock objects
         object1 = GameObject.FindWithTag("RockOb1");
-        enemyLarge = GameObject.FindWithTag("BossSkel1");
+        object2 = GameObject.FindWithTag("RockOb2");
         objectFinal = GameObject.FindWithTag("RockFinal");
+
+        // find enemy objects
+        enemyLarge = GameObject.FindWithTag("BossSkel1");
+        enemyLarge2 = GameObject.FindWithTag("BossSkel2");     
         finalMonster = GameObject.FindWithTag("FinalMonster");
+
+        // current health = max health to ensure player spawns with correct health
         currentHealth = maxHealth;
 
     }
@@ -79,6 +92,13 @@ public class EnemyStats : MonoBehaviour
                 
         }
 
+        // finds obstacle 2 and destroys if boss 2 is killed
+        if (gameObject.tag == "BossSkel2")
+        {
+            Destroy(object2.gameObject);
+
+        }
+
         // open gate if last boss dies
         if (gameObject.tag == "FinalMonster")
         {
@@ -100,5 +120,6 @@ public class EnemyStats : MonoBehaviour
         }
     }
 
+    
 
 }

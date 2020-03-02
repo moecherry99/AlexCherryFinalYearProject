@@ -123,6 +123,11 @@ accurate and not static.
 -Added a lot of sprites and level design to single player scene.
 -To do : Add enemy combat so there is proper gameplay.
 
+2nd March
+-Added combat system, enemy will damage player as long as they are in range. Player regeneration added for health and proper stats applied to each mob with seperate scripts.
+-To do : Add inventory system with loot so potions can be used (game balance must be adjusted as currently difficult) and finish single player level design.
+
+
 
 
 
