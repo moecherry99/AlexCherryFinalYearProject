@@ -11,6 +11,7 @@ public class MenuManager : MonoBehaviour
 
     // game object options menu
     public GameObject optionsMenu;
+    public GameObject helpMenu;
 
     // referencing player health 
     public PlayerHealthScript playerHealth;
@@ -24,7 +25,6 @@ public class MenuManager : MonoBehaviour
     public static int def;
     public static int dmg;
     public static int potion;
-
 
     void Start()
     {
@@ -44,12 +44,20 @@ public class MenuManager : MonoBehaviour
         textBox3.GetComponent<UnityEngine.UI.Text>().text = "Defense : " + def.ToString();
         textBox4.GetComponent<UnityEngine.UI.Text>().text = "Potions : " + potion.ToString();
 
-        // if press C
+        // if press C, open character stats menu
         if (Input.GetKeyDown(KeyCode.C))
         {
             // always sets to opposite (true or false)
             optionsMenu.gameObject.SetActive(!optionsMenu.gameObject.activeSelf);
         }
-        
+
+        // if press I, open information menu
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            // always sets to opposite (true or false)
+            helpMenu.gameObject.SetActive(!helpMenu.gameObject.activeSelf);
+        }
+
     }
+
 }

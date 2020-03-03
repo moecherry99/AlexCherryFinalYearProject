@@ -6,6 +6,7 @@ using UnityEngine;
 // References : https://www.youtube.com/watch?v=BLfNP4Sc_iA, https://www.youtube.com/watch?v=e8GmfoaOB4Y&t=132s
 // https://answers.unity.com/questions/177137/regenerating-health-script.html - health regeneration
 // https://forum.unity.com/threads/using-my-potion-c.412307/ - potion functionality for inventory system
+
 public class PlayerHealthScript : MonoBehaviour
 {
     
@@ -25,7 +26,6 @@ public class PlayerHealthScript : MonoBehaviour
     public static int damage = 5;
 
     public HealthBarScr healthBar;
-    public EnemyStats enemyHeal;
 
     // current health is max health (don't want to spawn with lower than max health)
     public void Start()
@@ -49,6 +49,7 @@ public class PlayerHealthScript : MonoBehaviour
                 
             }
         }
+
         if (currentHealth <= 0)
         {
             Die();
@@ -60,12 +61,14 @@ public class PlayerHealthScript : MonoBehaviour
             currentHealth = 100;
             healthBar.SetHealth(currentHealth);
         }
+
+        // developer tool, will take out after development
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             TakeDamage(20);
         }
 
-        // developer tool to heal and test level
+        // developer tool to heal and test level, will take out after development
         if (Input.GetKeyDown(KeyCode.E))
         {
             currentHealth += 20;
@@ -95,15 +98,13 @@ public class PlayerHealthScript : MonoBehaviour
             }
         }
 
-        // potion count 
-        
+        // potion count       
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             // if more than 1 potion, call UsePotion
             if (potionCount > 0)
             {
-                UsePotion();
-                   
+                UsePotion();                  
             }
 
             // if 0 potions, call DontUsePotion and do nothing
@@ -125,8 +126,7 @@ public class PlayerHealthScript : MonoBehaviour
     // damage is taken from current health
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage / defense;
-        
+        currentHealth -= damage / defense;      
         healthBar.SetHealth(currentHealth);
     }
 
@@ -135,6 +135,12 @@ public class PlayerHealthScript : MonoBehaviour
         // https://answers.unity.com/questions/634219/how-do-i-respawn-the-player-after-it-dies.html
         // Not a perfect way to respawn as it resets all progress, but will be worked upon in future
         Application.LoadLevel(Application.loadedLevel);
+
+        /* Destroy(player.gameObject);
+        player.transform.position = respawn.transform.position;
+        */
+
+        potionCount = 1;
 
     }
 
@@ -162,6 +168,7 @@ public class PlayerHealthScript : MonoBehaviour
             currentHealth = maxHealth;
 
         }
+
     }
 
     // call this function if player doesn't have potions

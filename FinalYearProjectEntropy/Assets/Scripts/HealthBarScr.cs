@@ -23,6 +23,5 @@ public class HealthBarScr : MonoBehaviour
     {
         slider.value = health;
     }
-
     
 }

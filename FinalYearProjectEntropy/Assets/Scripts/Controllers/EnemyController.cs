@@ -10,8 +10,7 @@ public class EnemyController : MonoBehaviour
 {
     public PlayerHealthScript health;
     public GameObject player;
-    
-    
+      
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");

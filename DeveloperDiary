@@ -138,6 +138,29 @@ accurate and not static.
 -Added simple potion system which heals player only if they have potions available. 
 -Added UI text to show number of potions in players inventory and added developer tool to add potions which will be removed at final stages.
 
+3rd March
+-Added few touches, mobs now reward player with 1 potion.
+-Info UI text and menu have been added, will update contents of info soon (controls etc.)
+-Obstacle around NPC has been added, need to add interaction with NPC so that it completes level/awards player with stat boosts for next level. 
+-Game logic applied/bug fixes.
+
+--------------------------------------------
+FINISHING TOUCHES BY 10TH March
+--------------------------------------------
+-To do : 
+-1. Add main screen to go to game (continue/new etc).
+-2. Add sound effects/music.
+-3. Add lighting such as lamps for spookiness.
+-4. Add area notification under mini map (hallway 1, boss section 1, boss room etc)
+-5. Add partner system (AI)
+-6. Add player sprite and animations, also add animations for skeletons(maybe add more enemies?)
+-7. Add class system or weapon swap system, either works.
+-8. Add Multiplayer functionality (duplicate player in current scene)
+-9. Add proper settings on the info/help menu
+-10. Add NPC interaction
+-11. Possibly add full new level (1 or 2 days max for diversity)
+
+
 
 
 

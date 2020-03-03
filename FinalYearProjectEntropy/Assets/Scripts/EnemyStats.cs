@@ -72,6 +72,8 @@ public class EnemyStats : MonoBehaviour
     // enemy die
     void Die()
     {
+        // adds potion to player inventory on kill (loot)
+        PlayerHealthScript.potionCount++;
 
         // tester
         Debug.Log("Enemy Died");
@@ -82,33 +84,21 @@ public class EnemyStats : MonoBehaviour
         // finds obstacle 1 and destroys if boss 1 is killed
         if(gameObject.tag == "BossSkel1")
         {
-            Destroy(object1.gameObject);
-                         
+            Destroy(object1.gameObject);                   
         }
-
-        
-       
 
         // finds obstacle 2 and destroys if boss 2 is killed
         if (gameObject.tag == "BossSkel2")
         {
             Destroy(object2.gameObject);
-
         }
 
         // open gate if last boss dies
         if (gameObject.tag == "FinalMonster")
         {
             Destroy(objectFinal.gameObject);
-
         }
 
-
     }
-
-    // Test function for healing player when small mob is killed
-  
-
     
-
 }

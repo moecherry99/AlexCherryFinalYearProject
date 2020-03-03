@@ -10,6 +10,7 @@ using UnityEngine;
 [RequireComponent(typeof(EnemyStats))]
 public class Combat : MonoBehaviour
 {
+    // script references
     EnemyStats enemyStats;
     PlayerHealthScript myStats;
 
@@ -17,17 +18,20 @@ public class Combat : MonoBehaviour
     public Transform attackPoint;
     public LayerMask enemyLayers;
 
+    // attack variables
     public int attackDamage = 40;
     public float attackRange = 0.5f;
     public float attackRate = 0.4f;
-    public float attackRatePower = 1f;
-
-    public float distanceDamage = 1f;
     float nextAttackTime = 0f;
+    public float distanceDamage = 1f;
+
+    // power attack variables
     float nextAttackTimePower = 0f;
+    public float attackRatePower = 1f;
 
     public GameObject swordSwing;
 
+    // find game objects
     GameObject en1;
     GameObject en2;
     GameObject en3;
@@ -38,6 +42,8 @@ public class Combat : MonoBehaviour
     {
         // find our main camera for our sword swing animation
         MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+
+        // find enemy objects
         en1 = GameObject.FindGameObjectWithTag("SmallMonster");
         en2 = GameObject.FindGameObjectWithTag("MediumMonster");
         en3 = GameObject.FindGameObjectWithTag("BossSkel1");     
@@ -46,7 +52,7 @@ public class Combat : MonoBehaviour
     void Start()
     {
         
-        // function to show level is cleared, destroying the object blocking the gate
+        // function to show level is cleared, destroying the object blocking the gate (only works if boss is killed)
         if (GameObject.FindGameObjectWithTag("SmallMonster") == null && GameObject.FindGameObjectWithTag("MediumMonster") == null && GameObject.FindGameObjectWithTag("BossSkel1") == null)
         {
             Debug.Log("Level Cleared");
@@ -56,6 +62,7 @@ public class Combat : MonoBehaviour
         swordSwing = GameObject.FindWithTag("Weapon");
         myStats = GetComponent<PlayerHealthScript>(); // stat finder for player
         enemyStats = GetComponent<EnemyStats>(); // stat finder for enemy
+
     }
 
     // get player stats
@@ -91,11 +98,10 @@ public class Combat : MonoBehaviour
                 // Delays attack accordingly (trial and error)
                 nextAttackTime = Time.time + 0.4f / attackRate;
 
-
             }
-
            
         }
+
         if (Time.time >= nextAttackTimePower)
         {
             // if press Q, do attack animation and damage if in range of enemy
@@ -112,7 +118,6 @@ public class Combat : MonoBehaviour
 
                 // Delays attack accordingly (trial and error)
                 nextAttackTimePower = Time.time + 12f / attackRatePower;
-
 
             }
         }
@@ -168,8 +173,7 @@ public class Combat : MonoBehaviour
     void Delay1()
     {
         // Delay method changes sword back to original position after attacking
-        swordSwing.transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
-        
+        swordSwing.transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);       
     } 
 
 }
