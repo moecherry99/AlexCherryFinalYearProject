@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 // Script for the Character Stats page
 // References : https://www.youtube.com/watch?v=aN11LnlF89I
-// https://answers.unity.com/questions/1273054/change-text-value.html
+// https://answers.unity.com/questions/1273054/change-text-value.html - change text
+// https://stackoverflow.com/questions/6356351/formatting-a-float-to-2-decimal-places - 2 decimal places
 public class MenuManager : MonoBehaviour
 {
 
@@ -21,10 +22,11 @@ public class MenuManager : MonoBehaviour
     public GameObject textBox3;
     public GameObject textBox4;
 
-    public static float health = (float)Mathf.Round(health * 100f) / 100f;
+    public static float health = Mathf.Round(health * 100f) / 100f;
     public static int def;
     public static int dmg;
     public static int potion;
+    public static float maxHp;
 
     void Start()
     {
@@ -37,9 +39,10 @@ public class MenuManager : MonoBehaviour
         health = PlayerHealthScript.currentHealth;
         def = PlayerHealthScript.defense;
         dmg = PlayerHealthScript.damage;
+        maxHp = PlayerHealthScript.maxHealth;
 
-        // get text components and change them
-        textBox1.GetComponent<UnityEngine.UI.Text>().text = "Health : " + health.ToString() + " / 100";
+        // get text components and change them   
+        textBox1.GetComponent<UnityEngine.UI.Text>().text = "Health : " + health.ToString("0.00") + " / " + maxHp.ToString("0.00");
         textBox2.GetComponent<UnityEngine.UI.Text>().text = "Damage : " + dmg.ToString();
         textBox3.GetComponent<UnityEngine.UI.Text>().text = "Defense : " + def.ToString();
         textBox4.GetComponent<UnityEngine.UI.Text>().text = "Potions : " + potion.ToString();

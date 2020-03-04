@@ -1,7 +1,4 @@
 sceneSetups:
-- path: Assets/unity-chan!/Unity-chan! Model/Scenes/Locomotion.unity
-  isLoaded: 0
-  isActive: 0
 - path: Assets/Scenes/MultiplayerScene.unity
   isLoaded: 0
   isActive: 0

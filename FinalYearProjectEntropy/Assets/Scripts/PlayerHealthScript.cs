@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Script to handle players Health
 // References : https://www.youtube.com/watch?v=BLfNP4Sc_iA, https://www.youtube.com/watch?v=e8GmfoaOB4Y&t=132s
@@ -12,10 +13,12 @@ public class PlayerHealthScript : MonoBehaviour
     
     public GameObject player;
     public GameObject respawn;
+    public GameObject weapon;
+    public GameObject cam;
 
     // variables
     public static int potionCount = 1;
-    public float maxHealth = 100f;
+    public static float maxHealth = 250f;
     public static float currentHealth;
     public float regeneration = 1f;
     public float attackRatePower = 1f;
@@ -30,6 +33,7 @@ public class PlayerHealthScript : MonoBehaviour
     // current health is max health (don't want to spawn with lower than max health)
     public void Start()
     {
+        cam = GameObject.FindWithTag("MainCamera");
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
 
@@ -52,20 +56,23 @@ public class PlayerHealthScript : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Die();
+            
             // Reference for respawn : https://docs.unity3d.com/ScriptReference/GameObject.FindWithTag.html
             player = GameObject.FindWithTag("Player");
             respawn = GameObject.FindWithTag("Respawn");
-            Instantiate(player, respawn.transform.position, respawn.transform.rotation);
+            weapon = GameObject.FindWithTag("Weapon");
             
-            currentHealth = 100;
+            //Instantiate(player, respawn.transform.position, respawn.transform.rotation);
+
+            currentHealth = 250;
             healthBar.SetHealth(currentHealth);
+            Die();
         }
 
         // developer tool, will take out after development
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            TakeDamage(20);
+            TakeDamage(80);
         }
 
         // developer tool to heal and test level, will take out after development
@@ -134,14 +141,17 @@ public class PlayerHealthScript : MonoBehaviour
     {
         // https://answers.unity.com/questions/634219/how-do-i-respawn-the-player-after-it-dies.html
         // Not a perfect way to respawn as it resets all progress, but will be worked upon in future
-        Application.LoadLevel(Application.loadedLevel);
+        //SceneManager.LoadScene(0);
 
-        /* Destroy(player.gameObject);
+        // new proper functionality for respawning
         player.transform.position = respawn.transform.position;
-        */
+        player.transform.rotation = respawn.transform.rotation;
 
-        potionCount = 1;
-
+        // set potion count = potion count - 1 so player loses potions on death
+        if (potionCount > 0)
+        {
+            potionCount = potionCount - 1;
+        }
     }
 
     // call this function if potion count is over 1
