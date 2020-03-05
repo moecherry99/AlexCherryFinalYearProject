@@ -166,7 +166,22 @@ FINISHING TOUCHES BY 10TH March
 
 5th March
 -Added a zombie sprite for diversity of enemies. Extra script for zombie and added stats.
+-Added basic lighting effects around map, placeholder for area text under mini map, adjusted scripts slightly for game logic. Added player sprite.
 
+-To do : 
+-Main screen
+-Area notification finish
+-Partner system (AI or multiplayer or both)
+-Multiplayer functionality
+-Weapon or class system
+-Proper Skill cooldown to show
+-Sound/music
+-Info menu finish
+-Full new level to add RPG aspect to game
+-Experience system
+-Enemy animations
+-NPC interaction
+-Chest interaction
 
 
 
