@@ -7,7 +7,7 @@ public class EnemyStats : MonoBehaviour
 
     public PlayerHealthScript playerhealth;
     public HealthBarScr healthBar;
-    public PlayerExperience exp;
+    PlayerExperience exp;
 
     public GameObject enemy;
 
@@ -22,6 +22,8 @@ public class EnemyStats : MonoBehaviour
     GameObject enemyLarge;
     GameObject enemyLarge2;
     GameObject finalMonster;
+
+    GameObject chest;
 
     // variables
     public int maxHealth = 50;
@@ -46,6 +48,8 @@ public class EnemyStats : MonoBehaviour
         enemyLarge = GameObject.FindWithTag("BossSkel1");
         enemyLarge2 = GameObject.FindWithTag("BossSkel2");     
         finalMonster = GameObject.FindWithTag("FinalMonster");
+
+        chest = GameObject.FindWithTag("Chest");
 
         // current health = max health to ensure player spawns with correct health
         currentHealth = maxHealth;
@@ -108,6 +112,14 @@ public class EnemyStats : MonoBehaviour
         if (gameObject.tag == "FinalMonster")
         {
             Destroy(objectFinal.gameObject);
+        }
+
+        // chest interaction(s)
+        if(gameObject.tag == "Chest")
+        {
+            PlayerHealthScript.potionCount += 4;
+            PlayerExperience.exp -= 30;
+            Debug.Log("Chest Opened!");
         }
 
 

@@ -13,6 +13,7 @@ TagManager:
   - RockFinal
   - RockOb2
   - BossSkel2
+  - Chest
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - Ground
   - Enemy
   - Weapon
-  - 
+  - Chest
   - 
   - 
   - 

@@ -25,14 +25,14 @@ public class SmallZomControl : MonoBehaviour
     Transform target;
     NavMeshAgent agent;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         target = PlayerManager.instance.player.transform;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (target == null)

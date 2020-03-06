@@ -17,6 +17,7 @@ public class Combat : MonoBehaviour
     // variables
     public Transform attackPoint;
     public LayerMask enemyLayers;
+    public LayerMask chestLayers;
 
     // attack variables
     public int attackDamage = 40;
@@ -30,6 +31,7 @@ public class Combat : MonoBehaviour
     public float attackRatePower = 1f;
 
     public GameObject swordSwing;
+    public GameObject chest;
 
     // find game objects
     GameObject en1;
@@ -65,6 +67,8 @@ public class Combat : MonoBehaviour
         myStats = GetComponent<PlayerHealthScript>(); // stat finder for player
         enemyStats = GetComponent<EnemyStats>(); // stat finder for enemy
 
+        chest = GameObject.FindWithTag("Chest");
+
     }
 
     // get player stats
@@ -95,7 +99,7 @@ public class Combat : MonoBehaviour
                 Invoke("Delay1", 0.1f);
 
                 //swordSwing.transform.rotation = Quaternion.Euler(40, 0, 0);
-                Attack();
+                Attack();                           
 
                 // Delays attack accordingly (trial and error)
                 nextAttackTime = Time.time + 0.4f / attackRate;
@@ -136,10 +140,10 @@ public class Combat : MonoBehaviour
         // if several enemies are in range we can hit all at once
         foreach(Collider enemy in hitEnemies)
         {
-            Debug.Log("Hit " + enemy.name);
-            enemy.GetComponent<EnemyStats>().TakeDamage((attackDamage / 2) + PlayerHealthScript.damage);
+            Debug.Log("Hit " + enemy.name);            
+            enemy.GetComponent<EnemyStats>().TakeDamage((attackDamage / 2) + PlayerHealthScript.damage);           
         }
-             
+
     }
 
     // Method for drain attack
@@ -156,9 +160,14 @@ public class Combat : MonoBehaviour
         {
             Debug.Log("Hit " + enemy.name);
             enemy.GetComponent<EnemyStats>().TakeDamage((attackDamage / 1) + PlayerHealthScript.damage);
+            
         }
 
     }
+
+  
+
+
 
     // shows in editor our attack range for easy adjustments
     void OnDrawGizmosSelected()
