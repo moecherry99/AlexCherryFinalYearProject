@@ -68,7 +68,7 @@ public class PlayerHealthScript : MonoBehaviour
             
             //Instantiate(player, respawn.transform.position, respawn.transform.rotation);
 
-            currentHealth = 250;
+            currentHealth = maxHealth;
             healthBar.SetHealth(currentHealth);
             Die();
         }

@@ -17,6 +17,7 @@ public class MenuManager : MonoBehaviour
     // referencing player health 
     public PlayerHealthScript playerHealth;
 
+    // reference these game objects in editor with text objects
     public GameObject textBox1;
     public GameObject textBox2;
     public GameObject textBox3;
@@ -25,6 +26,7 @@ public class MenuManager : MonoBehaviour
     public GameObject textBox6;
     public GameObject textBox7;
 
+    // variables to access text boxes
     public static float health = Mathf.Round(health * 100f) / 100f;
     public static int def;
     public static int dmg;
@@ -41,6 +43,8 @@ public class MenuManager : MonoBehaviour
     
     void Update()
     {
+
+        // variables equal to items in other scripts
         potion = PlayerHealthScript.potionCount;
         health = PlayerHealthScript.currentHealth;
         def = PlayerHealthScript.defense;
@@ -57,7 +61,7 @@ public class MenuManager : MonoBehaviour
         textBox4.GetComponent<UnityEngine.UI.Text>().text = "Potions : " + potion.ToString() + " (E)";
         textBox5.GetComponent<UnityEngine.UI.Text>().text = "Health : " + health.ToString("0.00") + " / " + maxHp.ToString("0");
         textBox6.GetComponent<UnityEngine.UI.Text>().text = "Exp : " + exp.ToString("0") + " / " + expToLevel.ToString("0");
-        textBox7.GetComponent<UnityEngine.UI.Text>().text = "Level : " + level.ToString() + " (" + exp.ToString() + "  / " + expToLevel.ToString("0") + " ) ";
+        textBox7.GetComponent<UnityEngine.UI.Text>().text = "Level : " + level.ToString() + " (" + exp.ToString() + "  / " + expToLevel.ToString("0") + ")";
 
         // if press C, open character stats menu
         if (Input.GetKeyDown(KeyCode.C))

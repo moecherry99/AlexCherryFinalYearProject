@@ -70,7 +70,7 @@ public class Combat : MonoBehaviour
     // get player stats
     public void Attack (PlayerHealthScript targetStats)
     {
-        targetStats.TakeDamage(20);
+        targetStats.TakeDamage(20 + PlayerHealthScript.damage);
     }
 
     // get enemy stats
@@ -137,7 +137,7 @@ public class Combat : MonoBehaviour
         foreach(Collider enemy in hitEnemies)
         {
             Debug.Log("Hit " + enemy.name);
-            enemy.GetComponent<EnemyStats>().TakeDamage(attackDamage / 2);
+            enemy.GetComponent<EnemyStats>().TakeDamage((attackDamage / 2) + PlayerHealthScript.damage);
         }
              
     }
@@ -155,7 +155,7 @@ public class Combat : MonoBehaviour
         foreach (Collider enemy in hitEnemies)
         {
             Debug.Log("Hit " + enemy.name);
-            enemy.GetComponent<EnemyStats>().TakeDamage(attackDamage / 1);
+            enemy.GetComponent<EnemyStats>().TakeDamage((attackDamage / 1) + PlayerHealthScript.damage);
         }
 
     }
