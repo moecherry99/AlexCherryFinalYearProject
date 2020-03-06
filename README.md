@@ -1,9 +1,9 @@
 # Alex Cherry Final Year Project
+
+## Entropy - A 3rd person Open World RPG developed in Unity.
+
 ## Authors : 
 Alex Cherry
-
-## Entropy
-The idea of this game is to create a 3rd person Open World RPG in Unity 3D. The game is split into Singleplayer and Multiplayer. The player will load into the Singleplayer scene at first. While in the mission located in the game they can activate an extra player to help them.
 
 ## Requirements : 
 Unity 2018.4.9f1, Visual Studio 2019.
