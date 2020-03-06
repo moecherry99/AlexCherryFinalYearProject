@@ -2,34 +2,37 @@
 My 4th Year Project for Software Development in GMIT.
 
 ## Entropy
-The idea of this game is to create a 3rd person Open World RPG in Unity 3D. The game is split into Singleplayer and Multiplayer. The player will load into the Singleplayer scene at first. They can pause the game and choose a mission from here which is done in Multiplayer.
+The idea of this game is to create a 3rd person Open World RPG in Unity 3D. The game is split into Singleplayer and Multiplayer. The player will load into the Singleplayer scene at first. While in the mission located in the game they can activate an extra player to help them.
 
-### Map Inspiration 
+### Map Inspiration for Mission
 All credits go to https://elderscrolls.bethesda.net/en/oblivion for map design and https://elderscrolls.fandom.com/wiki/Brush_of_Truepaint for image source
 ![alt test](readmescreenshots/PaintedWorld.jpg)
 
 The purpose of creating a map without massive graphical quality is that it does not require a lot of artistic skills, as this can take a lot of effort to design. This map inspiration is driven by the fact it still looks very aesthetically appealing even though it is not of high graphic quality.
 
 ### Singleplayer
-The singleplayer will be pretty straight forward. Just npcs that give quests, kill monsters, kill count goes up, collect reward, level up (max level 5 for easy testing purposes) with stat page.
+The single player aspect of the game is divided into an RPG style map and a mission that the player has to take on to save an NPC that is located there. 
 
 ### Multiplayer 
-Will create a server with Unity using Photon 2 (One laptop will host). Testing purposes will be done on same computer with two Unity clients at first, and secondly will be done with a second laptop. The Multiplayer testing can be done with two characters on the same client, with each operating with different Keys (WASD for player 1 and IJKL for player 2).
+A server is created with Unity using Photon 2 (One laptop will host). The player character gets duplicated and a seperate client opens for testing purposes. In reality this will be done using another computer.
 
 ### AI Partner System
 A simple AI is developed to follow the player around and help kill the enemies the player is fighting.
 
-### Class System
-Two different classes will be designed, one with ranged attacks and one with melee attacks. You can choose between them (Warrior and Archer) at the beginning scene of the game. Your player will be either red or green depending on which one you choose.
+### Combat System
+When enemies are in close proximity, the player will take periodic damage. There is also health regeneration so that the player can take on more enemies easily.
+
+### Weapon System
+Two weapons are designed (sword and crossbow) that can be swapped whenever the player wants to.
 
 ### Skill System
-Each of the two classes have their own attack styles and can use different skills which are better against certain AI.
+Each weapon has a skill that can be activated which will deal extra damage and have an additional effect on enemies.
 
 ### Level and Stat System
 A short level system with stats (Attack, Defense, Health) is designed (levels 1 to 5 are designed for Beta). Stats go up when the player levels by defeating enemies.
 
-### Mini Map and Compass System
-A mini map to track the player, their allies and the enemies is designed for pinpointing. A compass on the top of the screen is also designed and serves the same purpose except it has accurate measurements for precise communication between players. The mini map is done by using a seperate camera that hovers over the player and uses an image and a texture to track the image in real time.
+### Mini Map System
+A mini map to track the player, their allies and the enemies is designed for pinpointing. The mini map is done by using a seperate camera that hovers over the player and uses an image and a texture to track the image in real time.
 
 
 

@@ -38,6 +38,8 @@ public class Combat : MonoBehaviour
 
     private GameObject MainCamera;
 
+    public PlayerExperience experience;
+
     void Awake()
     {
         // find our main camera for our sword swing animation

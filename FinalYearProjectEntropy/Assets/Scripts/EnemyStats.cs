@@ -7,6 +7,7 @@ public class EnemyStats : MonoBehaviour
 
     public PlayerHealthScript playerhealth;
     public HealthBarScr healthBar;
+    public PlayerExperience exp;
 
     public GameObject enemy;
 
@@ -29,6 +30,8 @@ public class EnemyStats : MonoBehaviour
     // this will be changed by items in the game in future
     public int defense;
     public int damage;
+
+    public static bool isDestroyed = false;
 
     // current health is max health (don't want to spawn with lower than max health)
     void Start()
@@ -55,7 +58,12 @@ public class EnemyStats : MonoBehaviour
         {
             // die if 0 health
             Die();
+            
         }
+
+
+        isDestroyed = false;
+
 
     }
 
@@ -70,10 +78,13 @@ public class EnemyStats : MonoBehaviour
     }
 
     // enemy die
-    void Die()
+    public void Die()
     {
         // adds potion to player inventory on kill (loot)
         PlayerHealthScript.potionCount++;
+
+        // exp added per kill
+        PlayerExperience.exp += 30; 
 
         // tester
         Debug.Log("Enemy Died");
@@ -99,6 +110,8 @@ public class EnemyStats : MonoBehaviour
             Destroy(objectFinal.gameObject);
         }
 
+
+        isDestroyed = true;
     }
     
 }

@@ -1418,6 +1418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 31734085}
   maxHealth: 100
   currentHealth: 100
@@ -4474,6 +4475,83 @@ Transform:
   m_Father: {fileID: 1065287478}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &127974274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 127974275}
+  - component: {fileID: 127974277}
+  - component: {fileID: 127974276}
+  m_Layer: 5
+  m_Name: LevelExpText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &127974275
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127974274}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 491878893}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 6.564998, y: 13.11}
+  m_SizeDelta: {x: 104.87, y: 13.23}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &127974276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127974274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.009433985, g: 0.009433985, b: 0.009433985, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &127974277
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127974274}
+  m_CullTransparentMesh: 0
 --- !u!1 &134188928
 GameObject:
   m_ObjectHideFlags: 0
@@ -6087,6 +6165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 175464151}
   maxHealth: 150
   currentHealth: 150
@@ -7897,7 +7976,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 23200989}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: -10
   m_MaxValue: 250
   m_WholeNumbers: 1
   m_Value: 250
@@ -7917,6 +7996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 210361220}
+  max: {fileID: 0}
 --- !u!1 &213755017
 GameObject:
   m_ObjectHideFlags: 0
@@ -11057,6 +11137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 289186678}
   maxHealth: 170
   currentHealth: 170
@@ -11205,6 +11286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 303574923}
   maxHealth: 80
   currentHealth: 80
@@ -15876,6 +15958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 0}
   maxHealth: 50
   currentHealth: 0
@@ -16822,6 +16905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 445187131}
   maxHealth: 100
   currentHealth: 100
@@ -17407,6 +17491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 466700757}
   maxHealth: 100
   currentHealth: 100
@@ -18612,6 +18697,7 @@ RectTransform:
   m_LocalScale: {x: 3, y: 4, z: 1}
   m_Children:
   - {fileID: 858505490}
+  - {fileID: 127974275}
   - {fileID: 779207507}
   - {fileID: 1331765879}
   - {fileID: 604790254}
@@ -19543,6 +19629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 507266298}
   maxHealth: 100
   currentHealth: 100
@@ -21232,7 +21319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 474340, guid: 016e7bf62a334b6408f97e97b5e49ec7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.05
+      value: 8.35
       objectReference: {fileID: 0}
     - target: {fileID: 474340, guid: 016e7bf62a334b6408f97e97b5e49ec7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21682,6 +21769,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 421262, guid: 016e7bf62a334b6408f97e97b5e49ec7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.37
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 016e7bf62a334b6408f97e97b5e49ec7, type: 3}
 --- !u!4 &545348025 stripped
@@ -21724,6 +21815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 545348026}
   maxHealth: 80
   currentHealth: 80
@@ -24577,11 +24669,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 491878893}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.1400037, y: -30.4}
+  m_AnchoredPosition: {x: 4.14, y: -35.8}
   m_SizeDelta: {x: 100.03, y: 12.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &604790255
@@ -25745,6 +25837,9 @@ RectTransform:
   - {fileID: 1140811224}
   - {fileID: 442834218}
   - {fileID: 443808408}
+  - {fileID: 808098434}
+  - {fileID: 860627523}
+  - {fileID: 1384814039}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25785,6 +25880,9 @@ MonoBehaviour:
   textBox2: {fileID: 1331765878}
   textBox3: {fileID: 604790253}
   textBox4: {fileID: 767759396}
+  textBox5: {fileID: 860627522}
+  textBox6: {fileID: 1384814038}
+  textBox7: {fileID: 127974274}
 --- !u!1 &632227073
 GameObject:
   m_ObjectHideFlags: 0
@@ -27377,6 +27475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 0}
   maxHealth: 50
   currentHealth: 0
@@ -28575,6 +28674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 691365621}
   maxHealth: 100
   currentHealth: 100
@@ -30525,6 +30625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 0}
   maxHealth: 50
   currentHealth: 0
@@ -31718,8 +31819,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -833.2, y: -313}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -804.7, y: -313}
+  m_SizeDelta: {x: 216.98, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &767759398
 MonoBehaviour:
@@ -31752,7 +31853,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Potions : '
+  m_Text: 
 --- !u!222 &767759399
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32249,11 +32350,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 491878893}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.14, y: 8.5}
+  m_AnchoredPosition: {x: 4.14, y: -2.8100014}
   m_SizeDelta: {x: 100.03, y: 12.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &779207508
@@ -33452,6 +33553,83 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 807892262}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &808098433
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 808098434}
+  - component: {fileID: 808098436}
+  - component: {fileID: 808098435}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &808098434
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808098433}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 631671041}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -832.4, y: -274.8}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &808098435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808098433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Skill : '
+--- !u!222 &808098436
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808098433}
+  m_CullTransparentMesh: 0
 --- !u!1 &809899421
 GameObject:
   m_ObjectHideFlags: 0
@@ -33610,6 +33788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 810041459}
   maxHealth: 100
   currentHealth: 100
@@ -33947,6 +34126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 0}
   maxHealth: 50
   currentHealth: 0
@@ -35677,6 +35857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 0}
   maxHealth: 50
   currentHealth: 0
@@ -36377,6 +36558,83 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859206382}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &860627522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 860627523}
+  - component: {fileID: 860627525}
+  - component: {fileID: 860627524}
+  m_Layer: 5
+  m_Name: HealthText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &860627523
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860627522}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 631671041}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -791.8, y: -388}
+  m_SizeDelta: {x: 241.2, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &860627524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860627522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &860627525
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860627522}
+  m_CullTransparentMesh: 0
 --- !u!1 &862654840
 GameObject:
   m_ObjectHideFlags: 0
@@ -37543,6 +37801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 884766482}
   maxHealth: 100
   currentHealth: 100
@@ -38004,6 +38263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 0}
   maxHealth: 50
   currentHealth: 0
@@ -38154,6 +38414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 0}
   maxHealth: 50
   currentHealth: 0
@@ -45641,6 +45902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 0}
   maxHealth: 50
   currentHealth: 0
@@ -46010,6 +46272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 0}
   maxHealth: 50
   currentHealth: 0
@@ -46620,6 +46883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 1084024473}
   maxHealth: 100
   currentHealth: 100
@@ -47475,6 +47739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 1106980978}
   maxHealth: 100
   currentHealth: 100
@@ -50750,6 +51015,7 @@ GameObject:
   - component: {fileID: 1207900617}
   - component: {fileID: 1207900618}
   - component: {fileID: 1207900619}
+  - component: {fileID: 1207900620}
   m_Layer: 0
   m_Name: FPS
   m_TagString: Player
@@ -50829,6 +51095,7 @@ MonoBehaviour:
   respawn: {fileID: 1850212413}
   weapon: {fileID: 1522820360}
   cam: {fileID: 176883953}
+  cdTimer: {fileID: 808098433}
   regeneration: 1
   attackRatePower: 4
   healthBar: {fileID: 210361221}
@@ -50854,6 +51121,7 @@ MonoBehaviour:
   distanceDamage: 0
   attackRatePower: 4
   swordSwing: {fileID: 1522820360}
+  experience: {fileID: 0}
 --- !u!95 &1207900619
 Animator:
   serializedVersion: 3
@@ -50873,6 +51141,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1207900620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207900613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72382a98541d8fe46b907a030b20b28a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  die: {fileID: 0}
 --- !u!1 &1208232150
 GameObject:
   m_ObjectHideFlags: 0
@@ -52567,6 +52848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 0}
   maxHealth: 50
   currentHealth: 0
@@ -52689,6 +52971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 1245160824}
   maxHealth: 130
   currentHealth: 130
@@ -53469,6 +53752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 1250500424}
   maxHealth: 80
   currentHealth: 80
@@ -56488,6 +56772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 0}
   maxHealth: 50
   currentHealth: 0
@@ -57299,11 +57584,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 491878893}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.1400013, y: -10.9}
+  m_AnchoredPosition: {x: 4.1400013, y: -17.6}
   m_SizeDelta: {x: 100.03, y: 12.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1331765880
@@ -57573,6 +57858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 1333941582}
   maxHealth: 170
   currentHealth: 170
@@ -58527,6 +58813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 0}
   maxHealth: 50
   currentHealth: 0
@@ -58632,6 +58919,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 1362335925}
   maxHealth: 220
   currentHealth: 220
@@ -59510,6 +59798,83 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384230969}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1384814038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1384814039}
+  - component: {fileID: 1384814041}
+  - component: {fileID: 1384814040}
+  m_Layer: 5
+  m_Name: ExpText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1384814039
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384814038}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 631671041}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -832.8, y: -404.5}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1384814040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384814038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1384814041
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384814038}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1386314745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59793,6 +60158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 0}
   maxHealth: 50
   currentHealth: 0
@@ -63003,6 +63369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 0}
   maxHealth: 50
   currentHealth: 0
@@ -63108,6 +63475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 1457502493}
   maxHealth: 130
   currentHealth: 130
@@ -65538,6 +65906,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 0}
   maxHealth: 50
   currentHealth: 0
@@ -67235,6 +67604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 1559860114}
   maxHealth: 50
   currentHealth: 50
@@ -69003,6 +69373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 0}
   maxHealth: 50
   currentHealth: 0
@@ -72303,6 +72674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 0}
   maxHealth: 50
   currentHealth: 0
@@ -72544,6 +72916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 0}
   maxHealth: 50
   currentHealth: 0
@@ -73631,6 +74004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 1726630099}
   maxHealth: 120
   currentHealth: 120
@@ -76267,6 +76641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 1801048285}
   maxHealth: 120
   currentHealth: 120
@@ -77426,6 +77801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 0}
   maxHealth: 50
   currentHealth: 0
@@ -78182,6 +78558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 1828050376}
   maxHealth: 130
   currentHealth: 130
@@ -80392,6 +80769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 1879158260}
   maxHealth: 80
   currentHealth: 80
@@ -81847,6 +82225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 1909286448}
   maxHealth: 100
   currentHealth: 100
@@ -83718,6 +84097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 0}
   maxHealth: 50
   currentHealth: 0
@@ -84316,6 +84696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 0}
   maxHealth: 50
   currentHealth: 0
@@ -86114,6 +86495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 0}
   healthBar: {fileID: 0}
+  exp: {fileID: 0}
   enemy: {fileID: 0}
   maxHealth: 50
   currentHealth: 0

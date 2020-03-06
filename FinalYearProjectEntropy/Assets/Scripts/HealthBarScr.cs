@@ -10,7 +10,26 @@ public class HealthBarScr : MonoBehaviour
 {
     // slider reference
     public Slider slider;
-    
+    public PlayerHealthScript max;
+    public static float maxHp;
+
+    void Start()
+    {
+        // not sure if this is necessary, but it works
+        maxHp = PlayerHealthScript.maxHealth;
+    }
+
+    public void Update()
+    {
+        // added to accommodate for health changing after leveling up
+        if(maxHp >= slider.maxValue)
+        {
+            slider.maxValue = maxHp;
+            SetHealth(PlayerHealthScript.currentHealth);
+            SetMaxHealth(PlayerHealthScript.maxHealth);
+        }
+    }
+
     // set max health on slider to full value
     public void SetMaxHealth(float health)
     {

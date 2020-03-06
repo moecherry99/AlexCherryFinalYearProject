@@ -15,8 +15,10 @@ public class PlayerHealthScript : MonoBehaviour
     public GameObject respawn;
     public GameObject weapon;
     public GameObject cam;
+    public GameObject cdTimer;
 
     // variables
+    public static float timerSkill;
     public static int potionCount = 1;
     public static float maxHealth = 250f;
     public static float currentHealth;
@@ -33,6 +35,7 @@ public class PlayerHealthScript : MonoBehaviour
     // current health is max health (don't want to spawn with lower than max health)
     public void Start()
     {
+        
         cam = GameObject.FindWithTag("MainCamera");
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -42,8 +45,9 @@ public class PlayerHealthScript : MonoBehaviour
     // if press Tab, take damage (developer tool)
     public void Update()
     {
+        
         // health regeneration
-        if(currentHealth <= maxHealth)
+        if (currentHealth <= maxHealth)
         {
             currentHealth += regeneration * Time.deltaTime;
             healthBar.SetHealth(currentHealth);
@@ -76,7 +80,7 @@ public class PlayerHealthScript : MonoBehaviour
         }
 
         // developer tool to heal and test level, will take out after development
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             currentHealth += 20;
             healthBar.SetHealth(currentHealth);
@@ -89,12 +93,14 @@ public class PlayerHealthScript : MonoBehaviour
 
         if (Time.time >= nextAttackTime)
         {
+            cdTimer.GetComponent<UnityEngine.UI.Text>().text = "Skill : Ready (R)";
             // for drain attack
             if (Input.GetKeyDown(KeyCode.R))
             {
                 currentHealth += 25;
                 healthBar.SetHealth(currentHealth);
                 nextAttackTime = Time.time + 12f / attackRatePower;
+                cdTimer.GetComponent<UnityEngine.UI.Text>().text = "Skill : Not Ready";
                 if (currentHealth >= maxHealth)
                 {
                     
@@ -106,7 +112,7 @@ public class PlayerHealthScript : MonoBehaviour
         }
 
         // potion count       
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             // if more than 1 potion, call UsePotion
             if (potionCount > 0)
@@ -114,7 +120,7 @@ public class PlayerHealthScript : MonoBehaviour
                 UsePotion();                  
             }
 
-            // if 0 potions, call DontUsePotion and do nothing
+            // if 0 potions or max health, call DontUsePotion and do nothing
             if (potionCount == 0)
             {
                 DontUsePotion();

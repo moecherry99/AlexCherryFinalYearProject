@@ -9,7 +9,7 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     public PlayerHealthScript health;
-    public GameObject player;
+    public GameObject player;    
       
     void Awake()
     {

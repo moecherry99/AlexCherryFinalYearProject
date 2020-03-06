@@ -21,12 +21,18 @@ public class MenuManager : MonoBehaviour
     public GameObject textBox2;
     public GameObject textBox3;
     public GameObject textBox4;
+    public GameObject textBox5;
+    public GameObject textBox6;
+    public GameObject textBox7;
 
     public static float health = Mathf.Round(health * 100f) / 100f;
     public static int def;
     public static int dmg;
     public static int potion;
     public static float maxHp;
+    public static float exp;
+    public static float expToLevel;
+    public static int level;
 
     void Start()
     {
@@ -40,12 +46,18 @@ public class MenuManager : MonoBehaviour
         def = PlayerHealthScript.defense;
         dmg = PlayerHealthScript.damage;
         maxHp = PlayerHealthScript.maxHealth;
+        exp = PlayerExperience.exp;
+        expToLevel = PlayerExperience.expToLevel;
+        level = PlayerExperience.level;
 
         // get text components and change them   
         textBox1.GetComponent<UnityEngine.UI.Text>().text = "Health : " + health.ToString("0.00") + " / " + maxHp.ToString("0.00");
         textBox2.GetComponent<UnityEngine.UI.Text>().text = "Damage : " + dmg.ToString();
         textBox3.GetComponent<UnityEngine.UI.Text>().text = "Defense : " + def.ToString();
-        textBox4.GetComponent<UnityEngine.UI.Text>().text = "Potions : " + potion.ToString();
+        textBox4.GetComponent<UnityEngine.UI.Text>().text = "Potions : " + potion.ToString() + " (E)";
+        textBox5.GetComponent<UnityEngine.UI.Text>().text = "Health : " + health.ToString("0.00") + " / " + maxHp.ToString("0");
+        textBox6.GetComponent<UnityEngine.UI.Text>().text = "Exp : " + exp.ToString("0") + " / " + expToLevel.ToString("0");
+        textBox7.GetComponent<UnityEngine.UI.Text>().text = "Level : " + level.ToString() + " (" + exp.ToString() + "  / " + expToLevel.ToString("0") + " ) ";
 
         // if press C, open character stats menu
         if (Input.GetKeyDown(KeyCode.C))
