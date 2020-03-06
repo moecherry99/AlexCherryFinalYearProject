@@ -1,6 +1,5 @@
-# Alex Cherry Final Year Project
 
-## Entropy - A 3rd person Open World RPG developed in Unity.
+# Entropy - A 3rd person Open World RPG developed in Unity.
 
 ## Authors : 
 Alex Cherry
