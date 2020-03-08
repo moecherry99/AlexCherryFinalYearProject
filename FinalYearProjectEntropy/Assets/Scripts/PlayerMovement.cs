@@ -54,4 +54,12 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("NPC"))
+        {
+            Debug.Log("Player interacted");
+        }
+    }
+
 }

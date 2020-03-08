@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\MiniMapScript.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\NetworkController.cs" />
+    <Compile Include="Assets\Scripts\NPCScript.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerExperience.cs" />
     <Compile Include="Assets\Scripts\PlayerHealthScript.cs" />

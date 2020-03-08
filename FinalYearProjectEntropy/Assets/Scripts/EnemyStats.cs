@@ -122,6 +122,11 @@ public class EnemyStats : MonoBehaviour
             Debug.Log("Chest Opened!");
         }
 
+        if(gameObject.tag == "SmallMonster")
+        {
+            PlayerExperience.exp -= 10;
+        }
+
 
         isDestroyed = true;
     }

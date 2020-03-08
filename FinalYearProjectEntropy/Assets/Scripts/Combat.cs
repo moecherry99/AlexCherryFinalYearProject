@@ -144,6 +144,7 @@ public class Combat : MonoBehaviour
             enemy.GetComponent<EnemyStats>().TakeDamage((attackDamage / 2) + PlayerHealthScript.damage);           
         }
 
+        
     }
 
     // Method for drain attack

@@ -13,9 +13,11 @@ public class PlayerHealthScript : MonoBehaviour
     
     public GameObject player;
     public GameObject respawn;
+    public GameObject respawn2;
     public GameObject weapon;
     public GameObject cam;
     public GameObject cdTimer;
+    public GameObject dialogBox;
 
     // variables
     public static float timerSkill;
@@ -31,6 +33,7 @@ public class PlayerHealthScript : MonoBehaviour
     public static int damage = 5;
 
     public HealthBarScr healthBar;
+    NPCScript npc;
 
     // current health is max health (don't want to spawn with lower than max health)
     public void Start()
@@ -46,6 +49,12 @@ public class PlayerHealthScript : MonoBehaviour
     public void Update()
     {
         
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            Move();
+            // can add in stuff here (rewards maybe)                   
+        }
+
         // health regeneration
         if (currentHealth <= maxHealth)
         {
@@ -56,6 +65,7 @@ public class PlayerHealthScript : MonoBehaviour
                 currentHealth = maxHealth;
                 
             }
+
         }
 
         if (currentHealth <= 0)
@@ -64,6 +74,7 @@ public class PlayerHealthScript : MonoBehaviour
             // Reference for respawn : https://docs.unity3d.com/ScriptReference/GameObject.FindWithTag.html
             player = GameObject.FindWithTag("Player");
             respawn = GameObject.FindWithTag("Respawn");
+            respawn2 = GameObject.FindWithTag("Respawn2");
             weapon = GameObject.FindWithTag("Weapon");
             
             //Instantiate(player, respawn.transform.position, respawn.transform.rotation);
@@ -143,7 +154,7 @@ public class PlayerHealthScript : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
-    void Die()
+    public void Die()
     {
         // https://answers.unity.com/questions/634219/how-do-i-respawn-the-player-after-it-dies.html
         // Not a perfect way to respawn as it resets all progress, but will be worked upon in future
@@ -158,6 +169,12 @@ public class PlayerHealthScript : MonoBehaviour
         {
             potionCount = potionCount - 1;
         }
+    }
+
+    public void Move()
+    {
+        player.transform.position = respawn2.transform.position;
+        player.transform.rotation = respawn2.transform.rotation;
     }
 
     // call this function if potion count is over 1

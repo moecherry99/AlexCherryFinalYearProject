@@ -191,6 +191,19 @@ FINISHING TOUCHES BY 10TH March
 (4pm)
 -Added proper info menu, also updated combat logic to properly adjust to stats. Changed mob stats and all leveling features working correctly. Death max health fixed.
 
+8th March
+-Added NPC interaction. Text box appears and button option is active to teleport player. Need to add rewards and extra npc to teleport player over.
+
+-To do : 
+-Multiplayer
+-Partner system (AI)
+-Sound effects/music
+-Extra map and NPC/enemies
+-Weapon or class system
+-Area notification
+-Main screen
+-Enemy Animations
+
 
 
 
