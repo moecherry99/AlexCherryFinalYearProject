@@ -206,6 +206,7 @@ FINISHING TOUCHES BY 10TH March
 
 9th March
 -Added Open world area scenery. Added extra npc and teleport function if complete quest/talk to initial npc. Reward system working. Need to fix player respawn point.
+-Baked scenery and got AI working on main area.
 
 -To do : 
 -Multiplayer
@@ -217,6 +218,7 @@ FINISHING TOUCHES BY 10TH March
 -Main screen
 -Enemy Animations
 -Game balance
+
 
 
 
