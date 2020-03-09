@@ -45,7 +45,7 @@ public class NPCScript : MonoBehaviour
 
         if (col.gameObject.tag == "Player")
         { 
-            Debug.Log("Player interacted");
+            Debug.Log("Player interacted NPC");
             dialogBox.SetActive(true);
             active = true;
            

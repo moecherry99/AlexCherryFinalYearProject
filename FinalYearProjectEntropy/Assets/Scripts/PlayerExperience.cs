@@ -31,8 +31,12 @@ public class PlayerExperience : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-              
-        // player levels
+
+        // player levels (max 10) 
+        // can be adapted to use a proper formula but for beta purposes uses static amount
+        // example : if LevelUp, expToLevel * 1.2, level += 1, exp = 0. 
+        // if statement : exp >= expToLevel or for statement (for levels 1 - 10)
+       
         if (exp >= 100 && level == 1)
         {
             LevelUp();
@@ -68,11 +72,52 @@ public class PlayerExperience : MonoBehaviour
 
         }
 
-        if(level == 5)
+        if(exp >= 300 && level == 5)
+        {
+            LevelUp();
+            expToLevel = 400f;
+            level += 1;
+            exp = 0;
+        }
+
+        if (exp >= 400 && level == 6)
+        {
+            LevelUp();
+            expToLevel = 520f;
+            level += 1;
+            exp = 0;
+        }
+
+        if (exp >= 520 && level == 7)
+        {
+            LevelUp();
+            expToLevel = 660f;
+            level += 1;
+            exp = 0;
+        }
+
+        if (exp >= 660 && level == 8)
+        {
+            LevelUp();
+            expToLevel = 830f;
+            level += 1;
+            exp = 0;
+        }
+
+        if (exp >= 830 && level == 9)
+        {
+            LevelUp();
+            expToLevel = 0f;
+            level += 1;
+            exp = 0;
+        }
+
+        if(level == 10)
         {
             expToLevel = 0f;
             exp = 0;
         }
+        
 
     }
 

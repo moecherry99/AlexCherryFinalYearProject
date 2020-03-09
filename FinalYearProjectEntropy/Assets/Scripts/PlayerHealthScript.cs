@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 // References : https://www.youtube.com/watch?v=BLfNP4Sc_iA, https://www.youtube.com/watch?v=e8GmfoaOB4Y&t=132s
 // https://answers.unity.com/questions/177137/regenerating-health-script.html - health regeneration
 // https://forum.unity.com/threads/using-my-potion-c.412307/ - potion functionality for inventory system
+// https://answers.unity.com/questions/286068/do-something-only-once.html - do something only once (for quest rewards)
 
 public class PlayerHealthScript : MonoBehaviour
 {
@@ -18,6 +19,11 @@ public class PlayerHealthScript : MonoBehaviour
     public GameObject cam;
     public GameObject cdTimer;
     public GameObject dialogBox;
+    public GameObject objectiveText;
+    public GameObject rescueText;
+    public GameObject respawnNpc;
+    public GameObject npc2;
+    public GameObject respawnOpen;
 
     // variables
     public static float timerSkill;
@@ -27,6 +33,9 @@ public class PlayerHealthScript : MonoBehaviour
     public float regeneration = 1f;
     public float attackRatePower = 1f;
     float nextAttackTime = 0f;
+    bool activateOnce;
+    bool activateOnce2;
+    bool activateOnce3;
 
     // this will be changed by items in the game in future
     public static int defense = 2;
@@ -38,7 +47,9 @@ public class PlayerHealthScript : MonoBehaviour
     // current health is max health (don't want to spawn with lower than max health)
     public void Start()
     {
-        
+        activateOnce = true;
+        activateOnce2 = true;
+        activateOnce3 = true;
         cam = GameObject.FindWithTag("MainCamera");
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -48,12 +59,51 @@ public class PlayerHealthScript : MonoBehaviour
     // if press Tab, take damage (developer tool)
     public void Update()
     {
-        
-        if (Input.GetKeyDown(KeyCode.Y))
+
+        // These 3 functions are not optimal. They can be used at any time, leading to cheats
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        if (activateOnce == true)
         {
-            Move();
-            // can add in stuff here (rewards maybe)                   
+            // teleport to mission
+            if (Input.GetKeyDown(KeyCode.KeypadEnter))
+            {
+                objectiveText.GetComponent<UnityEngine.UI.Text>().text = "Current Objective : Rescue the hostage!";
+                Move2();
+                activateOnce = false;
+            }
         }
+
+        if (activateOnce2 == true)
+        {
+            // return to town
+            if (Input.GetKeyDown(KeyCode.Y))
+            {
+                dialogBox.GetComponent<UnityEngine.UI.Text>().text = "Thank you for rescuing him! Here is your reward (Press Shift to accept reward)";
+                objectiveText.GetComponent<UnityEngine.UI.Text>().text = "Current Objective : Return To Toland for rewards.";
+                rescueText.GetComponent<UnityEngine.UI.Text>().text = "Thank you for saving me!";
+                Move();
+                activateOnce2 = false;
+                npc2.transform.position = respawnNpc.transform.position;
+                npc2.transform.rotation = respawnNpc.transform.rotation;             
+
+            }
+        }
+
+        if (activateOnce3 == true)
+        {
+            // accept rewards
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                objectiveText.GetComponent<UnityEngine.UI.Text>().text = "";
+                PlayerExperience.exp += 100;
+                potionCount += 5;
+                dialogBox.GetComponent<UnityEngine.UI.Text>().text = "Thank you for rescuing him!";
+                activateOnce3 = false;
+            }
+        }
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         // health regeneration
         if (currentHealth <= maxHealth)
@@ -84,10 +134,16 @@ public class PlayerHealthScript : MonoBehaviour
             Die();
         }
 
+        // developer tool to add experience, will take out after development
+        if(Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            PlayerExperience.exp += 1000;
+        }
+
         // developer tool, will take out after development
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            TakeDamage(80);
+            TakeDamage(200);
         }
 
         // developer tool to heal and test level, will take out after development
@@ -175,6 +231,12 @@ public class PlayerHealthScript : MonoBehaviour
     {
         player.transform.position = respawn2.transform.position;
         player.transform.rotation = respawn2.transform.rotation;
+    }
+
+    public void Move2()
+    {
+        player.transform.position = respawn.transform.position;
+        player.transform.rotation = respawn.transform.rotation;
     }
 
     // call this function if potion count is over 1
