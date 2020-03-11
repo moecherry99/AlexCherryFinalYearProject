@@ -15,6 +15,7 @@ public class PlayerHealthScript : MonoBehaviour
     public GameObject player;
     public GameObject respawn;
     public GameObject respawn2;
+    public GameObject respawn3;
     public GameObject weapon;
     public GameObject cam;
     public GameObject cdTimer;
@@ -36,6 +37,7 @@ public class PlayerHealthScript : MonoBehaviour
     bool activateOnce;
     bool activateOnce2;
     bool activateOnce3;
+    bool activateOnce4;
 
     // this will be changed by items in the game in future
     public static int defense = 2;
@@ -50,6 +52,7 @@ public class PlayerHealthScript : MonoBehaviour
         activateOnce = true;
         activateOnce2 = true;
         activateOnce3 = true;
+        activateOnce4 = false;
         cam = GameObject.FindWithTag("MainCamera");
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -60,7 +63,7 @@ public class PlayerHealthScript : MonoBehaviour
     public void Update()
     {
 
-        // These 3 functions are not optimal. They can be used at any time, leading to cheats
+        // These 4 functions are not optimal. They can be used at any time, leading to cheats
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         if (activateOnce == true)
@@ -68,9 +71,10 @@ public class PlayerHealthScript : MonoBehaviour
             // teleport to mission
             if (Input.GetKeyDown(KeyCode.KeypadEnter))
             {
-                objectiveText.GetComponent<UnityEngine.UI.Text>().text = "Current Objective : Rescue the hostage!";
+                objectiveText.GetComponent<UnityEngine.UI.Text>().text = "Current Objective : Rescue the hostage! (Enter to return after death)";
                 Move2();
                 activateOnce = false;
+
             }
         }
 
@@ -103,6 +107,8 @@ public class PlayerHealthScript : MonoBehaviour
             }
         }
 
+        
+
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         // health regeneration
@@ -124,6 +130,7 @@ public class PlayerHealthScript : MonoBehaviour
             // Reference for respawn : https://docs.unity3d.com/ScriptReference/GameObject.FindWithTag.html
             player = GameObject.FindWithTag("Player");
             respawn = GameObject.FindWithTag("Respawn");
+            respawn3 = GameObject.FindWithTag("Respawn3");
             respawn2 = GameObject.FindWithTag("Respawn2");
             weapon = GameObject.FindWithTag("Weapon");
             
@@ -217,14 +224,18 @@ public class PlayerHealthScript : MonoBehaviour
         //SceneManager.LoadScene(0);
 
         // new proper functionality for respawning
-        player.transform.position = respawn.transform.position;
-        player.transform.rotation = respawn.transform.rotation;
+        player.transform.position = respawn3.transform.position;
+        player.transform.rotation = respawn3.transform.rotation;
 
         // set potion count = potion count - 1 so player loses potions on death
         if (potionCount > 0)
         {
             potionCount = potionCount - 1;
         }
+
+        activateOnce = true;
+
+        
     }
 
     public void Move()

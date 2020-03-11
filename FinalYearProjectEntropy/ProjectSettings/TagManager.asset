@@ -16,6 +16,8 @@ TagManager:
   - Chest
   - NPC
   - Respawn2
+  - Respawn3
+  - EnemyOpen
   layers:
   - Default
   - TransparentFX

@@ -127,6 +127,11 @@ public class EnemyStats : MonoBehaviour
             PlayerExperience.exp -= 10;
         }
 
+        if (gameObject.tag == "EnemyOpen")
+        {
+            PlayerExperience.exp -= 20;
+        }
+
 
         isDestroyed = true;
     }
