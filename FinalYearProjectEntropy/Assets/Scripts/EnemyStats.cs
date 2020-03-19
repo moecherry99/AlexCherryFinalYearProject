@@ -132,8 +132,8 @@ public class EnemyStats : MonoBehaviour
             PlayerExperience.exp -= 20;
         }
 
-
         isDestroyed = true;
+
     }
     
 }

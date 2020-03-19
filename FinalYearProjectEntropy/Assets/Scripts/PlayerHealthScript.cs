@@ -37,7 +37,6 @@ public class PlayerHealthScript : MonoBehaviour
     bool activateOnce;
     bool activateOnce2;
     bool activateOnce3;
-    bool activateOnce4;
 
     // this will be changed by items in the game in future
     public static int defense = 2;
@@ -52,7 +51,6 @@ public class PlayerHealthScript : MonoBehaviour
         activateOnce = true;
         activateOnce2 = true;
         activateOnce3 = true;
-        activateOnce4 = false;
         cam = GameObject.FindWithTag("MainCamera");
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -63,7 +61,7 @@ public class PlayerHealthScript : MonoBehaviour
     public void Update()
     {
 
-        // These 4 functions are not optimal. They can be used at any time, leading to cheats
+        // These 4 functions are not optimal. They can be used at any time, leading to cheats, but boolean variables only allow for one usage per playthrough
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         if (activateOnce == true)
