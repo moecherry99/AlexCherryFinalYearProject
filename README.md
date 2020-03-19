@@ -19,20 +19,14 @@ The single player aspect of the game is divided into an RPG style map and a miss
 ### Multiplayer 
 A server is created with Unity using Photon 2 (One laptop will host). The player character gets duplicated and a seperate client opens for testing purposes. In reality this will be done using another computer.
 
-### AI Partner System
-A simple AI is developed to follow the player around and help kill the enemies the player is fighting.
-
 ### Combat System
 When enemies are in close proximity, the player will take periodic damage. There is also health regeneration so that the player can take on more enemies easily.
 
-### Weapon System
-Two weapons are designed (sword and crossbow) that can be swapped whenever the player wants to.
-
 ### Skill System
-Each weapon has a skill that can be activated which will deal extra damage and have an additional effect on enemies.
+The weapon has a skill that will deal additional damage to enemies with an additional effect on it to make it unique if different weapon types are implemented.
 
 ### Level and Stat System
-A short level system with stats (Attack, Defense, Health) is designed (levels 1 to 5 are designed for Beta). Stats go up when the player levels by defeating enemies.
+A short level system with stats (Attack, Defense, Health) is designed (levels 1 to 10 are designed for Beta). Stats go up when the player levels by defeating enemies.
 
 ### Mini Map System
 A mini map to track the player, their allies and the enemies is designed for pinpointing. The mini map is done by using a seperate camera that hovers over the player and uses an image and a texture to track the image in real time.
