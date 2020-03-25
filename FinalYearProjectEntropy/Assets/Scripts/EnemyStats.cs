@@ -95,6 +95,11 @@ public class EnemyStats : MonoBehaviour
 
         // destroy object when it has died
         Destroy(enemy.gameObject);
+
+        if(gameObject.tag == "EnemyOpen")
+        {
+            SoundManagerScript.PlaySound("Skeleton_die");
+        }
         
         // finds obstacle 1 and destroys if boss 1 is killed
         if(gameObject.tag == "BossSkel1")
@@ -130,6 +135,11 @@ public class EnemyStats : MonoBehaviour
         if (gameObject.tag == "EnemyOpen")
         {
             PlayerExperience.exp -= 20;
+        }
+
+        if (gameObject.tag == "OpenZombie")
+        {
+            PlayerExperience.exp -= 15;
         }
 
         isDestroyed = true;

@@ -18,6 +18,7 @@ TagManager:
   - Respawn2
   - Respawn3
   - EnemyOpen
+  - OpenZombie
   layers:
   - Default
   - TransparentFX

@@ -22,6 +22,8 @@ public class EnemyController : MonoBehaviour
     public float damageDelay = 0.8f;
     private float damageTimer = 0f;
 
+    float soundDelay;
+
     Transform target;
     NavMeshAgent agent;
 
@@ -35,12 +37,16 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        soundDelay += Time.deltaTime;
+
         if(target == null)
         {
             GameObject player = GameObject.FindWithTag("Player");
             if (player != null)
             {
                 target = PlayerManager.instance.player.transform;
+                
             }
         }
         float distance = Vector3.Distance(target.position, transform.position);
@@ -49,7 +55,16 @@ public class EnemyController : MonoBehaviour
         {
             agent.SetDestination(target.position);
 
-            if(distance <= agent.stoppingDistance)
+            // delay for skeleton run sound
+            if(soundDelay > 1)
+            {
+                soundDelay = 0;
+                SoundManagerScript.PlaySound("Skeleton_Run");
+            }
+            
+            
+
+            if (distance <= agent.stoppingDistance)
             {
                 // attack/face target
                 FaceTarget();
@@ -91,5 +106,10 @@ public class EnemyController : MonoBehaviour
         // allows us to visually see when the enemy has targetted the player
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
+    }
+
+    void SkelSmallRun()
+    {
+        SoundManagerScript.PlaySound("Skeleton_Run");
     }
 }

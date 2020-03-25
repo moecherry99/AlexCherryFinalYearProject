@@ -242,6 +242,7 @@ To do :
 -Working on sound manager right now, will acquire sound effects and music soon.
 -Tried to fix respawning but couldn't get it working, not optimal as it is (raised issue on GitHub)
 
+-Sound working with proper sound effects, skeleton run and die working. Need to add more sound effects.
 
 
 
