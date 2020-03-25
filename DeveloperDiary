@@ -242,7 +242,26 @@ To do :
 -Working on sound manager right now, will acquire sound effects and music soon.
 -Tried to fix respawning but couldn't get it working, not optimal as it is (raised issue on GitHub)
 
+(8pm)
 -Sound working with proper sound effects, skeleton run and die working. Need to add more sound effects.
+
+(11pm)
+-Finished all mob sounds, need to add chest, potion, jump and attack sounds + music.
+
+To do : 
+(March 26th - 31st)
+-Record video for Dominic (26th March)
+-Finish sounds (26th March)
+-Multiplayer (31st March)
+-Respawn enemies (29th March)
+-Enemy animations (30th March)
+-Area notification (optional) (31st March)
+
+(After April)
+-Finish game design document
+-LaTeX document/dissertation
+-Update Wiki with diary and other stuff
+-Clean up repository, files and issues page on GitHub
 
 
 

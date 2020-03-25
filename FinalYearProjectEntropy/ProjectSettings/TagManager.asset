@@ -19,6 +19,9 @@ TagManager:
   - Respawn3
   - EnemyOpen
   - OpenZombie
+  - ZombieMed
+  - ZombieSmall
+  - LargeSkel
   layers:
   - Default
   - TransparentFX

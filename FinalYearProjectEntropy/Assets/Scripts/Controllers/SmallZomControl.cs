@@ -22,6 +22,8 @@ public class SmallZomControl : MonoBehaviour
     public float damageDelay = 0.8f;
     private float damageTimer = 0f;
 
+    float soundDelay;
+
     Transform target;
     NavMeshAgent agent;
 
@@ -35,6 +37,8 @@ public class SmallZomControl : MonoBehaviour
     
     void Update()
     {
+        soundDelay += Time.deltaTime;
+
         if (target == null)
         {
             GameObject player = GameObject.FindWithTag("Player");
@@ -48,6 +52,12 @@ public class SmallZomControl : MonoBehaviour
         if (distance <= lookRadius)
         {
             agent.SetDestination(target.position);
+
+            if (soundDelay > 1)
+            {
+                soundDelay = 0;
+                SoundManagerScript.PlaySound("Zombie_Run");
+            }
 
             if (distance <= agent.stoppingDistance)
             {

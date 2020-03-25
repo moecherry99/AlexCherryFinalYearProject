@@ -100,27 +100,42 @@ public class EnemyStats : MonoBehaviour
         {
             SoundManagerScript.PlaySound("Skeleton_die");
         }
-        
-        // finds obstacle 1 and destroys if boss 1 is killed
-        if(gameObject.tag == "BossSkel1")
+
+        if (gameObject.tag == "LargeSkel")
         {
-            Destroy(object1.gameObject);                   
+            SoundManagerScript.PlaySound("Skeleton_die");
+        }
+
+        // finds obstacle 1 and destroys if boss 1 is killed
+        if (gameObject.tag == "BossSkel1")
+        {
+            Destroy(object1.gameObject);
+            SoundManagerScript.PlaySound("Skeleton_die");
         }
 
         // finds obstacle 2 and destroys if boss 2 is killed
         if (gameObject.tag == "BossSkel2")
         {
             Destroy(object2.gameObject);
+            SoundManagerScript.PlaySound("Skeleton_die");
         }
 
         // open gate if last boss dies
         if (gameObject.tag == "FinalMonster")
         {
             Destroy(objectFinal.gameObject);
+            SoundManagerScript.PlaySound("Skeleton_die");
+        }
+
+        if (gameObject.tag == "MediumMonster")
+        {
+            PlayerExperience.exp += 10;
+            SoundManagerScript.PlaySound("Skeleton_die");
+
         }
 
         // chest interaction(s)
-        if(gameObject.tag == "Chest")
+        if (gameObject.tag == "Chest")
         {
             PlayerHealthScript.potionCount += 4;
             PlayerExperience.exp -= 30;
@@ -130,6 +145,7 @@ public class EnemyStats : MonoBehaviour
         if(gameObject.tag == "SmallMonster")
         {
             PlayerExperience.exp -= 10;
+            SoundManagerScript.PlaySound("Skeleton_die");
         }
 
         if (gameObject.tag == "EnemyOpen")
@@ -140,6 +156,19 @@ public class EnemyStats : MonoBehaviour
         if (gameObject.tag == "OpenZombie")
         {
             PlayerExperience.exp -= 15;
+            SoundManagerScript.PlaySound("Zombie_Die1");
+        }
+
+        if (gameObject.tag == "ZombieMed")
+        {
+            PlayerExperience.exp += 15;
+            SoundManagerScript.PlaySound("Zombie_Die1");
+        }
+
+        if (gameObject.tag == "ZombieSmall")
+        {
+            PlayerExperience.exp += 10;
+            SoundManagerScript.PlaySound("Zombie_Die1");
         }
 
         isDestroyed = true;

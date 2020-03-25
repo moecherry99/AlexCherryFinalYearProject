@@ -23,6 +23,8 @@ public class EnemyControllerMed : MonoBehaviour
     public float damageDelay = 0.8f;
     private float damageTimer = 0f;
 
+    float soundDelay;
+
     Transform target;
     NavMeshAgent agent;
 
@@ -36,11 +38,19 @@ public class EnemyControllerMed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        soundDelay += Time.deltaTime;
+
         float distance = Vector3.Distance(target.position, transform.position);
 
         if (distance <= lookRadius)
         {
             agent.SetDestination(target.position);
+
+            if (soundDelay > 1)
+            {
+                soundDelay = 0;
+                SoundManagerScript.PlaySound("Skeleton_Run");
+            }
 
             if (distance <= agent.stoppingDistance)
             {

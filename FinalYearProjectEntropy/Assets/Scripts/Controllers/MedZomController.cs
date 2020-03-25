@@ -22,6 +22,8 @@ public class MedZomController : MonoBehaviour
     public float damageDelay = 1f;
     private float damageTimer = 0f;
 
+    float soundDelay;
+
     Transform target;
     NavMeshAgent agent;
 
@@ -35,6 +37,8 @@ public class MedZomController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        soundDelay += Time.deltaTime;
+
         if (target == null)
         {
             GameObject player = GameObject.FindWithTag("Player");
@@ -48,6 +52,12 @@ public class MedZomController : MonoBehaviour
         if (distance <= lookRadius)
         {
             agent.SetDestination(target.position);
+
+            if (soundDelay > 1)
+            {
+                soundDelay = 0;
+                SoundManagerScript.PlaySound("Zombie_Run");
+            }
 
             if (distance <= agent.stoppingDistance)
             {

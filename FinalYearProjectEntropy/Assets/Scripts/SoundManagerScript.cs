@@ -9,6 +9,8 @@ public class SoundManagerScript : MonoBehaviour
 
     public static AudioClip skelSmallDie;
     public static AudioClip skelRun;
+    public static AudioClip zombieDie;
+    public static AudioClip zombieRun;
     static AudioSource audioSrc;
 
     // Start is called before the first frame update
@@ -17,6 +19,8 @@ public class SoundManagerScript : MonoBehaviour
         // get audio clip sources
         skelSmallDie = Resources.Load<AudioClip>("Skeleton_die");
         skelRun = Resources.Load<AudioClip>("Skeleton_Run");
+        zombieDie = Resources.Load<AudioClip>("Zombie_Die1");
+        zombieRun = Resources.Load<AudioClip>("Zombie_Run");
 
         // get audio source component
         audioSrc = GetComponent<AudioSource>();       
@@ -38,6 +42,12 @@ public class SoundManagerScript : MonoBehaviour
                 break;
             case "Skeleton_Run":
                 audioSrc.PlayOneShot(skelRun);
+                break;
+            case "Zombie_Die1":
+                audioSrc.PlayOneShot(zombieDie);
+                break;
+            case "Zombie_Run":
+                audioSrc.PlayOneShot(zombieRun);
                 break;
         }
     }
