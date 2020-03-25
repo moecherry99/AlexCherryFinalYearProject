@@ -238,6 +238,11 @@ To do :
 -Game balance
 -(Optional) Area notification
 
+25th March
+-Working on sound manager right now, will acquire sound effects and music soon.
+-Tried to fix respawning but couldn't get it working, not optimal as it is (raised issue on GitHub)
+
+
 
 
 

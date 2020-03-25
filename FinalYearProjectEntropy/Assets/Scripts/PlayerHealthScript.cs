@@ -41,6 +41,7 @@ public class PlayerHealthScript : MonoBehaviour
     // this will be changed by items in the game in future
     public static int defense = 2;
     public static int damage = 5;
+    int deathCount = 0;
 
     public HealthBarScr healthBar;
     NPCScript npc;
@@ -69,10 +70,9 @@ public class PlayerHealthScript : MonoBehaviour
             // teleport to mission
             if (Input.GetKeyDown(KeyCode.KeypadEnter))
             {
-                objectiveText.GetComponent<UnityEngine.UI.Text>().text = "Current Objective : Rescue the hostage! (Enter to return after death)";
+                objectiveText.GetComponent<UnityEngine.UI.Text>().text = "Current Objective : Rescue the hostage! (Enter to return after death)";               
                 Move2();
                 activateOnce = false;
-
             }
         }
 
@@ -232,7 +232,7 @@ public class PlayerHealthScript : MonoBehaviour
         }
 
         activateOnce = true;
-
+        deathCount += 1;
         
     }
 
@@ -246,6 +246,12 @@ public class PlayerHealthScript : MonoBehaviour
     {
         player.transform.position = respawn.transform.position;
         player.transform.rotation = respawn.transform.rotation;
+    }
+
+    public void Move3()
+    {
+        player.transform.position = respawn3.transform.position;
+        player.transform.rotation = respawn3.transform.rotation;
     }
 
     // call this function if potion count is over 1
