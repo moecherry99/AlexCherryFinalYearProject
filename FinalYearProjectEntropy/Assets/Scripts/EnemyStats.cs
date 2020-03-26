@@ -31,7 +31,7 @@ public class EnemyStats : MonoBehaviour
 
     // this will be changed by items in the game in future
     public int defense;
-    public int damage;
+    public static int damage = 1;
 
     public static bool isDestroyed = false;
 
@@ -140,6 +140,7 @@ public class EnemyStats : MonoBehaviour
             PlayerHealthScript.potionCount += 4;
             PlayerExperience.exp -= 30;
             Debug.Log("Chest Opened!");
+            SoundManagerScript.PlaySound("Chest");
         }
 
         if(gameObject.tag == "SmallMonster")

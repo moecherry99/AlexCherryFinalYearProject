@@ -9,7 +9,8 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     public PlayerHealthScript health;
-    public GameObject player;    
+    public GameObject player;
+    EnemyStats damage;
       
     void Awake()
     {
@@ -82,7 +83,7 @@ public class EnemyController : MonoBehaviour
                     damageTimer -= damageDelay;
                     PlayerHealthScript player = target.GetComponent<PlayerHealthScript>();
                     if (player != null)
-                        player.TakeDamage(20);
+                        player.TakeDamage(20 * EnemyStats.damage);
                     Debug.Log("Player took");
                 }
             

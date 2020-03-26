@@ -104,6 +104,7 @@ public class Combat : MonoBehaviour
                 // Delays attack accordingly (trial and error)
                 nextAttackTime = Time.time + 0.4f / attackRate;
 
+                SoundManagerScript.PlaySound("Swing");
             }
            
         }
@@ -124,6 +125,8 @@ public class Combat : MonoBehaviour
 
                 // Delays attack accordingly (trial and error)
                 nextAttackTimePower = Time.time + 12f / attackRatePower;
+
+                SoundManagerScript.PlaySound("BigSwing");
 
             }
         }

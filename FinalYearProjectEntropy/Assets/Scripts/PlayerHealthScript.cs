@@ -189,7 +189,8 @@ public class PlayerHealthScript : MonoBehaviour
             // if more than 1 potion, call UsePotion
             if (potionCount > 0)
             {
-                UsePotion();                  
+                UsePotion();
+                SoundManagerScript.PlaySound("Potion");
             }
 
             // if 0 potions or max health, call DontUsePotion and do nothing

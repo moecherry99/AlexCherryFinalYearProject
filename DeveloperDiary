@@ -246,12 +246,15 @@ To do :
 -Sound working with proper sound effects, skeleton run and die working. Need to add more sound effects.
 
 (11pm)
--Finished all mob sounds, need to add chest, potion, jump and attack sounds + music.
+-Finished all mob sounds, need to add chest, potion, attack sounds and music.
+
+(12am)
+-Finished all sound effects, need to add music last.
 
 To do : 
 (March 26th - 31st)
 -Record video for Dominic (26th March)
--Finish sounds (26th March)
+-Music (26th March)
 -Multiplayer (31st March)
 -Respawn enemies (29th March)
 -Enemy animations (30th March)
@@ -262,6 +265,8 @@ To do :
 -LaTeX document/dissertation
 -Update Wiki with diary and other stuff
 -Clean up repository, files and issues page on GitHub
+
+
 
 
 
