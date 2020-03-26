@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿
+using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,35 +26,45 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded;
     Vector3 velocity;
 
-    
+
     void Update()
     {
+        //if (PhotonView.isMine)
+        //{
+            isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+            // ground check to reset velocity
+            if (isGrounded && velocity.y < 0)
+            {
+                velocity.y = -2f;
+            }
+            // creates movement based on direction you are facing with mouse look script
+            float x = Input.GetAxis("Horizontal");
+            float z = Input.GetAxis("Vertical");
 
-        // ground check to reset velocity
-        if (isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
-        }
-        // creates movement based on direction you are facing with mouse look script
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+            Vector3 move = transform.right * x + transform.forward * z;
 
-        Vector3 move = transform.right * x + transform.forward * z;
+            // multiply move speed by jump speed to get proper gravity options
+            controller.Move(move * speed * Time.deltaTime);
+            if (Input.GetButtonDown("Jump") && isGrounded)
+            {
+                velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            }
+            velocity.y += gravity * Time.deltaTime;
 
-        // multiply move speed by jump speed to get proper gravity options
-        controller.Move(move * speed * Time.deltaTime);
-        if(Input.GetButtonDown("Jump") && isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-        }
-        velocity.y += gravity * Time.deltaTime;
+            // velocity
+            controller.Move(velocity * Time.deltaTime);
 
-        // velocity
-        controller.Move(velocity * Time.deltaTime);
-
+        //}
     }
+
+    /*void Awake()
+    {
+        if (!PhotonView.isMine)
+        {
+            enabled = false;
+        }
+    }*/
 
     void OnCollisionEnter(Collision collision)
     {

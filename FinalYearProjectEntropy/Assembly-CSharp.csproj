@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\QuickStartLobbyController.cs" />
     <Compile Include="Assets\Scripts\QuickStartRoomController.cs" />
     <Compile Include="Assets\Scripts\SoundManagerScript.cs" />
+    <Compile Include="Assets\Scripts\TestScript.cs" />
     <Compile Include="Assets\Warrior Pack Bundle 3 FREE\Code\IKHands.cs" />
     <Compile Include="Assets\Warrior Pack Bundle 3 FREE\Code\SmoothFollow.cs" />
     <Compile Include="Assets\Warrior Pack Bundle 3 FREE\Code\WarriorAnimationDemoFREE.cs" />
