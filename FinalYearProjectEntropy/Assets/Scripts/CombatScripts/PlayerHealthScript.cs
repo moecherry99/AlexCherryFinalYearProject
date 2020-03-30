@@ -49,12 +49,14 @@ public class PlayerHealthScript : MonoBehaviour
     // current health is max health (don't want to spawn with lower than max health)
     public void Start()
     {
-        activateOnce = true;
+        activateOnce = false;
         activateOnce2 = true;
         activateOnce3 = true;
         cam = GameObject.FindWithTag("MainCamera");
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        // SoundManagerScript.PlaySound("Cave1");
+        
 
     }
 

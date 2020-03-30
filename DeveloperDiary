@@ -269,6 +269,15 @@ To do :
 26th March
 -Implemented multiplayer into the menu sequence, tried to clone player and successful but can't control individually. Fixed up some bugs.
 
+30th March
+-Added sound track and fixed respawn issue. Cleaned up code and updated Game Balance.
+
+To do : 
+-Multiplayer Fix
+-Respawn Enemies
+-Enemy Animations + Health Bar
+-Improve Menu Quality
+
 
 
 

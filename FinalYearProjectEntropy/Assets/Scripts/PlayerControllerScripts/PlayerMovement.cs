@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //if (PhotonView.isMine)
-        //{
+       // {
             isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
             // ground check to reset velocity
@@ -55,10 +55,10 @@ public class PlayerMovement : MonoBehaviour
             // velocity
             controller.Move(velocity * Time.deltaTime);
 
-        //}
+      //  }
     }
 
-    /*void Awake()
+  /*  void Awake()
     {
         if (!PhotonView.isMine)
         {

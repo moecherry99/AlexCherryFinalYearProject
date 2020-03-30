@@ -15,6 +15,7 @@ public class NPCScript2 : MonoBehaviour
     public GameObject objectiveText;
     public GameObject player;
     public GameObject movePlayer;
+    public GameObject respawn1;
 
     public bool active = false;
 
@@ -22,6 +23,7 @@ public class NPCScript2 : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         movePlayer = GameObject.FindWithTag("Respawn");
+        respawn1 = GameObject.FindWithTag("Respawn");
     }
 
 
@@ -36,6 +38,12 @@ public class NPCScript2 : MonoBehaviour
                 Move();
                 active = false;
 
+            }
+
+            if(Input.GetKeyDown(KeyCode.KeypadEnter))
+            {
+                Move2();
+                active = false;
             }
 
         }
@@ -69,5 +77,12 @@ public class NPCScript2 : MonoBehaviour
 
         player.transform.rotation = movePlayer.transform.rotation;
         player.transform.position = movePlayer.transform.position;
+    }
+
+    public void Move2()
+    {
+
+        player.transform.rotation = respawn1.transform.rotation;
+        player.transform.position = respawn1.transform.position;
     }
 }

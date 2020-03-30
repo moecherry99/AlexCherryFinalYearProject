@@ -15,6 +15,9 @@ public class SoundManagerScript : MonoBehaviour
     public static AudioClip bigSwing;
     public static AudioClip chest;
     public static AudioClip potion;
+    public static AudioClip cave1;
+    public static AudioClip cave2;
+    public static AudioClip fight1;
     static AudioSource audioSrc;
 
     // Start is called before the first frame update
@@ -29,6 +32,9 @@ public class SoundManagerScript : MonoBehaviour
         bigSwing = Resources.Load<AudioClip>("BigSwing");
         chest = Resources.Load<AudioClip>("Chest");
         potion = Resources.Load<AudioClip>("Potion");
+        cave1 = Resources.Load<AudioClip>("Cave1");
+        cave2 = Resources.Load<AudioClip>("Cave2");
+        fight1 = Resources.Load<AudioClip>("Fight1");
 
         // get audio source component
         audioSrc = GetComponent<AudioSource>();       
@@ -68,6 +74,15 @@ public class SoundManagerScript : MonoBehaviour
                 break;
             case "BigSwing":
                 audioSrc.PlayOneShot(bigSwing);
+                break;
+            case "Cave1":
+                audioSrc.PlayOneShot(cave1);
+                break;
+            case "Cave2":
+                audioSrc.PlayOneShot(cave2);
+                break;
+            case "Fight1":
+                audioSrc.PlayOneShot(fight1);
                 break;
         }
     }
