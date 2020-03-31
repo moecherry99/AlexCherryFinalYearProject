@@ -14,6 +14,7 @@ public class NPCScript : MonoBehaviour
     public GameObject dialogBox;
     public GameObject player;
     public GameObject movePlayer;
+    public GameObject areaText;
 
     public bool active = false;
 
@@ -31,6 +32,7 @@ public class NPCScript : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Y))
             {
+                areaText.GetComponent<UnityEngine.UI.Text>().text = "Area : Open World";
                 Debug.Log("Moving");
                 Move();
                 active = false;

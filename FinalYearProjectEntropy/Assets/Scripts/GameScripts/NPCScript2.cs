@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 // Script for the NPC interaction
 // Reference : https://gamedev.stackexchange.com/questions/146544/help-with-ontriggerentered-canvas-ui
@@ -12,10 +13,11 @@ public class NPCScript2 : MonoBehaviour
 
     PlayerHealthScript teleport;
     public GameObject dialogBox;
-    public GameObject objectiveText;
     public GameObject player;
     public GameObject movePlayer;
     public GameObject respawn1;
+    public GameObject text;
+    public GameObject areaText;
 
     public bool active = false;
 
@@ -34,6 +36,7 @@ public class NPCScript2 : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Y))
             {
+                
                 Debug.Log("Moving");
                 Move();
                 active = false;
@@ -42,6 +45,8 @@ public class NPCScript2 : MonoBehaviour
 
             if(Input.GetKeyDown(KeyCode.KeypadEnter))
             {
+                text.GetComponent<UnityEngine.UI.Text>().text = "Current Objective : Rescue the hostage! (Enter to return after death)";
+                areaText.GetComponent<UnityEngine.UI.Text>().text = "Area : Skeleton's Labyrinth";
                 Move2();
                 active = false;
             }
