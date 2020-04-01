@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Controllers\EnemyControllerLarge.cs" />
     <Compile Include="Assets\Scripts\Controllers\EnemyControllerMed.cs" />
     <Compile Include="Assets\Scripts\Controllers\MedZomController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\SkelMoveScript.cs" />
     <Compile Include="Assets\Scripts\Controllers\SmallZomControl.cs" />
     <Compile Include="Assets\Scripts\GameScripts\NPCScript.cs" />
     <Compile Include="Assets\Scripts\GameScripts\NPCScript2.cs" />
