@@ -30,8 +30,6 @@ public class EnemyStats : MonoBehaviour
     public int maxHealth = 50;
     public int currentHealth;
 
-
-
     // this will be changed by items in the game in future
     public int defense;
     public static int damage = 1;
@@ -112,7 +110,7 @@ public class EnemyStats : MonoBehaviour
 
         if (gameObject.tag == "LargeSkel")
         {
-            PlayerHealthScript.potionCount += 3;
+            PlayerHealthScript.potionCount += 1;
             PlayerExperience.exp += 40;
             SoundManagerScript.PlaySound("Skeleton_die");
         }
@@ -120,7 +118,7 @@ public class EnemyStats : MonoBehaviour
         // finds obstacle 1 and destroys if boss 1 is killed
         if (gameObject.tag == "BossSkel1")
         {
-            PlayerHealthScript.potionCount += 3;
+            PlayerHealthScript.potionCount += 1;
             PlayerExperience.exp += 40;
             Destroy(object1.gameObject);
             SoundManagerScript.PlaySound("Skeleton_die");
@@ -129,7 +127,7 @@ public class EnemyStats : MonoBehaviour
         // finds obstacle 2 and destroys if boss 2 is killed
         if (gameObject.tag == "BossSkel2")
         {
-            PlayerHealthScript.potionCount += 3;
+            PlayerHealthScript.potionCount += 1;
             PlayerExperience.exp += 40;
             Destroy(object2.gameObject);
             SoundManagerScript.PlaySound("Skeleton_die");
@@ -155,7 +153,7 @@ public class EnemyStats : MonoBehaviour
         // chest interaction(s)
         if (gameObject.tag == "Chest")
         {
-            PlayerHealthScript.potionCount += 4;
+            PlayerHealthScript.potionCount += 3;
             PlayerExperience.exp -= 30;
             Debug.Log("Chest Opened!");
             SoundManagerScript.PlaySound("Chest");
@@ -180,7 +178,7 @@ public class EnemyStats : MonoBehaviour
 
         if (gameObject.tag == "ZombieMed")
         {
-            PlayerHealthScript.potionCount += 2;
+            PlayerHealthScript.potionCount += 1;
             PlayerExperience.exp += 15;
             SoundManagerScript.PlaySound("Zombie_Die1");
         }

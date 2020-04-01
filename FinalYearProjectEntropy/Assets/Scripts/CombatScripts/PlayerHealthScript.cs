@@ -157,7 +157,7 @@ public class PlayerHealthScript : MonoBehaviour
         // developer tool to heal and test level, will take out after development
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            currentHealth += 20;
+            currentHealth += 400;
             healthBar.SetHealth(currentHealth);
             if (currentHealth >= maxHealth)
             {
