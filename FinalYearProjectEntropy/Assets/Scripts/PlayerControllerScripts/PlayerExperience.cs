@@ -126,8 +126,8 @@ public class PlayerExperience : MonoBehaviour
         // get variables to increase stats
         PlayerHealthScript.maxHealth += 30;
         PlayerHealthScript.currentHealth += 30;
-        PlayerHealthScript.damage += 2;
-        PlayerHealthScript.defense += 1;
+        PlayerHealthScript.damage += 8;
+        PlayerHealthScript.defense += 2;
 
         // set max health properly
         HealthBarScr.maxHp += PlayerHealthScript.maxHealth;

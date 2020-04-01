@@ -37,10 +37,11 @@ public class PlayerHealthScript : MonoBehaviour
     bool activateOnce;
     bool activateOnce2;
     bool activateOnce3;
+    public static bool deathConfirm = false;
 
     // this will be changed by items in the game in future
-    public static int defense = 2;
-    public static int damage = 5;
+    public static int defense = 10;
+    public static int damage = 25;
     int deathCount = 0;
 
     public HealthBarScr healthBar;
@@ -63,7 +64,7 @@ public class PlayerHealthScript : MonoBehaviour
     // if press Tab, take damage (developer tool)
     public void Update()
     {
-
+        PlayerHealthScript.deathConfirm = false;
         // These 4 functions are not optimal. They can be used at any time, leading to cheats, but boolean variables only allow for one usage per playthrough
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -214,8 +215,8 @@ public class PlayerHealthScript : MonoBehaviour
     // damage is taken from current health
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage / defense;      
-        healthBar.SetHealth(currentHealth);
+        currentHealth -= damage - defense;
+        healthBar.SetHealth(currentHealth);        
     }
 
     public void Die()
@@ -236,6 +237,8 @@ public class PlayerHealthScript : MonoBehaviour
 
         activateOnce = true;
         deathCount += 1;
+
+        deathConfirm = true;
         
     }
 
@@ -262,7 +265,7 @@ public class PlayerHealthScript : MonoBehaviour
     {
         if (potionCount >= 1)
         {           
-            currentHealth += 20;
+            currentHealth += 20 + (PlayerExperience.level * 2);
             healthBar.SetHealth(currentHealth);
             potionCount--;
         }

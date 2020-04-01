@@ -280,6 +280,15 @@ To do :
 
 31st March
 -Added simple NPC sprite, made area notification and teleport accurately change text boxes. Some Game Balance added.
+-Started to add health bar to enemies, not functioning yet. Enemies now regenerate health if player dies. Huge game balance added.
+
+To do : 
+-Multiplayer fix
+-Respawn enemies
+-Enemy anims + finish health bar
+-Tips and Tricks menu
+-Improve menu quality
+-NPC 2 sprite
 
 
 

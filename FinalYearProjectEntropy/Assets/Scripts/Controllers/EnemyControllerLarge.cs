@@ -70,7 +70,7 @@ public class EnemyControllerLarge : MonoBehaviour
                     damageTimer -= damageDelay;
                     PlayerHealthScript player = target.GetComponent<PlayerHealthScript>();
                     if (player != null)
-                        player.TakeDamage(45);
+                        player.TakeDamage(35);
                     Debug.Log("Player took");
                 }
 

@@ -62,9 +62,11 @@
   <ItemGroup>
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
     <Compile Include="Assets\Scripts\CombatScripts\Combat.cs" />
+    <Compile Include="Assets\Scripts\CombatScripts\EnemyHealthScript.cs" />
     <Compile Include="Assets\Scripts\CombatScripts\EnemyStats.cs" />
     <Compile Include="Assets\Scripts\CombatScripts\HealthBarScr.cs" />
     <Compile Include="Assets\Scripts\CombatScripts\PlayerHealthScript.cs" />
+    <Compile Include="Assets\Scripts\CombatScripts\Test.cs" />
     <Compile Include="Assets\Scripts\Controllers\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Controllers\EnemyControllerBoss.cs" />
     <Compile Include="Assets\Scripts\Controllers\EnemyControllerLarge.cs" />

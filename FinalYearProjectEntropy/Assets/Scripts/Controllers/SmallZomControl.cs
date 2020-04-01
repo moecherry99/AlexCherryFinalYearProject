@@ -77,7 +77,7 @@ public class SmallZomControl : MonoBehaviour
                     damageTimer -= damageDelay;
                     PlayerHealthScript player = target.GetComponent<PlayerHealthScript>();
                     if (player != null)
-                        player.TakeDamage(50);
+                        player.TakeDamage(40);
                     Debug.Log("Player took");
                 }
 

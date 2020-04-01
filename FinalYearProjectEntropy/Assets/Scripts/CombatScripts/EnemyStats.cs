@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyStats : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class EnemyStats : MonoBehaviour
     public int maxHealth = 50;
     public int currentHealth;
 
+
+
     // this will be changed by items in the game in future
     public int defense;
     public static int damage = 1;
@@ -38,6 +41,7 @@ public class EnemyStats : MonoBehaviour
     // current health is max health (don't want to spawn with lower than max health)
     void Start()
     {
+
 
         // find rock objects
         object1 = GameObject.FindWithTag("RockOb1");
@@ -65,9 +69,14 @@ public class EnemyStats : MonoBehaviour
             
         }
 
+        if(PlayerHealthScript.deathConfirm == true)
+        {
+            currentHealth = maxHealth;
+            
+        }
+
 
         isDestroyed = false;
-
 
     }
 
@@ -103,12 +112,16 @@ public class EnemyStats : MonoBehaviour
 
         if (gameObject.tag == "LargeSkel")
         {
+            PlayerHealthScript.potionCount += 3;
+            PlayerExperience.exp += 40;
             SoundManagerScript.PlaySound("Skeleton_die");
         }
 
         // finds obstacle 1 and destroys if boss 1 is killed
         if (gameObject.tag == "BossSkel1")
         {
+            PlayerHealthScript.potionCount += 3;
+            PlayerExperience.exp += 40;
             Destroy(object1.gameObject);
             SoundManagerScript.PlaySound("Skeleton_die");
         }
@@ -116,6 +129,8 @@ public class EnemyStats : MonoBehaviour
         // finds obstacle 2 and destroys if boss 2 is killed
         if (gameObject.tag == "BossSkel2")
         {
+            PlayerHealthScript.potionCount += 3;
+            PlayerExperience.exp += 40;
             Destroy(object2.gameObject);
             SoundManagerScript.PlaySound("Skeleton_die");
         }
@@ -123,13 +138,16 @@ public class EnemyStats : MonoBehaviour
         // open gate if last boss dies
         if (gameObject.tag == "FinalMonster")
         {
+            PlayerHealthScript.potionCount += 7;
+            PlayerExperience.exp += 80;
             Destroy(objectFinal.gameObject);
             SoundManagerScript.PlaySound("Skeleton_die");
         }
 
         if (gameObject.tag == "MediumMonster")
         {
-            PlayerExperience.exp += 10;
+            PlayerHealthScript.potionCount += 1;
+            PlayerExperience.exp += 15;
             SoundManagerScript.PlaySound("Skeleton_die");
 
         }
@@ -145,35 +163,37 @@ public class EnemyStats : MonoBehaviour
 
         if(gameObject.tag == "SmallMonster")
         {
-            PlayerExperience.exp -= 10;
+            PlayerExperience.exp -= 5;
             SoundManagerScript.PlaySound("Skeleton_die");
         }
 
         if (gameObject.tag == "EnemyOpen")
         {
-            PlayerExperience.exp -= 20;
+            PlayerExperience.exp -= 10;
         }
 
         if (gameObject.tag == "OpenZombie")
         {
-            PlayerExperience.exp -= 15;
+            PlayerExperience.exp -= 5;
             SoundManagerScript.PlaySound("Zombie_Die1");
         }
 
         if (gameObject.tag == "ZombieMed")
         {
+            PlayerHealthScript.potionCount += 2;
             PlayerExperience.exp += 15;
             SoundManagerScript.PlaySound("Zombie_Die1");
         }
 
         if (gameObject.tag == "ZombieSmall")
         {
-            PlayerExperience.exp += 10;
+            PlayerExperience.exp += 15;
             SoundManagerScript.PlaySound("Zombie_Die1");
         }
 
         isDestroyed = true;
 
     }
-    
+
+
 }
