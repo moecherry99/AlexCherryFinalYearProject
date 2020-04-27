@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 1408
+  controlID: 574
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 1409
+  controlID: 575
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 1410
+  controlID: 576
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -381,9 +381,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d4fbffff
-      m_LastClickedID: -1068
-      m_ExpandedIDs: d4fbffff
+      m_SelectedIDs: d6fbffff
+      m_LastClickedID: -1066
+      m_ExpandedIDs: 20080100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -525,20 +525,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 43
   m_LastFolders:
-  - Assets/Scripts
+  - Assets
   m_LastFoldersGridSize: 43
   m_LastProjectPath: C:\Users\moech\Desktop\FYP\AlexCherryFinalYearProject\FinalYearProjectEntropy
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 960e0000
-    m_LastClickedID: 3734
-    m_ExpandedIDs: 00000000300e0000cc0f0000b41000005e120000fa120000bc170000ee17000002180000ce18000026190000c81a0000241b00008a1c00004a1d0000981d0000541e0000be1e0000c6210000444200004642000000ca9a3b
+    scrollPos: {x: 0, y: 44}
+    m_SelectedIDs: 320e0000
+    m_LastClickedID: 3634
+    m_ExpandedIDs: 00000000320e0000ce0f0000b610000060120000fc120000be170000f017000004180000d018000028190000ca1a0000261b00008c1c00004c1d00009a1d0000561e0000c01e0000c8210000484200004a42000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -566,7 +566,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000300e0000960e0000cc0f0000b41000005e120000fa120000bc170000ee17000002180000ce18000026190000c81a0000241b00008a1c00004a1d0000981d0000541e0000be1e0000c6210000444200004642000000ca9a3b
+    m_ExpandedIDs: 00000000320e0000ce0f0000b610000060120000fc120000be170000f017000004180000d018000028190000ca1a0000261b00008c1c00004c1d00009a1d0000561e0000c01e0000c8210000484200004a42000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -593,7 +593,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
