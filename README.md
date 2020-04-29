@@ -14,8 +14,17 @@ Windows/Mac/Linux OS, Unity 2018.4.9f1, Visual Studio 2019+.
 
 ### Table of Contents
 
+* [Introduction](#introduction)
 * [Singleplayer](#singleplayer)
 * [Multiplayer](#multiplayer)
+* [Movement and Looking](#movement-and-looking)
+* [Combat System](#combat-system)
+* [Level and Stat System](#level-and-stat-system)
+* [Potion and Chest System](#potion-and-chest-system)
+* [Skill System](#skill-system)
+* [Mini-Map System](#mini-map-system)
+* [Quest System](#quest-system)
+* [References](#references)
 
 ### Introduction
 Explain entropys purpose and architecture, explain the directory here as well for informative use (like TOA proj).
@@ -65,7 +74,6 @@ The enemies around the map will attack the player when they are in close proximi
 
 If the player happens to die to an enemy or enemies, all of the remaining enemies will have their health restored to full health. This creates a certain difficulty to the bosses in the game, and prevents the player from just respawning and killing their enemy. It creates an emphasis on "grinding", which means to kill enemies repeatedly in this case, and gain more experience to level up. More details on leveling up is described in the [Level and Stat System](#level-and-stat-system) section.
 
-
 ### Level and Stat System
 A leveling system is designed in the game. The player has a certain experience value, and every time they defeat an enemy they will gain experience. Depending on the type of monster such as Skeletons, Zombies and their sizes, the player will gain less or more experience. There are 10 levels designed for the game, and the player has 3 stats to accompany this level : 
 1. **Health** : A base value of 250 health is in the game, and this will increment by 30 every time the player gains a level. This is useful for survivability.
@@ -76,8 +84,62 @@ A leveling system is designed in the game. The player has a certain experience v
 
 It is necessary for the player to level up to complete the game due to the way the defense variable works. As it is divided by the enemies damage, it creates great advantages for the player, but if the player is too low of a level they will die too quickly in certain sections.
 
+### Potion and Chest System
+Potions can be used by the player to increase their current health. In order for potions to be used, the player must have some in their inventory first. Potions are obtained by either killing monsters, leveling up, completing [Quests](#quest-system) or by hitting chests. Chests are scattered around the two areas and can be attacked to give the player 5 potions. Players can use potions by pressing the '**E**' key.
+
+``` 
+if (Input.GetKeyDown(KeyCode.E))
+{
+    // if more than 1 potion, call UsePotion
+    if (potionCount > 0)
+    {
+        UsePotion();
+        SoundManagerScript.PlaySound("Potion");
+    }
+
+    // if 0 potions or max health, call DontUsePotion and do nothing
+    if (potionCount == 0)
+    {
+        DontUsePotion();
+    }
+
+}
+```
+
+In this code snippet we can see that when the "**potionCount**" variable is above 0, a potion can be used. If it is 0, a function returning null is called and there will be no effect. The **UsePotion()** function is called, which is shown below.
+
+```
+// call this function if potion count is over 1
+    public void UsePotion()
+    {
+        if (potionCount >= 1)
+        {           
+            currentHealth += 20 + (PlayerExperience.level * 2);
+            healthBar.SetHealth(currentHealth);
+            potionCount--;
+        }
+
+        if (potionCount <= 0)
+        {
+            potionCount = 0;
+
+        }
+        
+        // set health
+        if (currentHealth >= maxHealth)
+        {
+            currentHealth = maxHealth;
+
+        }
+
+    }
+```
+
+The health of the player is restored by 20 plus the level of the player multiplied by 2. **For example** : The players level is 4, if they use a potion at this level they will heal 20 + (4 x 2) health, equaling 28 health. This is so that potions will not lose their effectiveness the higher the level of the player. This is an important game balance issue that was addressed as bug testers had no incentive to keep leveling due to this. Calling this function will deduct 1 potion from the potion count.
+
+
 ### Skill System
-The weapon in the game has a skill that can be activated with the keyboard shortcut 'R'. This has a cooldown of 3 seconds when used, and will drain the health of an enemy and deal more damage to it, giving the player 25 health every time it is used. This is done by simply adding the health to the players stat and updating the health bar slider variable. The cooldown works in the way that every time it is activated, the key can't be pressed again until the timer of 3 seconds bypasses. There is a text object in the games UI that symbolizes this as well, so it will notify the player when the "**Drain Skill**" is ready to be used. 
+The weapon in the game has a skill that can be activated with the keyboard shortcut '**R**'. This has a cooldown of 3 seconds when used, and will drain the health of an enemy and deal more damage to it, giving the player 25 health every time it is used. This is done by simply adding the health to the players stat and updating the health bar slider variable. The cooldown works in the way that every time it is activated, the key can't be pressed again until the timer of 3 seconds bypasses. There is a text object in the games UI that symbolizes this as well, so it will notify the player when the "**Drain Skill**" is ready to be used. 
 
 ```
 if (Input.GetKeyDown(KeyCode.R))
@@ -101,11 +163,7 @@ A basic mini map function is designed for the player. It is done by creating a s
 (definitely a picture of mini map here with light in it).
 
 ### Quest System
-
-### Something else, maybe 2-3 more sections 
-(this whole doc needs to be 10 pages ish)
-
-
+In the game there is a single quest that the player can activate. The objective of the game is to "Find NPC(Non-Playable-Character) Toland". Once the player has found the NPC, they can proceed with the quest. They are teleported into the mission area, and are given the task to eliminate all of the enemies and save the other NPC. Once the quest is finished, the player can return to Toland and receive experience and potions. This is to aid the player in future quests that may be implemented into the game. 
 
 ### References
 [1] [Map Inspiration](https://elderscrolls.bethesda.net/en/oblivion) - For inspiration on the designed map  
