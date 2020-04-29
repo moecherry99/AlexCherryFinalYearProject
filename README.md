@@ -106,7 +106,7 @@ if (Input.GetKeyDown(KeyCode.E))
 }
 ```
 
-In this code snippet we can see that when the "**potionCount**" variable is above 0, a potion can be used. If it is 0, a function returning null is called and there will be no effect. The **UsePotion()** function is called, which is shown below.
+In this code snippet we can see that when the "**potionCount**" variable is above 0, a potion can be used. If it is 0, a function returning null is called and there will be no effect. It will also play the sound effect for the potion noise. The **UsePotion()** function is called, which is shown below.
 
 ```
 // call this function if potion count is over 1
@@ -122,16 +122,13 @@ In this code snippet we can see that when the "**potionCount**" variable is abov
         if (potionCount <= 0)
         {
             potionCount = 0;
-
         }
         
         // set health
         if (currentHealth >= maxHealth)
         {
             currentHealth = maxHealth;
-
         }
-
     }
 ```
 
