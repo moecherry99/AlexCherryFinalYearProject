@@ -27,12 +27,31 @@ All credits go to [Bethesda](#references) for Map Design and Inspiration.
 The purpose of creating a map without massive graphical quality is that it does not require a lot of artistic skills, as this can take a lot of effort to design. This map inspiration is driven by the fact it still looks very aesthetically appealing even though it is not of high graphic quality.
 
 ### Singleplayer
-The single player aspect of the game is divided into an RPG style map and a mission that the player has to take on to save an NPC that is located there. 
+The single player aspect of the game is divided into an RPG style map and a mission that the player has to take on to save an NPC that is located in the mission.
 
 ### Multiplayer 
-A server is created with Unity using **[Photon 2](#references)** (One laptop will host). The players character gets duplicated and the second player can play with the main camera focused on their character. (This function is not working due to the deadline being during the COVID-19 pandemic of 2020. Access to another machine was prohibited and it was not able to be tested from a singular machine and proved difficult).
+A server is created with Unity using [Photon 2](#references) (One laptop will host). The players character gets duplicated and the second player can play with the main camera focused on their character. (This function is not working due to the deadline being during the COVID-19 pandemic of 2020. Access to another machine was prohibited and it was not able to be tested from a singular machine and proved difficult).
 
-### Movement
+### Movement and Looking
+
+#### Movement
+A basic movement system is implemented into the game for the player. The W, A, S and D keys are used to move the player according to the direction on the keyboard. Arrow keys can also be used, as implemented by Unitys basic input tools. The player can jump using the space key, and gravity is applied to the jumping mechanic for a realistic feel.
+
+#### Looking
+A "**Mouse Lock**" system is implemented into the game as well. Once the game is loaded up, the mouse will lock to the middle of the screen. This gives the camera free access to the players mouse control, therefore making the character look wherever the player moves the mouse. This is quite a smooth system and works very well.
+
+```
+void Start()
+{
+  // get camera component
+  cam = GetComponent<Camera>();
+
+  // Locks Cursor to middle of screen
+  Cursor.lockState = CursorLockMode.Locked;
+}
+```
+
+Whenever the mouse must be unlocked, for example in the pause menu when the player presses the escape key, the "**.Locked**" variable must be changed to "**.None**". Controlling the mouse this way gives the game a smooth experience.
 
 ### Combat System
 The enemies around the map will attack the player when they are in close proximity. They deal damage over time, and all have different values depending on the types of enemies. There are two main types : 
@@ -40,9 +59,9 @@ The enemies around the map will attack the player when they are in close proximi
 1. **Zombies**
 2. **Skeletons**
 
-Skeletons have 4 different types to them : **Small**, **Medium**, **Large** and **Boss**. These increase in size to differentiate them from eachother. They also have different health values and damage values for difficulty variance. 
+**Skeletons** have 4 different types to them : **Small**, **Medium**, **Large** and **Boss**. These increase in size to differentiate them from eachother. They also have different health values and damage values for difficulty variance. 
 
-Zombies have 2 different types to them : **Small** and **Medium**. These work the same as the Skeleton enemies. They are slightly tougher in comparison to the Skeletons however, as they are considered "mini-bosses".
+**Zombies** have 2 different types to them : **Small** and **Medium**. These work the same as the Skeleton enemies. They are slightly tougher in comparison to the Skeletons however, as they are considered "mini-bosses".
 
 If the player happens to die to an enemy or enemies, all of the remaining enemies will have their health restored to full health. This creates a certain difficulty to the bosses in the game, and prevents the player from just respawning and killing their enemy. It creates an emphasis on "grinding", which means to kill enemies repeatedly in this case, and gain more experience to level up. More details on leveling up is described in the [Level and Stat System](#level-and-stat-system) section.
 
