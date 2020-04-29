@@ -21,7 +21,7 @@ Windows/Mac/Linux OS, Unity 2018.4.9f1, Visual Studio 2019+.
 Explain entropys purpose and architecture, explain the directory here as well for informative use (like TOA proj).
 
 ### Map Inspiration for Mission
-All credits go to [Bethesda](#references) for map design
+All credits go to [Bethesda](#references) for Map Design and Inspiration.
 ![alt test](readmescreenshots/PaintedWorld.jpg)
 
 The purpose of creating a map without massive graphical quality is that it does not require a lot of artistic skills, as this can take a lot of effort to design. This map inspiration is driven by the fact it still looks very aesthetically appealing even though it is not of high graphic quality.
@@ -72,7 +72,7 @@ A basic mini map function is designed for the player. It is done by creating a s
 
 
 ### References
-[1] [Map Inspiration] (https://elderscrolls.bethesda.net/en/oblivion) - For inspiration on the designed map  
+[1] [Map Inspiration](https://elderscrolls.bethesda.net/en/oblivion) - For inspiration on the designed map  
 [2] [Photon Engine](https://www.photonengine.com/) - Photon Engine for Multiplayer design  
 
 
