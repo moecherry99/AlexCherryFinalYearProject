@@ -60,6 +60,12 @@ It is necessary for the player to level up to complete the game due to the way t
 ### Skill System
 The weapon in the game has a skill that can be activated with the keyboard shortcut 'R'. This has a cooldown of 3 seconds when used, and will drain the health of an enemy and deal more damage to it, giving the player 25 health every time it is used. This is done by simply adding the health to the players stat and updating the health bar slider variable. The cooldown works in the way that every time it is activated, the key can't be pressed again until the timer of 3 seconds bypasses. There is a text object in the games UI that symbolizes this as well, so it will notify the player when the "**Drain Skill**" is ready to be used.
 
+```
+codesnippettest(){
+  yoDude();
+}
+```
+
 ### Mini Map System
 A basic mini map function is designed for the player. It is done by creating a seperate camera, which will hover over the player and change direction as well depending on where the player is facing. This is handy for pinpointing enemies, and due to the way the lighting system works in the game, it can become even more accurate for the player.
 (definitely a picture of mini map here with light in it).
