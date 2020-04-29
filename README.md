@@ -2,10 +2,15 @@
 # Entropy - A 1st person Open World RPG developed in Unity.
 
 ## Authors : 
-Alex Cherry
+**Alex Cherry**
 
-## Requirements : 
-Unity 2018.4.9f1, Visual Studio 2019.
+### Requirements : 
+Windows/Mac/Linux OS, Unity 2018.4.9f1, Visual Studio 2019+.
+
+### Downloading and Running the Application
+1. Clone the repository at https://github.com/moecherry99/AlexCherryFinalYearProject into a new folder on your Desktop.
+2. Move to the Executables folder and select the .exe file.
+3. If you wish to edit, open in Unity v2018.4.9f1, any version of Visual Studio will work for editting code. 
 
 ### Table of Contents
 
