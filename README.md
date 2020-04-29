@@ -19,6 +19,7 @@ Windows/Mac/Linux OS, Unity 2018.4.9f1, Visual Studio 2019+.
 * [Singleplayer](#singleplayer)
 * [Multiplayer](#multiplayer)
 * [Movement and Looking](#movement-and-looking)
+* [Menus and User Interface](#menus-and-user-interface)
 * [Combat System](#combat-system)
 * [Level and Stat System](#level-and-stat-system)
 * [Potion and Chest System](#potion-and-chest-system)
@@ -63,6 +64,10 @@ void Start()
 
 Whenever the mouse must be unlocked, for example in the pause menu when the player presses the escape key, the "**.Locked**" variable must be changed to "**.None**". Controlling the mouse this way gives the game a smooth experience.
 
+### Menus and User Interface
+Update this section
+
+
 ### Combat System
 The enemies around the map will attack the player when they are in close proximity. They deal damage over time, and all have different values depending on the types of enemies. There are two main types : 
 
@@ -82,6 +87,23 @@ A leveling system is designed in the game. The player has a certain experience v
 2. **Damage** : The player has a base damage value, which will let the player deal a certain amount of damage to enemies. The higher the players damage, the more damage they deal with attacks. The Drain Attack is also affected by this variable, and is enhanced even more than the basic attacks if the player decides to level up. This Attack is described below in the "Skill System" section of this file.
 
 3. **Defense** : The player has a base defense value, which will reduce the damage an enemy does to them. This works by dividing the damage variable of the enemy by the defense stat of the player. This gives the player a great incentive to level up before taking on harder enemies.
+
+Here is a quick code snippet on what actually happens when the player levels up : 
+
+```
+    public void LevelUp()
+    {
+        // get variables to increase stats
+        PlayerHealthScript.maxHealth += 30;
+        PlayerHealthScript.currentHealth += 30;
+        PlayerHealthScript.damage += 8;
+        PlayerHealthScript.defense += 2;
+
+        // set max health properly
+        HealthBarScr.maxHp += PlayerHealthScript.maxHealth;
+    }
+```
+It is relatively easy to understand what is happening here. Each of the variables in the [PlayerHealthScript](https://github.com/moecherry99/AlexCherryFinalYearProject/tree/master/FinalYearProjectEntropy/Assets/Scripts/CombatScripts) get increased accordingly. 
 
 It is necessary for the player to level up to complete the game due to the way the defense variable works. As it is divided by the enemies damage, it creates great advantages for the player, but if the player is too low of a level they will die too quickly in certain sections.
 
@@ -157,11 +179,26 @@ if (Input.GetKeyDown(KeyCode.R))
 We can see in the code snippet that you can only press the R key when the time has elapsed for the cooldown. Once this occurs, the **PowerAttack()** function plays in another script, which will absorb the health and deal extra damage. The **currentHealth** variable raises by 25, showing this health increase for the player.
 
 ### Mini Map System
-A basic mini map function is designed for the player. It is done by creating a seperate camera, which will hover over the player and change direction as well depending on where the player is facing. This is handy for pinpointing enemies, and due to the way the lighting system works in the game, it can become even more accurate for the player.
-(definitely a picture of mini map here with light in it).
+A basic mini map function is designed for the player. It is done by creating a seperate camera, which will hover over the player and change direction as well depending on where the player is facing. This is handy for pinpointing enemies, and due to the way the lighting system works in the game, it can become even more accurate for the player. The code snippet for this is featured below : 
+
+```
+void LateUpdate() 
+{
+    Vector3 newPosition = player.position;
+    newPosition.y = transform.position.y;
+    transform.position = newPosition;
+
+    // for camera to rotate with player
+    transform.rotation = Quaternion.Euler(90f, player.eulerAngles.y, 0f);
+}
+```
+
+The **LateUpdate()** function is used as it must be called after the **Update()** function has been called. The reason this must be done is because the player moves and the main camera updates, but we can't simultaneously update another camera to match it perfectly. It is about 1 frame behind, meaning it has time to adjust to the sudden movements the player might do. It must be updated after the player moves as it is following those movements. This helps reduce the lag in the game as well, and allows for better frame rate.
 
 ### Quest System
 In the game there is a single quest that the player can activate. The objective of the game is to "Find NPC(Non-Playable-Character) Toland". Once the player has found the NPC, they can proceed with the quest. They are teleported into the mission area, and are given the task to eliminate all of the enemies and save the other NPC. Once the quest is finished, the player can return to Toland and receive experience and potions. This is to aid the player in future quests that may be implemented into the game. 
+
+The quest system also makes use of the User Interface elements frequently. Every time an action is done in the game involving the NPCs, the current objective must be updated for the player so that they know what they are doing or what they need to do next. 
 
 ### References
 [1] [Map Inspiration](https://elderscrolls.bethesda.net/en/oblivion) - For inspiration on the designed map  
