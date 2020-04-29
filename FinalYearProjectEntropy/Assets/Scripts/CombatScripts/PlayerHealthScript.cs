@@ -142,18 +142,21 @@ public class PlayerHealthScript : MonoBehaviour
             Die();
         }
 
+        /*
         // developer tool to add experience, will take out after development
         if(Input.GetKeyDown(KeyCode.Alpha3))
         {
             PlayerExperience.exp += 1000;
-        }
+        }*/
 
+        /*
         // developer tool, will take out after development
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             TakeDamage(200);
-        }
+        }*/
 
+        /*
         // developer tool to heal and test level, will take out after development
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -164,7 +167,8 @@ public class PlayerHealthScript : MonoBehaviour
                 currentHealth = maxHealth;
 
             }
-        }
+        }*/
+        
 
         if (Time.time >= nextAttackTime)
         {
@@ -203,12 +207,12 @@ public class PlayerHealthScript : MonoBehaviour
             }
 
         }
-
+        /*
         // developer tool for adding potions to inventory, remove after development
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             potionCount++;
-        }
+        }*/
 
     }
 
