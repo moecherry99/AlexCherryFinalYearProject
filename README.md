@@ -72,8 +72,8 @@ A basic mini map function is designed for the player. It is done by creating a s
 
 
 ### References
-[1] [Map Inspiration] (https://elderscrolls.bethesda.net/en/oblivion) - For inspiration on the designed map
-[2] [Photon Engine](https://www.photonengine.com/) - Photon Engine for Multiplayer design
+[1] [Map Inspiration] (https://elderscrolls.bethesda.net/en/oblivion) - For inspiration on the designed map  
+[2] [Photon Engine](https://www.photonengine.com/) - Photon Engine for Multiplayer design  
 
 
 
