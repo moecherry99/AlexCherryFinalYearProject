@@ -44,7 +44,7 @@ Skeletons have 4 different types to them : **Small**, **Medium**, **Large** and 
 
 Zombies have 2 different types to them : **Small** and **Medium**. These work the same as the Skeleton enemies. They are slightly tougher in comparison to the Skeletons however, as they are considered "mini-bosses".
 
-If the player happens to die to an enemy or enemies, all of the remaining enemies will have their health restored to full health. This creates a certain difficulty to the bosses in the game, and prevents the player from just respawning and killing their enemy. It creates an emphasis on "grinding", which means to kill enemies repeatedly in this case, and gain more experience to level up. More details on leveling up is described in the "Level and Stat System" section. <- create link for that
+If the player happens to die to an enemy or enemies, all of the remaining enemies will have their health restored to full health. This creates a certain difficulty to the bosses in the game, and prevents the player from just respawning and killing their enemy. It creates an emphasis on "grinding", which means to kill enemies repeatedly in this case, and gain more experience to level up. More details on leveling up is described in the [Level and Stat System](#level-and-stat-system) section.
 
 
 ### Level and Stat System
@@ -69,10 +69,8 @@ if (Input.GetKeyDown(KeyCode.R))
       cdTimer.GetComponent<UnityEngine.UI.Text>().text = "Skill : Not Ready";
       if (currentHealth >= maxHealth)
       {
-
           currentHealth = maxHealth;
           nextAttackTime = Time.time + 12f / attackRatePower;
-
       }
 }
 ```
