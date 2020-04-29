@@ -9,6 +9,7 @@ Unity 2018.4.9f1, Visual Studio 2019.
 
 ### Table of Contents
 Stuff here, remember to finish links down below as well.
+[Singleplayer](#singleplayer)
 
 ### Introduction
 Explain entropys purpose and architecture, explain the directory here as well for informative use (like TOA proj).
