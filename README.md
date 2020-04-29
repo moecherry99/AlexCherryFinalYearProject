@@ -21,7 +21,7 @@ Windows/Mac/Linux OS, Unity 2018.4.9f1, Visual Studio 2019+.
 Explain entropys purpose and architecture, explain the directory here as well for informative use (like TOA proj).
 
 ### Map Inspiration for Mission
-All credits go to https://elderscrolls.bethesda.net/en/oblivion for map design and https://elderscrolls.fandom.com/wiki/Brush_of_Truepaint for image source
+All credits go to [Bethesda](#references) for map design
 ![alt test](readmescreenshots/PaintedWorld.jpg)
 
 The purpose of creating a map without massive graphical quality is that it does not require a lot of artistic skills, as this can take a lot of effort to design. This map inspiration is driven by the fact it still looks very aesthetically appealing even though it is not of high graphic quality.
@@ -30,7 +30,7 @@ The purpose of creating a map without massive graphical quality is that it does 
 The single player aspect of the game is divided into an RPG style map and a mission that the player has to take on to save an NPC that is located there. 
 
 ### Multiplayer 
-A server is created with Unity using [1](#references) [https://www.photonengine.com/](Photon 2) (One laptop will host). The players character gets duplicated and the second player can play with the main camera focused on their character. (This function is not working due to the deadline being during the COVID-19 pandemic of 2020. Access to another machine was prohibited and it was not able to be tested from a singular machine and proved difficult).
+A server is created with Unity using **[Photon 2](#references)** (One laptop will host). The players character gets duplicated and the second player can play with the main camera focused on their character. (This function is not working due to the deadline being during the COVID-19 pandemic of 2020. Access to another machine was prohibited and it was not able to be tested from a singular machine and proved difficult).
 
 ### Movement
 
@@ -72,7 +72,8 @@ A basic mini map function is designed for the player. It is done by creating a s
 
 
 ### References
-[1] [Photon Engine](https://www.photonengine.com/)
+[1] [Map Inspiration] (https://elderscrolls.bethesda.net/en/oblivion) - For inspiration on the designed map
+[2] [Photon Engine](https://www.photonengine.com/) - Photon Engine for Multiplayer design
 
 
 
