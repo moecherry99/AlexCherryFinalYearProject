@@ -10,6 +10,9 @@ Unity 2018.4.9f1, Visual Studio 2019.
 ### Table of Contents
 Stuff here, remember to finish links down below as well.
 
+### Introduction
+Explain entropys purpose and architecture, explain the directory here as well for informative use (like TOA proj).
+
 ### Map Inspiration for Mission
 All credits go to https://elderscrolls.bethesda.net/en/oblivion for map design and https://elderscrolls.fandom.com/wiki/Brush_of_Truepaint for image source
 ![alt test](readmescreenshots/PaintedWorld.jpg)
@@ -53,6 +56,8 @@ The weapon in the game has a skill that can be activated with the keyboard short
 ### Mini Map System
 A basic mini map function is designed for the player. It is done by creating a seperate camera, which will hover over the player and change direction as well depending on where the player is facing. This is handy for pinpointing enemies, and due to the way the lighting system works in the game, it can become even more accurate for the player.
 (definitely a picture of mini map here with light in it).
+
+### Quest System
 
 ### Something else, maybe 2-3 more sections 
 (this whole doc needs to be 10 pages ish)
