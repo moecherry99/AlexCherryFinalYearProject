@@ -21,7 +21,7 @@ Windows/Mac/Linux OS, Unity 2018.4.9f1, Visual Studio 2019+.
 Explain entropys purpose and architecture, explain the directory here as well for informative use (like TOA proj).
 
 ### Map Inspiration for Mission
-All credits go to [Bethesda](#references) for Map Design and Inspiration.
+All credits go to [Bethesda](#references) for Map Design and Inspiration.  
 ![alt test](readmescreenshots/PaintedWorld.jpg)
 
 The purpose of creating a map without massive graphical quality is that it does not require a lot of artistic skills, as this can take a lot of effort to design. This map inspiration is driven by the fact it still looks very aesthetically appealing even though it is not of high graphic quality.
@@ -58,13 +58,26 @@ A leveling system is designed in the game. The player has a certain experience v
 It is necessary for the player to level up to complete the game due to the way the defense variable works. As it is divided by the enemies damage, it creates great advantages for the player, but if the player is too low of a level they will die too quickly in certain sections.
 
 ### Skill System
-The weapon in the game has a skill that can be activated with the keyboard shortcut 'R'. This has a cooldown of 3 seconds when used, and will drain the health of an enemy and deal more damage to it, giving the player 25 health every time it is used. This is done by simply adding the health to the players stat and updating the health bar slider variable. The cooldown works in the way that every time it is activated, the key can't be pressed again until the timer of 3 seconds bypasses. There is a text object in the games UI that symbolizes this as well, so it will notify the player when the "**Drain Skill**" is ready to be used.
+The weapon in the game has a skill that can be activated with the keyboard shortcut 'R'. This has a cooldown of 3 seconds when used, and will drain the health of an enemy and deal more damage to it, giving the player 25 health every time it is used. This is done by simply adding the health to the players stat and updating the health bar slider variable. The cooldown works in the way that every time it is activated, the key can't be pressed again until the timer of 3 seconds bypasses. There is a text object in the games UI that symbolizes this as well, so it will notify the player when the "**Drain Skill**" is ready to be used. 
 
 ```
-codesnippettest(){
-  yoDude();
+if (Input.GetKeyDown(KeyCode.R))
+{
+      currentHealth += 25;
+      healthBar.SetHealth(currentHealth);
+      nextAttackTime = Time.time + 12f / attackRatePower;
+      cdTimer.GetComponent<UnityEngine.UI.Text>().text = "Skill : Not Ready";
+      if (currentHealth >= maxHealth)
+      {
+
+          currentHealth = maxHealth;
+          nextAttackTime = Time.time + 12f / attackRatePower;
+
+      }
 }
 ```
+
+We can see in the code snippet that you can only press the R key when the time has elapsed for the cooldown. Once this occurs, the **PowerAttack()** function plays in another script, which will absorb the health and deal extra damage. The **currentHealth** variable raises by 25, showing this health increase for the player.
 
 ### Mini Map System
 A basic mini map function is designed for the player. It is done by creating a seperate camera, which will hover over the player and change direction as well depending on where the player is facing. This is handy for pinpointing enemies, and due to the way the lighting system works in the game, it can become even more accurate for the player.
