@@ -166,6 +166,6 @@ In the game there is a single quest that the player can activate. The objective 
 [1] [Map Inspiration](https://elderscrolls.bethesda.net/en/oblivion) - For inspiration on the designed map  
 [2] [Photon Engine](https://www.photonengine.com/) - Photon Engine for Multiplayer design  
 
-[Back to top](#entropy--a-1st-person-open-world-rpg-developed-in-unity.)
+[Back to top](#entropy-a-1st-person-open-world-rpg-developed-in-unity)
 
 
