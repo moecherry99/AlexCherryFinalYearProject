@@ -1,6 +1,6 @@
 
 # Entropy
-A first person Open World RPG developed in Unity.
+A First-Person Open World RPG developed in Unity.
 
 ## Authors : 
 [Alex Cherry](https://github.com/moecherry99)
