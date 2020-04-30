@@ -5,6 +5,9 @@ A first person Open World RPG developed in Unity.
 ## Authors : 
 [Alex Cherry](https://github.com/moecherry99)
 
+## Project Supervisor : 
+[Dr. Dominic Carr](https://github.com/dominiccarr)
+
 ### Requirements : 
 Windows/Mac/Linux OS, Unity 2018.4.9f1, Visual Studio 2019+.
 
