@@ -11,7 +11,7 @@ Windows/Mac/Linux OS, Unity 2018.4.9f1, Visual Studio 2019+.
 ### Downloading and Running the Application
 1. Clone the repository at https://github.com/moecherry99/AlexCherryFinalYearProject into a new folder on your Desktop.
 2. Move to the Executables folder and select the .exe file.
-3. If you wish to edit, open in Unity v2018.4.9f1, any version of Visual Studio will work for editting code. 
+3. If you wish to edit, open in Unity v2018.4.9f1, any version of Visual Studio will work for editing code. 
 
 ### Table of Contents
 
@@ -41,7 +41,7 @@ The purpose of creating a map without massive graphical quality is that it does 
 The single player aspect of the game is divided into an RPG style map and a mission that the player has to take on to save an NPC that is located in the mission.
 
 ### Multiplayer 
-A server is created with Unity using [Photon 2](#references) (One laptop will host). The players character gets duplicated and the second player can play with the main camera focused on their character. (This function is not working due to the deadline being during the COVID-19 pandemic of 2020. Access to another machine was prohibited and it was not able to be tested from a singular machine and proved difficult).
+A server is created with Unity using [Photon 2](#references). The players character gets duplicated and the second player can play with the main camera focused on their character. (This function is not working due to the deadline being during the COVID-19 pandemic of 2020. Access to another machine was prohibited and it was not able to be tested from a singular machine and proved difficult).
 
 ### Movement and Looking
 
@@ -67,7 +67,6 @@ Whenever the mouse must be unlocked, for example in the pause menu when the play
 ### Menus and User Interface
 Update this section
 
-
 ### Combat System
 The enemies around the map will attack the player when they are in close proximity. They deal damage over time, and all have different values depending on the types of enemies. There are two main types : 
 
@@ -81,7 +80,6 @@ The enemies around the map will attack the player when they are in close proximi
 All of these files can be found at the [Controllers](https://github.com/moecherry99/AlexCherryFinalYearProject/tree/master/FinalYearProjectEntropy/Assets/Scripts/Controllers) directory, showing the variations between enemy stats.
 
 If the player happens to die to an enemy or enemies, all of the remaining enemies will have their health restored to full health. This creates a certain difficulty to the bosses in the game, and prevents the player from just respawning and killing their enemy. It creates an emphasis on "grinding", which means to kill enemies repeatedly in this case, and gain more experience to level up. More details on leveling up is described in the [Level and Stat System](#level-and-stat-system) section.
-
 
 ### Level and Stat System
 A leveling system is designed in the game. The player has a certain experience value, and every time they defeat an enemy they will gain experience. Depending on the type of monster such as Skeletons, Zombies and their sizes, the player will gain less or more experience. There are 10 levels designed for the game, and the player has 3 stats to accompany this level : 
@@ -106,6 +104,7 @@ Here is a quick code snippet on what actually happens when the player levels up 
         HealthBarScr.maxHp += PlayerHealthScript.maxHealth;
     }
 ```
+
 It is relatively easy to understand what is happening here. Each of the variables in the [PlayerHealthScript](https://github.com/moecherry99/AlexCherryFinalYearProject/tree/master/FinalYearProjectEntropy/Assets/Scripts/CombatScripts/PlayerHealthScript.cs) get increased accordingly. 
 
 It is necessary for the player to level up to complete the game due to the way the defense variable works. As it is divided by the enemies damage, it creates great advantages for the player, but if the player is too low of a level they will die too quickly in certain sections.
@@ -159,7 +158,6 @@ In this code snippet we can see that when the "**potionCount**" variable is abov
 ```
 
 The health of the player is restored by 20 plus the level of the player multiplied by 2. **For example** : The players level is 4, if they use a potion at this level they will heal 20 + (4 x 2) health, equaling 28 health. This is so that potions will not lose their effectiveness the higher the level of the player. This is an important game balance issue that was addressed as bug testers had no incentive to keep leveling due to this. Calling this function will deduct 1 potion from the potion count.
-
 
 ### Skill System
 The weapon in the game has a skill that can be activated with the keyboard shortcut '**R**'. This has a cooldown of 3 seconds when used, and will drain the health of an enemy and deal more damage to it, giving the player 25 health every time it is used. This is done by simply adding the health to the players stat and updating the health bar slider variable. The cooldown works in the way that every time it is activated, the key can't be pressed again until the timer of 3 seconds bypasses. There is a text object in the games UI that symbolizes this as well, so it will notify the player when the "**Drain Skill**" is ready to be used. 
