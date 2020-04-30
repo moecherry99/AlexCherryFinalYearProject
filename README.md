@@ -76,11 +76,12 @@ The enemies around the map will attack the player when they are in close proximi
 
 **Skeletons** have 4 different types to them : **Small**, **Medium**, **Large** and **Boss**. These increase in size to differentiate them from eachother. They also have different health values and damage values for difficulty variance. 
 
-**Zombies** have 2 different types to them : **Small** and **Medium**. These work the same as the Skeleton enemies. They are slightly tougher in comparison to the Skeletons however, as they are considered "mini-bosses".
+**Zombies** have 2 different types to them : **Small** and **Medium**. These work the same as the Skeleton enemies. They are slightly tougher in comparison to the Skeletons however, as they are considered "mini-bosses". 
+
+All of these files can be found at the [Controllers](https://github.com/moecherry99/AlexCherryFinalYearProject/tree/master/FinalYearProjectEntropy/Assets/Scripts/Controllers) directory, showing the variations between enemy stats.
 
 If the player happens to die to an enemy or enemies, all of the remaining enemies will have their health restored to full health. This creates a certain difficulty to the bosses in the game, and prevents the player from just respawning and killing their enemy. It creates an emphasis on "grinding", which means to kill enemies repeatedly in this case, and gain more experience to level up. More details on leveling up is described in the [Level and Stat System](#level-and-stat-system) section.
 
-All of these files can be found at the [Controllers](https://github.com/moecherry99/AlexCherryFinalYearProject/tree/master/FinalYearProjectEntropy/Assets/Scripts/Controllers) directory.
 
 ### Level and Stat System
 A leveling system is designed in the game. The player has a certain experience value, and every time they defeat an enemy they will gain experience. Depending on the type of monster such as Skeletons, Zombies and their sizes, the player will gain less or more experience. There are 10 levels designed for the game, and the player has 3 stats to accompany this level : 
