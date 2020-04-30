@@ -103,7 +103,7 @@ Here is a quick code snippet on what actually happens when the player levels up 
         HealthBarScr.maxHp += PlayerHealthScript.maxHealth;
     }
 ```
-It is relatively easy to understand what is happening here. Each of the variables in the [PlayerHealthScript](https://github.com/moecherry99/AlexCherryFinalYearProject/tree/master/FinalYearProjectEntropy/Assets/Scripts/CombatScripts) get increased accordingly. 
+It is relatively easy to understand what is happening here. Each of the variables in the [PlayerHealthScript](https://github.com/moecherry99/AlexCherryFinalYearProject/tree/master/FinalYearProjectEntropy/Assets/Scripts/CombatScripts/PlayerHealthScript.cs) get increased accordingly. 
 
 It is necessary for the player to level up to complete the game due to the way the defense variable works. As it is divided by the enemies damage, it creates great advantages for the player, but if the player is too low of a level they will die too quickly in certain sections.
 
