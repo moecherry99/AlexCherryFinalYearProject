@@ -32,7 +32,7 @@ Windows/Mac/Linux OS, Unity 2018.4.9f1, Visual Studio 2019+.
 * [References](#references)
 
 ### Introduction
-Explain entropys purpose and architecture, explain the directory here as well for informative use (like TOA proj).
+Entropy is a First-Person Shooter (FPS) that is designed and developed in Unity. The purpose of the game is to design a game without aesthetic appeal, and aim towards making the mechanics fluid and smooth. 
 
 ### Map Inspiration for Mission
 All credits go to [Bethesda](#references) for Map Design and Inspiration.  
