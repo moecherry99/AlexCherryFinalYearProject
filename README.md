@@ -41,7 +41,7 @@ All credits go to [Bethesda](#references) for Map Design and Inspiration.
 The purpose of creating a map without massive graphical quality is that it does not require a lot of artistic skills, as this can take a lot of effort to design. This map inspiration is driven by the fact it still looks very aesthetically appealing even though it is not of high graphic quality.
 
 ### Singleplayer
-The single player aspect of the game is divided into an RPG style map and a mission that the player has to take on to save an NPC that is located in the mission.
+The single player aspect of the game is divided into an Open World RPG style map and a mission that the player has to take on to save an NPC that is located in the mission area. The first area holds a few enemies that can be killed before entering the mission area so that they can get a feel for the games mechanics.
 
 ### Multiplayer 
 A server is created with Unity using [Photon 2](#references). The players character gets duplicated and the second player can play with the main camera focused on their character. (This function is not working due to the deadline being during the COVID-19 pandemic of 2020. Access to another machine was prohibited and it was not able to be tested from a singular machine and proved difficult).
