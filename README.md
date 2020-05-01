@@ -38,15 +38,18 @@ of the "ground work" and applying all the mechanics to the game means that the g
 
 ### File Structure 
 
-Update this section  
+The Project contains 3 folders and 5 files in the main page, only one of which contains the actual contents of the project in the **FinalYearProjectEntropy folder**. This is where all of the Unity files and logs are, basically where everything in the project was done coding wise. The main directory of the application contains documentation. 
+
+Inside of the main folder holds mostly Unity log files and Photon files. The main folder to note here is the **Assets** folder. This contains all of the scripts and extra resources used in the application. Below is a screenshot from the Unity editor to show what is happening inside here.   
 ![alt file](readmescreenshots/FileStructure.PNG)  
+Most of these files are for resources, but the **Scripts** folder is very important as this is where 90% of the development occurred. Below is a screenshot of the folder and its organised contents.  
 
 ![alt scripts](readmescreenshots/ScriptsStructure.PNG)  
 
-Include repo contents (folders seen on github)
+This folder was carefully organised, as not having an organised project makes it very difficult to memorise and navigate through certain directories. The key to developing a game is efficiency, so knowing where everything is located while developing the project is the best use of your time.  
 
 ### Map Inspiration for Mission
-All credits go to [Bethesda](#references) for Map Design and Inspiration.  
+All credits go to [Bethesda](#references) for Map Inspiration.  
 ![alt test](readmescreenshots/PaintedWorld.jpg)
 
 The purpose of creating a map without massive graphical quality is that it does not require a lot of artistic skills, as this can take a lot of effort to design. This map inspiration is driven by the fact it still looks very aesthetically appealing even though it is not of high graphic quality.
@@ -58,7 +61,7 @@ The single player aspect of the game is divided into an Open World RPG style map
 A server is created with Unity using [Photon 2](#references). The players character gets duplicated and the second player can play with the main camera focused on their character. (This function is not working due to the deadline being during the COVID-19 pandemic of 2020. Access to another machine was prohibited and it was not able to be tested from a singular machine and proved difficult). More information on [Photon](#photon-2-engine) is seen down below.
 
 ### Photon 2 Engine
-In order for Photon to work, a server must be set up first.  
+In order for Photon to work, a server must be set up first. When loading up the application in Unity, scripts from the **PhotonScripts** folder will all connect to the servers in synchronization. The connection will be established with your hosting server (in this case the **Europe servers**), and the player will connect after establishing and allowing that connection to go through.  
 
 All credits go to [Photon](#references) for this image.  
 ![alt photon](readmescreenshots/ServerClientModel.png)  
@@ -224,7 +227,7 @@ void LateUpdate()
 
 The **LateUpdate()** function is used as it must be called after the **Update()** function has been called. The reason this must be done is because the player moves and the main camera updates, but we can't simultaneously update another camera to match it perfectly. It is about 1 frame behind, meaning it has time to adjust to the sudden movements the player might do. It must be updated after the player moves as it is following those movements. This helps reduce the lag in the game as well, and allows for better frame rate.
 
-Picture here on mini map  
+![alt mini](readmescreenshots/mini.PNG)
 
 ### Quest System
 In the game there is a single quest that the player can activate. The objective of the game is to "Find NPC(Non-Playable-Character) Toland". Once the player has found the NPC, they can proceed with the quest. They are teleported into the mission area, and are given the task to eliminate all of the enemies and save the other NPC. Once the quest is finished, the player can return to Toland and receive experience and potions. This is to aid the player in future quests that may be implemented into the game. 
@@ -257,7 +260,7 @@ Stuff here
 
 Need more references, specifically photon  
 
-To do : Mini map pic, references update, photon section finish, conclusion, intro section update and add diagram   
+To do :references update, conclusion  
 
 [Back to top](#entropy)
 
