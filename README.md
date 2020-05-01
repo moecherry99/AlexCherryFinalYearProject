@@ -37,6 +37,8 @@ Entropy is a First-Person Open World RPG that is designed and developed in Unity
 of the "ground work" and applying all the mechanics to the game means that the game can easily be further developed, such as making new maps for quests and adding new enemies in with new stats. Adding quests and enemies proved easy compared to making the actual mechanics of the game, so a large sense of fulfilment was acquired with the development of the project as most of the work was aimed towards mechanics improvements and optimisation.
 
 ### File Structure 
+
+Update this section  
 ![alt file](readmescreenshots/FileStructure.PNG)  
 
 ![alt scripts](readmescreenshots/ScriptsStructure.PNG)  
@@ -222,6 +224,8 @@ void LateUpdate()
 
 The **LateUpdate()** function is used as it must be called after the **Update()** function has been called. The reason this must be done is because the player moves and the main camera updates, but we can't simultaneously update another camera to match it perfectly. It is about 1 frame behind, meaning it has time to adjust to the sudden movements the player might do. It must be updated after the player moves as it is following those movements. This helps reduce the lag in the game as well, and allows for better frame rate.
 
+Picture here on mini map  
+
 ### Quest System
 In the game there is a single quest that the player can activate. The objective of the game is to "Find NPC(Non-Playable-Character) Toland". Once the player has found the NPC, they can proceed with the quest. They are teleported into the mission area, and are given the task to eliminate all of the enemies and save the other NPC. Once the quest is finished, the player can return to Toland and receive experience and potions. This is to aid the player in future quests that may be implemented into the game. 
 
@@ -244,10 +248,17 @@ This code basically says if the player hits the '**Enter**' key on their keyboar
 
 ### Conclusion
 
+Stuff here  
+
 ### References
 [1] [Map Inspiration](https://elderscrolls.bethesda.net/en/oblivion) - For inspiration on the designed map  
 [2] [Photon Engine](https://www.photonengine.com/) - Photon Engine for Multiplayer design  
 [3] [Photon Diagram](https://doc.photonengine.com/zh-tw/bolt/current/in-depth/server-client-model) - A diagram for the Photon Engine layout and how clients connect to eachother.  
+
+Need more references, specifically photon  
+
+To do : Mini map pic, references update, photon section finish, conclusion etc  
+
 [Back to top](#entropy)
 
 
