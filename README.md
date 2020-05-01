@@ -33,7 +33,7 @@ Windows/Mac/Linux OS, Unity 2018.4.9f1, Visual Studio 2019+.
 * [References](#references)
 
 ### Introduction
-Entropy is a First-Person Shooter (FPS) that is designed and developed in Unity. The purpose of the game is to design a game with smooth mechanics and implement these mechanics into a full sized game. The game is currently a beta version, as designing a full sized game in a small time frame with one person is almost impossible. Therefore, laying down all 
+Entropy is a First-Person Open World RPG that is designed and developed in Unity. The purpose of the game is to design a game with smooth mechanics and implement these mechanics into a full sized game. The game is currently a beta version, as designing a full sized game in a small time frame with one person is almost impossible. Therefore, laying down all 
 of the "ground work" and applying all the mechanics to the game means that the game can easily be further developed, such as making new maps for quests and adding new enemies in with new stats. Adding quests and enemies proved easy compared to making the actual mechanics of the game, so a large sense of fulfilment was acquired with the development of the project as most of the work was aimed towards mechanics improvements and optimisation.
 
 ### File Structure 
