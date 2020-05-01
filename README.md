@@ -35,7 +35,7 @@ Windows/Mac/Linux OS, Unity 2018.4.9f1, Visual Studio 2019+.
 Entropy is a First-Person Shooter (FPS) that is designed and developed in Unity. The purpose of the game is to design a game with smooth mechanics and implement these mechanics into a full sized game. The game is currently a beta version, as designing a full sized game in a small time frame with one person is almost impossible. Therefore, laying down all 
 of the "ground work" and applying all the mechanics to the game means that the game can easily be further developed, such as making new maps for quests and adding new enemies in with new stats. These items proved easy compared to making the actual mechanics of the game, so a large sense of fulfilment was acquired with the development of the project.
 
-### File Strucure 
+### File Structure 
 ![alt file](readmescreenshots/FileStructure.PNG)  
 
 ![alt scripts](readmescreenshots/ScriptsStructure.PNG)  
@@ -55,17 +55,19 @@ The single player aspect of the game is divided into an Open World RPG style map
 A server is created with Unity using [Photon 2](#references). The players character gets duplicated and the second player can play with the main camera focused on their character. (This function is not working due to the deadline being during the COVID-19 pandemic of 2020. Access to another machine was prohibited and it was not able to be tested from a singular machine and proved difficult).
 
 #### Photon 2 Engine
-In order for Photon 
+In order for Photon to work, a server must be set up first.  
+
 All credits go to [Photon](#references) for this image.  
 ![alt photon](readmescreenshots/ServerClientModel.png)  
 
+This diagram shows the Client-Server Model for the Photon Engine in the application. A server will load up, and the client (Player 1) will load into the game. If Player 2 wants to connect, they will join the server rather than connect directly to the Player 1's hosting computer. This creates **server based** matchmaking rather than **peer to peer** matchmaking.
 ### Movement and Looking
 
 #### Movement
 A basic movement system is implemented into the game for the player. The W, A, S and D keys are used to move the player according to the direction on the keyboard. Arrow keys can also be used, as implemented by Unitys basic input tools. The player can jump using the space key, and gravity is applied to the jumping mechanic for a realistic feel.
 
 #### Looking
-A "**Mouse Lock**" system is implemented into the game as well. Once the game is loaded up, the mouse will lock to the middle of the screen. This gives the camera free access to the players mouse control, therefore making the character look wherever the player moves the mouse. This is quite a smooth system and works very well.
+A **Mouse Lock** system is implemented into the game as well. Once the game is loaded up, the mouse will lock to the middle of the screen. This gives the camera free access to the players mouse control, therefore making the character look wherever the player moves the mouse. This is quite a smooth system and works very well.
 
 ```
 void Start()
@@ -78,7 +80,7 @@ void Start()
 }
 ```
 
-Whenever the mouse must be unlocked, for example in the pause menu when the player presses the escape key, the "**.Locked**" variable must be changed to "**.None**". Controlling the mouse this way gives the game a smooth experience.
+Whenever the mouse must be unlocked, for example in the pause menu when the player presses the escape key, the **.Locked** variable must be changed to **.None**. Controlling the mouse this way gives the game a smooth experience.
 
 ### Menus and User Interface
 Update this section
@@ -147,7 +149,7 @@ if (Input.GetKeyDown(KeyCode.E))
 }
 ```
 
-In this code snippet we can see that when the "**potionCount**" variable is above 0, a potion can be used. If it is 0, a function returning null is called and there will be no effect. It will also play the sound effect for the potion noise. The **UsePotion()** function is called, which is shown below.
+In this code snippet we can see that when the **potionCount** variable is above 0, a potion can be used. If it is 0, a function returning null is called and there will be no effect. It will also play the sound effect for the potion noise. The **UsePotion()** function is called, which is shown below.
 
 ```
 // call this function if potion count is over 1
@@ -176,7 +178,7 @@ In this code snippet we can see that when the "**potionCount**" variable is abov
 The health of the player is restored by 20 plus the level of the player multiplied by 2. **For example** : The players level is 4, if they use a potion at this level they will heal 20 + (4 x 2) health, equaling 28 health. This is so that potions will not lose their effectiveness the higher the level of the player. This is an important game balance issue that was addressed as bug testers had no incentive to keep leveling due to this. Calling this function will deduct 1 potion from the potion count.
 
 ### Skill System
-The weapon in the game has a skill that can be activated with the keyboard shortcut '**R**'. This has a cooldown of 3 seconds when used, and will drain the health of an enemy and deal more damage to it, giving the player 25 health every time it is used. This is done by simply adding the health to the players stat and updating the health bar slider variable. The cooldown works in the way that every time it is activated, the key can't be pressed again until the timer of 3 seconds bypasses. There is a text object in the games UI that symbolizes this as well, so it will notify the player when the "**Drain Skill**" is ready to be used. 
+The weapon in the game has a skill that can be activated with the keyboard shortcut '**R**'. This has a cooldown of 3 seconds when used, and will drain the health of an enemy and deal more damage to it, giving the player 25 health every time it is used. This is done by simply adding the health to the players stat and updating the health bar slider variable. The cooldown works in the way that every time it is activated, the key can't be pressed again until the timer of 3 seconds bypasses. There is a text object in the games UI that symbolizes this as well, so it will notify the player when the **Drain Skill** is ready to be used. 
 
 ```
 if (Input.GetKeyDown(KeyCode.R))
