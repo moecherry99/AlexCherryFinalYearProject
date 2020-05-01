@@ -227,7 +227,11 @@ void LateUpdate()
 
 The **LateUpdate()** function is used as it must be called after the **Update()** function has been called. The reason this must be done is because the player moves and the main camera updates, but we can't simultaneously update another camera to match it perfectly. It is about 1 frame behind, meaning it has time to adjust to the sudden movements the player might do. It must be updated after the player moves as it is following those movements. This helps reduce the lag in the game as well, and allows for better frame rate.
 
-![alt mini](readmescreenshots/mini.PNG)
+Here is a basic screenshot of the Mini-Map designed in the game. It shows clearly how the lighting works for the players advantage.  
+
+![alt mini](readmescreenshots/mini.PNG)  
+
+The Mini-Map was quite interesting to design, as my experience with Unity never allowed me or given me a reason to show two cameras on the same screen at once. This was a prime example of how to do that, and adding it seemed like a great learning experience. 
 
 ### Quest System
 In the game there is a single quest that the player can activate. The objective of the game is to "Find NPC(Non-Playable-Character) Toland". Once the player has found the NPC, they can proceed with the quest. They are teleported into the mission area, and are given the task to eliminate all of the enemies and save the other NPC. Once the quest is finished, the player can return to Toland and receive experience and potions. This is to aid the player in future quests that may be implemented into the game. 
