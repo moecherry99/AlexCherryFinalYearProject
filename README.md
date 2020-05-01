@@ -257,7 +257,7 @@ Stuff here
 
 Need more references, specifically photon  
 
-To do : Mini map pic, references update, photon section finish, conclusion etc  
+To do : Mini map pic, references update, photon section finish, conclusion, intro section update and add diagram   
 
 [Back to top](#entropy)
 
