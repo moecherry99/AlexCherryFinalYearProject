@@ -12,9 +12,9 @@ A First-Person Open World RPG developed in Unity.
 Windows/Mac/Linux OS, Unity 2018.4.9f1, Visual Studio 2019+.
 
 ### Downloading and Running the Application
-1. Clone the repository at https://github.com/moecherry99/AlexCherryFinalYearProject into a new folder on your Desktop.
-2. Move to the Executables folder and select the .exe file.
-3. If you wish to edit, open in Unity v2018.4.9f1, any version of Visual Studio will work for editing code. 
+1. **Clone** the repository at https://github.com/moecherry99/AlexCherryFinalYearProject into a new folder on your **Desktop**.
+2. Move to the **Executables** folder and select the .exe file.
+3. If you wish to **edit**, open in **Unity v2018.4.9f1**, any version of **Visual Studio** will work for editing code. 
 
 ### Table of Contents
 
@@ -29,6 +29,7 @@ Windows/Mac/Linux OS, Unity 2018.4.9f1, Visual Studio 2019+.
 * [Skill System](#skill-system)
 * [Mini-Map System](#mini-map-system)
 * [Quest System](#quest-system)
+* [Conclusion](#conclusion)
 * [References](#references)
 
 ### Introduction
@@ -52,15 +53,22 @@ The purpose of creating a map without massive graphical quality is that it does 
 The single player aspect of the game is divided into an Open World RPG style map and a mission that the player has to take on to save an NPC that is located in the mission area. The first area holds a few enemies that can be killed before entering the mission area so that they can get a feel for the games mechanics.
 
 ### Multiplayer 
-A server is created with Unity using [Photon 2](#references). The players character gets duplicated and the second player can play with the main camera focused on their character. (This function is not working due to the deadline being during the COVID-19 pandemic of 2020. Access to another machine was prohibited and it was not able to be tested from a singular machine and proved difficult).
+A server is created with Unity using [Photon 2](#references). The players character gets duplicated and the second player can play with the main camera focused on their character. (This function is not working due to the deadline being during the COVID-19 pandemic of 2020. Access to another machine was prohibited and it was not able to be tested from a singular machine and proved difficult). More information on [Photon](#photon-2-engine) is seen down below.
 
-#### Photon 2 Engine
+### Photon 2 Engine
 In order for Photon to work, a server must be set up first.  
 
 All credits go to [Photon](#references) for this image.  
 ![alt photon](readmescreenshots/ServerClientModel.png)  
 
-This diagram shows the Client-Server Model for the Photon Engine in the application. A server will load up, and the client (Player 1) will load into the game. If Player 2 wants to connect, they will join the server rather than connect directly to the Player 1's hosting computer. This creates **server based** matchmaking rather than **peer to peer** matchmaking.
+This diagram shows the Client-Server Model for the Photon Engine in the application. A server will load up, and the client (Player 1) will load into the game. If Player 2 wants to connect, they will join the server rather than connect directly to the Player 1's hosting computer. This creates **server based** matchmaking rather than **peer to peer** matchmaking. 
+
+**1. Server Based Matchmaking : ** This is a more effective way for large groups of players to match together. Hosting all of the games data on a Server rather than on a players machine **reduces lag** for all players overall, as the host also has to play the game on their machine. An alternative is to use a **dedicated server** and sacrifice the hosts machine to host for the other players, instead of playing themselves. This however is the same as hosting from an actual server and can be seen as redundant unless it's for money making purposes.
+
+**2. Peer to Peer Matchmaking : ** Peer to Peer matchmaking refers to machines connecting to eachother in order for them to play the game together. Peer to Peer is more suitable for low populated servers, so that players can play for free or without an additional plugin for that fun gaming experience. It is simple and effective, but not for large populations.
+
+Both of these matchmaking methods are useful, but Photons use of Server Based Matchmaking is very effective, and that is why I chose it in my development of Entropy. It was simple to set up, caused no bandwidth issues and was free.
+
 ### Movement and Looking
 
 #### Movement
@@ -88,8 +96,8 @@ Update this section
 ### Combat System
 The enemies around the map will attack the player when they are in close proximity. They deal damage over time, and all have different values depending on the types of enemies. There are two main types : 
 
-1. **Zombies**
-2. **Skeletons**
+**1. Zombies**
+**2. Skeletons**
 
 **Skeletons** have 4 different types to them : **Small**, **Medium**, **Large** and **Boss**. These increase in size to differentiate them from eachother. They also have different health values and damage values for difficulty variance. 
 
