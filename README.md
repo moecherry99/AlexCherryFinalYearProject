@@ -36,9 +36,9 @@ Entropy is a First-Person Shooter (FPS) that is designed and developed in Unity.
 of the "ground work" and applying all the mechanics to the game means that the game can easily be further developed, such as making new maps for quests and adding new enemies in with new stats. These items proved easy compared to making the actual mechanics of the game, so a large sense of fulfilment was acquired with the development of the project.
 
 ### File Strucure 
-![alt file](readmescreenshots/FileStructure.png)  
+![alt file](readmescreenshots/FileStructure.PNG)  
 
-![alt scripts](readmescreenshots/ScriptsStructure.png)  
+![alt scripts](readmescreenshots/ScriptsStructure.PNG)  
 
 Include repo contents (folders seen on github)
 
