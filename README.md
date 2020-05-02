@@ -97,7 +97,7 @@ Whenever the mouse must be unlocked, for example in the pause menu when the play
 
 ### Menus and User Interface
 The Menus and UI are fairly simple in the application. The layout is convenient, as to not block any of the screen for the user. Here is a screenshot of the main menu screen :  
-![alt bigimg](readmescreenshots/bigimg.PNG)  
+![alt bigimg](readmescreenshots/menus.PNG)  
 It clearly shows all of the options upon loading the game. Each will have their own purpose, according to their names.  
 
 1. **Singleplayer :** This menu will load up the game in Singleplayer mode. The player will spawn as normal and can play the game.
@@ -106,17 +106,23 @@ It clearly shows all of the options upon loading the game. Each will have their 
 4. **Quit Game :** Very self explanatory. This will quit the game if clicked.
 
 The extra menus in the game are included in the Singleplayer and Multiplayer areas.  
-![alt menus](readmescreenshots/menus.PNG)  
+![alt menus](readmescreenshots/bigimg.PNG)  
 All of the items will be explained as follows : 
 1. **Top Right Corner :** This is the **Mini-Map**, which can be found in the [Mini-Map](#mini-map-system) section. It shows players their location and is done by using a separate camera above the players head that follows them around. All of this is explained in the section below.
 
-2. **Bottom Right Corner :** This text is to give the player tips on what the controls are inside of the game. This menu can also be seen in the middle of the screen, labeled **Controls**. 
+2. **Top Middle :** This text holds the players current objective in the quest they are embarking on. This is described in detail in the [Quest System](#quest-system) section.
 
-3. **Bottom Left Corner :** This area contains several items. 
-The topmost item is the **Skill Ready Text**. This shows the player when their weapon skill is ready. This can be seen in the [Skill System](#skill-system) section. 
-The second item is the **Potion Count Text**. This shows the players potion count, described in the [Potion and Chest System](#potion-and-chest-system) section. 
-The third item is the players current Health, shown by a health bar. This is described in the [Level and Stat System](#level-and-stat-system) section. 
-The final item is this area is the Experience value that the player holds. This is explained also in the [Level and Stat System](#level-and-stat-system) section. 
+3. **Bottom Right Corner :** This text is to give the player tips on what the controls are inside of the game. This menu can also be seen in the middle of the screen, labeled **Controls**. 
+
+4. **Bottom Left Corner :** This area contains several items. 
+The topmost item is the **Skill Ready Text**. This shows the player when their weapon skill is ready. This can be seen in the [Skill System](#skill-system) section.   
+
+The second item is the **Potion Count Text**. This shows the players potion count, described in the [Potion and Chest System](#potion-and-chest-system) section.   
+
+The third item is the players current Health, shown by a health bar. This is described in the [Level and Stat System](#level-and-stat-system) section.   
+
+The final item is this area is the Experience value that the player holds. This is explained also in the [Level and Stat System](#level-and-stat-system) section.   
+
 
 ### Combat System
 The enemies around the map will attack the player when they are in close proximity. They deal damage over time, and all have different values depending on the types of enemies. There are two main types : 
