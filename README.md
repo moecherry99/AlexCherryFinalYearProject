@@ -290,7 +290,7 @@ All in all the project was incredibly fun to develop and mess around with. I fel
 [2] [Photon Engine](https://www.photonengine.com/) - Photon Engine for Multiplayer design  
 [3] [Photon Diagram](https://doc.photonengine.com/zh-tw/bolt/current/in-depth/server-client-model) - A diagram for the Photon Engine layout and how clients connect to eachother.  
 
-Any other references that were used for the actual development of the game are shown in the **References** folder that is contained in the main page of this repository.
+Any other references that were used for the actual development of the game are shown in the **References** file that is contained in the main page of this repository.
 
 [Back to top](#entropy)
 
