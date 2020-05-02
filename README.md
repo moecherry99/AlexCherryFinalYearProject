@@ -96,7 +96,27 @@ void Start()
 Whenever the mouse must be unlocked, for example in the pause menu when the player presses the escape key, the **.Locked** variable must be changed to **.None**. Controlling the mouse this way gives the game a smooth experience.
 
 ### Menus and User Interface
-The Menus and UI are fairly simple in the application. The layout is convenient, as to not block any of the screen for the user. 
+The Menus and UI are fairly simple in the application. The layout is convenient, as to not block any of the screen for the user. Here is a screenshot of the main menu screen :  
+![alt bigimg](readmescreenshots/bigimg.PNG)  
+It clearly shows all of the options upon loading the game. Each will have their own purpose, according to their names.  
+
+1. **Singleplayer :** This menu will load up the game in Singleplayer mode. The player will spawn as normal and can play the game.
+2. **Multiplayer :** This menu will load the game with the Photon scripts and Game Objects. This will allow the player to be duplicated upon loading in and both players should be able to move around simultaneously. This function unfortunately could not be tested effectively as mentioned before. 
+3. **Tips and Tricks :** This menu will load up an informative menu, explaining the game mechanics to the players. It is a simple menu containing text objects in a clear yet concise menu.
+4. **Quit Game :** Very self explanatory. This will quit the game if clicked.
+
+The extra menus in the game are included in the Singleplayer and Multiplayer areas.  
+![alt menus](readmescreenshots/menus.PNG)  
+All of the items will be explained as follows : 
+1. **Top Right Corner :** This is the **Mini-Map**, which can be found in the [Mini-Map](#mini-map-system) section. It shows players their location and is done by using a separate camera above the players head that follows them around. All of this is explained in the section below.
+
+2. **Bottom Right Corner :** This text is to give the player tips on what the controls are inside of the game. This menu can also be seen in the middle of the screen, labeled **Controls**. 
+
+3. **Bottom Left Corner :** This area contains several items. 
+The topmost item is the **Skill Ready Text**. This shows the player when their weapon skill is ready. This can be seen in the [Skill System](#skill-system) section. 
+The second item is the **Potion Count Text**. This shows the players potion count, described in the [Potion and Chest System](#potion-and-chest-system) section. 
+The third item is the players current Health, shown by a health bar. This is described in the [Level and Stat System](#level-and-stat-system) section. 
+The final item is this area is the Experience value that the player holds. This is explained also in the [Level and Stat System](#level-and-stat-system) section. 
 
 ### Combat System
 The enemies around the map will attack the player when they are in close proximity. They deal damage over time, and all have different values depending on the types of enemies. There are two main types : 
@@ -255,16 +275,12 @@ This code basically says if the player hits the '**Enter**' key on their keyboar
 
 ### Conclusion
 
-Stuff here  
+All in all the project was incredibly fun to develop and mess around with. I felt that when I was developing the game, new ideas were constantly flowing into my head. I had made a plan as well but as you develop a game, certain parts seem to come together and new ideas can be formed after visualising clearly what has been done in front of you. Especially since this is the first game I have developed, knowing what order to do things in and what should have been added in the development plans originally are much clearer to me now, and I have learned some very valuable lessons from doing this project. I now understand the hardships that are overcome by games developers, and being an avid game player who has criticized the work of other game developer companies I have learned that adding simple ideas into games can actually lead to very daunting tasks. 
 
 ### References
 [1] [Map Inspiration](https://elderscrolls.bethesda.net/en/oblivion) - For inspiration on the designed map  
 [2] [Photon Engine](https://www.photonengine.com/) - Photon Engine for Multiplayer design  
 [3] [Photon Diagram](https://doc.photonengine.com/zh-tw/bolt/current/in-depth/server-client-model) - A diagram for the Photon Engine layout and how clients connect to eachother.  
-
-Need more references, specifically photon  
-
-To do :references update, conclusion  
 
 [Back to top](#entropy)
 
