@@ -115,13 +115,13 @@ All of the items will be explained as follows :
 3. **Bottom Right Corner :** This text is to give the player tips on what the controls are inside of the game. This menu can also be seen in the middle of the screen, labeled **Controls**. 
 
 4. **Bottom Left Corner :** This area contains several items. 
-  1. The topmost item is the **Skill Ready Text**. This shows the player when their weapon skill is ready. This can be seen in the [Skill System](#skill-system) section.   
+    4.1. The topmost item is the **Skill Ready Text**. This shows the player when their weapon skill is ready. This can be seen in the [Skill System](#skill-system) section.   
 
-  2. The second item is the **Potion Count Text**. This shows the players potion count, described in the [Potion and Chest System](#potion-and-chest-system) section.   
+    4.2. The second item is the **Potion Count Text**. This shows the players potion count, described in the [Potion and Chest System](#potion-and-chest-system) section.   
 
-  3. The third item is the players current Health, shown by a health bar. This is described in the [Level and Stat System](#level-and-stat-system) section.   
+    4.3. The third item is the players current Health, shown by a health bar. This is described in the [Level and Stat System](#level-and-stat-system) section.   
 
-  4. The final item is this area is the Experience value that the player holds. This is explained also in the [Level and Stat System](#level-and-stat-system) section.   
+    4.4. The final item is this area is the Experience value that the player holds. This is explained also in the [Level and Stat System](#level-and-stat-system) section.   
 
 
 ### Combat System
