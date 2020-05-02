@@ -100,8 +100,8 @@ The Menus and UI are fairly simple in the application. The layout is convenient,
 ![alt bigimg](readmescreenshots/menus.PNG)  
 It clearly shows all of the options upon loading the game. Each will have their own purpose, according to their names.  
 
-1. **Singleplayer :** This menu will load up the game in Singleplayer mode. The player will spawn as normal and can play the game.
-2. **Multiplayer :** This menu will load the game with the Photon scripts and Game Objects. This will allow the player to be duplicated upon loading in and both players should be able to move around simultaneously. This function unfortunately could not be tested effectively as mentioned before. 
+1. **Play Singleplayer :** This menu will load up the game in Singleplayer mode. The player will spawn as normal and can play the game.
+2. **Play Multiplayer :** This menu will load the game with the Photon scripts and Game Objects. This will allow the player to be duplicated upon loading in and both players should be able to move around simultaneously. This function unfortunately could not be tested effectively as mentioned before. 
 3. **Tips and Tricks :** This menu will load up an informative menu, explaining the game mechanics to the players. It is a simple menu containing text objects in a clear yet concise menu.
 4. **Quit Game :** Very self explanatory. This will quit the game if clicked.
 
@@ -115,13 +115,13 @@ All of the items will be explained as follows :
 3. **Bottom Right Corner :** This text is to give the player tips on what the controls are inside of the game. This menu can also be seen in the middle of the screen, labeled **Controls**. 
 
 4. **Bottom Left Corner :** This area contains several items. 
-The topmost item is the **Skill Ready Text**. This shows the player when their weapon skill is ready. This can be seen in the [Skill System](#skill-system) section.   
+  1. The topmost item is the **Skill Ready Text**. This shows the player when their weapon skill is ready. This can be seen in the [Skill System](#skill-system) section.   
 
-The second item is the **Potion Count Text**. This shows the players potion count, described in the [Potion and Chest System](#potion-and-chest-system) section.   
+  2. The second item is the **Potion Count Text**. This shows the players potion count, described in the [Potion and Chest System](#potion-and-chest-system) section.   
 
-The third item is the players current Health, shown by a health bar. This is described in the [Level and Stat System](#level-and-stat-system) section.   
+  3. The third item is the players current Health, shown by a health bar. This is described in the [Level and Stat System](#level-and-stat-system) section.   
 
-The final item is this area is the Experience value that the player holds. This is explained also in the [Level and Stat System](#level-and-stat-system) section.   
+  4. The final item is this area is the Experience value that the player holds. This is explained also in the [Level and Stat System](#level-and-stat-system) section.   
 
 
 ### Combat System
