@@ -96,7 +96,7 @@ void Start()
 Whenever the mouse must be unlocked, for example in the pause menu when the player presses the escape key, the **.Locked** variable must be changed to **.None**. Controlling the mouse this way gives the game a smooth experience.
 
 ### Menus and User Interface
-Update this section
+The Menus and UI are fairly simple in the application. The layout is convenient, as to not block any of the screen for the user. 
 
 ### Combat System
 The enemies around the map will attack the player when they are in close proximity. They deal damage over time, and all have different values depending on the types of enemies. There are two main types : 
