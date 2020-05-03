@@ -140,7 +140,7 @@ The enemies around the map will attack the player when they are in close proximi
 
 All of these files can be found at the [Controllers](https://github.com/moecherry99/AlexCherryFinalYearProject/tree/master/FinalYearProjectEntropy/Assets/Scripts/Controllers) directory, showing the variations between enemy stats.
 
-The player can attack the enemies using the '**Q**' key or the '**R**' key which will unleast a special attack, explained in the [Skill System](#skill-system) section. The player will do a set amount of damage to each enemy, but as their health varies as mentioned above it will take more hits to defeat them.
+The player can attack the enemies using the '**Q**' key or the '**R**' key which will unleash a special attack, explained in the [Skill System](#skill-system) section. The player will do a set amount of damage to each enemy, but as their health varies as mentioned above it will take more hits to defeat them.
 
 If the player happens to die to an enemy or enemies, all of the remaining enemies will have their health restored to full health. This creates a certain difficulty to the bosses in the game, and prevents the player from just respawning and killing their enemy. It creates an emphasis on "grinding", which means to kill enemies repeatedly in this case, and gain more experience to level up. More details on leveling up is described in the [Level and Stat System](#level-and-stat-system) section.
 
