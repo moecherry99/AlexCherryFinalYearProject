@@ -294,7 +294,7 @@ The quest system also makes use of the User Interface elements frequently. Every
 
 This code basically says if the player hits the '**Enter**' key on their keyboard, they will move with the **Move2()** function which will transport the player. The main thing to note here though is that the **text.GetComponent<UnityEngine.UI.Text>().text** element is being changed in this if statement. This changes two text elements : The objective text and the area text. This is a perfect example of how the UI elements are manipulated by key presses for the quest system.
 
-### Testing and Bug Testers
+## Testing and Bug Testers
 
 Testing the code was done in 3 ways : 
 
@@ -306,7 +306,7 @@ Testing the code was done in 3 ways :
 
 Again due to certain restrictions, bug testers were limited. Due to living with my brother, he happily accepted to test the game for me for any bugs several times. Being the developer of the game, it is easy to miss these bugs as I would play the game as it is intended, but using bug testers to play the game means they have no idea what will actually happen in the game. As he did not know the code, this was a "Black Box Testing" method. I sent the application on to a couple of friends but the executable was quite buggy, which is described below in the [Known Issues](#known-issues) section so this did not prove useful, so first-hand testing was necessary.  
 
-### Known Issues
+## Known Issues
 
 1. Executable : For some reason the .exe does not take a liking to the Mouse Look system. It works fine when actually editting in Unity but the mouse stays on the middle of the screen. Another issue is the camera view in the .exe. Attacking still works and kills enemies, but the sword won't swing the way it is intended to, so the animation looks off.  
 
@@ -314,7 +314,7 @@ Again due to certain restrictions, bug testers were limited. Due to living with 
 
 3. Health Bars : This issue is not major, but the health bars on the enemies all seem to be connected to the same variable. If one enemy dies, they all die. This is strange as I linked this to the enemys health variable, and without the health bars they all die separately, but putting a functioning bar on them will kill all of them if one is killed. It is not a major issue as the mechanics of the game still work, it just means people have a harder time visualising when an enemy will actually die. They must pay extra attention to how big the enemy is in order to calculate the level of difficulty it holds compared to the previous enemies that have been encountered in the game. In order for the game to work properly I had to remove this feature entirely, however it is still evident in the code. 
 
-### Conclusion
+## Conclusion
 
 All in all the project was incredibly fun to develop and experiment with. I felt that when I was developing the game, new ideas were constantly flowing into my head. I had made a plan as well but as you develop a game, certain parts seem to come together and new ideas can be formed after visualising clearly what has been done in front of you. Especially since this is the first game I have developed, knowing what order to do things in and what should have been added in the development plans originally are much clearer to me now, and I have learned some very valuable lessons from doing this project. I now understand the hardships that are overcome by games developers, and being an avid game player who has criticized the work of other game developer companies I have learned that adding simple ideas into games can actually lead to very daunting tasks. 
 
@@ -324,10 +324,10 @@ Important items to note that I have learned :
 3. Timing - It was important to space out the development as taking on too many tasks at once would become difficult.   
 4. Depth - Making a complex application just for the sake of it is not always the main goal. Anything and everything in this application is necessary, and there are no extra items in that would have increased development time but had little to no impact on the application itself. Everything was efficient.  
 
-### References
-[1] [Map Inspiration](https://elderscrolls.bethesda.net/en/oblivion) - For inspiration on the designed map  
-[2] [Photon Engine](https://www.photonengine.com/) - Photon Engine for Multiplayer design  
-[3] [Photon Diagram](https://doc.photonengine.com/zh-tw/bolt/current/in-depth/server-client-model) - A diagram for the Photon Engine layout and how clients connect to eachother.  
+## References
+[1] Map Inspiration : [https://elderscrolls.bethesda.net/en/oblivion](https://elderscrolls.bethesda.net/en/oblivion) - For inspiration on the designed map  
+[2] Photon Engine : [https://www.photonengine.com/](https://www.photonengine.com/) - Photon Engine for Multiplayer design  
+[3] Photon Diagram : [https://doc.photonengine.com/zh-tw/bolt/current/in-depth/server-client-model](https://doc.photonengine.com/zh-tw/bolt/current/in-depth/server-client-model) - A diagram for the Photon Engine layout and how clients connect to eachother.  
 
 Any other references that were used for the actual development of the game are shown in the **References** file that is contained in the main page of this repository.
 
