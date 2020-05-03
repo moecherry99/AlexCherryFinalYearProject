@@ -19,10 +19,12 @@ Windows/Mac/Linux OS, Unity 2018.4.9f1, Visual Studio 2019+.
 ### Table of Contents
 
 * [Introduction](#introduction)
+* [File Structure](#file-structure)
 * [Singleplayer](#singleplayer)
 * [Multiplayer](#multiplayer)
-* [Movement and Looking](#movement-and-looking)
 * [Menus and User Interface](#menus-and-user-interface)
+* [Game Controls](#game-controls)
+* [Movement and Looking](#movement-and-looking)
 * [Combat System](#combat-system)
 * [Level and Stat System](#level-and-stat-system)
 * [Potion and Chest System](#potion-and-chest-system)
