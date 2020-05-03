@@ -60,7 +60,7 @@ Most of these files are for resources, but the **Scripts** folder is very import
 This folder was carefully organised, as not having an organised project makes it very difficult to memorise and navigate through certain directories. The key to developing a game is efficiency, so knowing where everything is located while developing the project is the best use of your time.  
 
 ### Map Inspiration for Mission
-All credits go to [Bethesda](#references) for Map Inspiration.  
+All credits go to [Bethesda](#references) for Map Inspiration :   
 ![alt test](readmescreenshots/PaintedWorld.jpg)
 
 The purpose of creating a map without massive graphical quality is that it does not require a lot of artistic skills, as this can take a lot of effort to design. This map inspiration is driven by the fact it still looks very aesthetically appealing even though it is not of high graphic quality.
@@ -74,7 +74,7 @@ A server is created with Unity using [Photon 2](#references). The players charac
 ### Photon 2 Engine
 In order for Photon to work, a server must be set up first. When loading up the application in Unity, scripts from the **PhotonScripts** folder will all connect to the servers in synchronization. The connection will be established with your hosting server (in this case the **Europe servers**), and the player will connect after establishing and allowing that connection to go through.  
 
-All credits go to [Photon](#references) for this image.  
+All credits go to [Photon](#references) for this image :   
 ![alt photon](readmescreenshots/ServerClientModel.png)  
 
 This diagram shows the Client-Server Model for the Photon Engine in the application. A server will load up, and the client (Player 1) will load into the game. If Player 2 wants to connect, they will join the server rather than connect directly to the Player 1's hosting computer. This creates **server based** matchmaking rather than **peer to peer** matchmaking. 
@@ -85,7 +85,7 @@ This diagram shows the Client-Server Model for the Photon Engine in the applicat
 
 Both of these matchmaking methods are useful, but Photons use of Server Based Matchmaking is very effective, and that is why I chose it in my development of Entropy. It was simple to set up, caused no bandwidth issues and was free.  
 
-### Menus and User Interface
+## Menus and User Interface
 The Menus and UI are fairly simple in the application. The layout is convenient, as to not block any of the screen for the user. Here is a screenshot of the main menu screen :  
 ![alt bigimg](readmescreenshots/menus.PNG)  
 It clearly shows all of the options upon loading the game. Each will have their own purpose, according to their names.  
