@@ -133,8 +133,8 @@ Whenever the mouse must be unlocked, for example in the pause menu when the play
 ### Combat System
 The enemies around the map will attack the player when they are in close proximity. They deal damage over time, and all have different values depending on the types of enemies. There are two main types : 
 
-**1. Zombies**
-**2. Skeletons**
+**1. Zombies**   
+**2. Skeletons**   
 
 **Skeletons** have 4 different types to them : **Small**, **Medium**, **Large** and **Boss**. These increase in size to differentiate them from eachother. They also have different health values and damage values for difficulty variance. 
 
