@@ -35,16 +35,16 @@ Windows/Mac/Linux OS, Unity 2018.4.9f1, Visual Studio 2019+.
 * [References](#references)
 
 ### Introduction
-Entropy is a First-Person Open World RPG that is designed and developed in Unity. The purpose of the game is to design a game with smooth mechanics and implement these mechanics into a full sized game. The game is currently a beta version, as designing a full sized game in a small time frame with one person is almost impossible. Therefore, laying down all 
+Entropy is a First-Person Open World RPG that is designed and developed in Unity. The purpose of the application is to design a game with smooth mechanics and implement these mechanics into a full sized game. The game is currently a beta version, as designing a full sized game in a small time frame with one person is almost impossible. Therefore, laying down all 
 of the "ground work" and applying all the mechanics to the game means that the game can easily be further developed, such as making new maps for quests and adding new enemies in with new stats. Adding quests and enemies proved easy compared to making the actual mechanics of the game, so a large sense of fulfilment was acquired with the development of the project as most of the work was aimed towards mechanics improvements and optimisation.
 
 ### File Structure 
 
 The Project contains 3 folders and 5 files in the main page, only one of which contains the actual contents of the project in the **FinalYearProjectEntropy folder**. This is where all of the Unity files and logs are, basically where everything in the project was done coding wise. The main directory of the application contains documentation. 
 
-Inside of the main folder holds mostly Unity log files and Photon files. The main folder to note here is the **Assets** folder. This contains all of the scripts and extra resources used in the application. Below is a screenshot from the Unity editor to show what is happening inside here.   
+Inside of the main folder holds mostly Unity log files and Photon files. The main folder to note here is the **Assets** folder. This contains all of the scripts and extra resources used in the application. Below is a screenshot from the Unity editor to show what is happening inside here :    
 ![alt file](readmescreenshots/FileStructure.PNG)  
-Most of these files are for resources, but the **Scripts** folder is very important as this is where 90% of the development occurred. Below is a screenshot of the folder and its organised contents.  
+Most of these files are for resources, but the **Scripts** folder is very important as this is where 90% of the development occurred. Below is a screenshot of the folder and its organised contents :    
 
 ![alt scripts](readmescreenshots/ScriptsStructure.PNG)  
 
@@ -56,11 +56,11 @@ All credits go to [Bethesda](#references) for Map Inspiration.
 
 The purpose of creating a map without massive graphical quality is that it does not require a lot of artistic skills, as this can take a lot of effort to design. This map inspiration is driven by the fact it still looks very aesthetically appealing even though it is not of high graphic quality.
 
-### Singleplayer
+## Singleplayer
 The single player aspect of the game is divided into an Open World RPG style map and a mission that the player has to take on to save an NPC that is located in the mission area. The first area holds a few enemies that can be killed before entering the mission area so that they can get a feel for the games mechanics. The second area is the mission area that has more difficult enemies for the player to take on. It increases in difficulty as the player progresses.
 
-### Multiplayer 
-A server is created with Unity using [Photon 2](#references). The players character gets duplicated and the second player can play with the main camera focused on their character. (This function is not working due to the deadline being during the COVID-19 pandemic of 2020. Access to another machine was prohibited and it was not able to be tested from a singular machine and proved difficult). More information on [Photon](#photon-2-engine) is seen down below.
+## Multiplayer 
+A server is created with Unity using [Photon 2](#references). The players character gets duplicated and the second player can play with the main camera focused on their character. This function is mostly working, but is described in detail in the [Issues](#known-issues) section. More information on [Photon](#photon-2-engine) is seen down below.
 
 ### Photon 2 Engine
 In order for Photon to work, a server must be set up first. When loading up the application in Unity, scripts from the **PhotonScripts** folder will all connect to the servers in synchronization. The connection will be established with your hosting server (in this case the **Europe servers**), and the player will connect after establishing and allowing that connection to go through.  
@@ -74,28 +74,7 @@ This diagram shows the Client-Server Model for the Photon Engine in the applicat
 
 **2. Peer to Peer Matchmaking :** Peer to Peer matchmaking refers to machines connecting to eachother in order for them to play the game together. Peer to Peer is more suitable for low populated servers, so that players can play for free or without an additional plugin for that fun gaming experience. It is simple and effective, but not for large populations.
 
-Both of these matchmaking methods are useful, but Photons use of Server Based Matchmaking is very effective, and that is why I chose it in my development of Entropy. It was simple to set up, caused no bandwidth issues and was free.
-
-### Movement and Looking
-
-#### Movement
-A basic movement system is implemented into the game for the player. The W, A, S and D keys are used to move the player according to the direction on the keyboard. Arrow keys can also be used, as implemented by Unitys basic input tools. The player can jump using the space key, and gravity is applied to the jumping mechanic for a realistic feel.
-
-#### Looking
-A **Mouse Lock** system is implemented into the game as well. Once the game is loaded up, the mouse will lock to the middle of the screen. This gives the camera free access to the players mouse control, therefore making the character look wherever the player moves the mouse. This is quite a smooth system and works very well.
-
-```
-void Start()
-{
-  // get camera component
-  cam = GetComponent<Camera>();
-
-  // Locks Cursor to middle of screen
-  Cursor.lockState = CursorLockMode.Locked;
-}
-```
-
-Whenever the mouse must be unlocked, for example in the pause menu when the player presses the escape key, the **.Locked** variable must be changed to **.None**. Controlling the mouse this way gives the game a smooth experience.
+Both of these matchmaking methods are useful, but Photons use of Server Based Matchmaking is very effective, and that is why I chose it in my development of Entropy. It was simple to set up, caused no bandwidth issues and was free.  
 
 ### Menus and User Interface
 The Menus and UI are fairly simple in the application. The layout is convenient, as to not block any of the screen for the user. Here is a screenshot of the main menu screen :  
@@ -124,7 +103,30 @@ All of the items will be explained as follows :
     4.3. The third item is the players current **Health**, shown by a health bar. This is described in the [Level and Stat System](#level-and-stat-system) section.   
 
     4.4. The final item in this area is the **Experience** value that the player holds. This is explained also in the [Level and Stat System](#level-and-stat-system) section.   
+    
+## Game Controls
+The game has many controls such as moving, attacking, using potions and jumping. All of these are described in the upcoming sections. 
 
+### Movement and Looking
+
+#### Movement
+A basic movement system is implemented into the game for the player. The W, A, S and D keys are used to move the player according to the direction on the keyboard. Arrow keys can also be used, as implemented by Unitys basic input tools. The player can jump using the space key, and gravity is applied to the jumping mechanic for a realistic feel.
+
+#### Looking
+A **Mouse Lock** system is implemented into the game as well. Once the game is loaded up, the mouse will lock to the middle of the screen. This gives the camera free access to the players mouse control, therefore making the character look wherever the player moves the mouse. This is quite a smooth system and works very well.
+
+```
+void Start()
+{
+  // get camera component
+  cam = GetComponent<Camera>();
+
+  // Locks Cursor to middle of screen
+  Cursor.lockState = CursorLockMode.Locked;
+}
+```
+
+Whenever the mouse must be unlocked, for example in the pause menu when the player presses the escape key, the **.Locked** variable must be changed to **.None**. Controlling the mouse this way gives the game a smooth experience.
 
 ### Combat System
 The enemies around the map will attack the player when they are in close proximity. They deal damage over time, and all have different values depending on the types of enemies. There are two main types : 
