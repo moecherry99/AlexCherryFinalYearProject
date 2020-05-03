@@ -36,8 +36,15 @@ Windows/Mac/Linux OS, Unity 2018.4.9f1, Visual Studio 2019+.
 * [Conclusion](#conclusion)
 * [References](#references)
 
-### Introduction
-Entropy is a First-Person Open World RPG that is designed and developed in Unity. The purpose of the application is to design a game with smooth mechanics and implement these mechanics into a full sized game. The game is currently a beta version, as designing a full sized game in a small time frame with one person is almost impossible. Therefore, laying down all 
+**Key Words :** 
+1. RPG - Role Playing Game. 
+2. NPC - Non-Playable Character. 
+3. Beta - Game that is in pre-release stage. 
+4. First Person - Camera angle is from players point of view (realistic).
+5. Quest - An objective in a role playing game. 
+
+## Introduction
+Entropy is a First-Person Open World RPG (Role Playing Game) that is designed and developed in Unity. The purpose of the application is to design a game with smooth mechanics and implement these mechanics into a full sized game. The game is currently a beta version, as designing a full sized game in a small time frame with one person is almost impossible. Therefore, laying down all 
 of the "ground work" and applying all the mechanics to the game means that the game can easily be further developed, such as making new maps for quests and adding new enemies in with new stats. Adding quests and enemies proved easy compared to making the actual mechanics of the game, so a large sense of fulfilment was acquired with the development of the project as most of the work was aimed towards mechanics improvements and optimisation.
 
 ### File Structure 
@@ -144,11 +151,11 @@ All of these files can be found at the [Controllers](https://github.com/moecherr
 
 The player can attack the enemies using the '**Q**' key or the '**R**' key which will unleash a special attack, explained in the [Skill System](#skill-system) section. The player will do a set amount of damage to each enemy, but as their health varies as mentioned above it will take more hits to defeat them.
 
-If the player happens to die to an enemy or enemies, all of the remaining enemies will have their health restored to full health. This creates a certain difficulty to the bosses in the game, and prevents the player from just respawning and killing their enemy. It creates an emphasis on "grinding", which means to kill enemies repeatedly in this case, and gain more experience to level up. More details on leveling up is described in the [Level and Stat System](#level-and-stat-system) section.
+If the player happens to die to an enemy or enemies, all of the remaining enemies will have their health restored to full health. They can also teleport back to the mission area if they happen to die by pressing '**Enter**' only if the player has progressed that far in the game, otherwise they will respawn as normal in the regular open world area. This creates a certain difficulty to the bosses in the game, and prevents the player from just respawning and killing their enemy. It creates an emphasis on "grinding", which means to kill enemies repeatedly in this case, and gain more experience to level up. More details on leveling up is described in the [Level and Stat System](#level-and-stat-system) section.
 
 ### Level and Stat System
 A leveling system is designed in the game. The player has a certain experience value, and every time they defeat an enemy they will gain experience. Depending on the type of monster such as Skeletons, Zombies and their sizes, the player will gain less or more experience. There are 10 levels designed for the game, and the player has 3 stats to accompany this level : 
-1. **Health** : A base value of 250 health is in the game, and this will increment by 30 every time the player gains a level. This is useful for survivability.
+1. **Health** : A base value of 250 health is in the game, and this will increment by 30 every time the player gains a level. This is useful for survivability. If the players health reaches zero, they will die and respawn. Respawning teleports the player to the previous area.  
 
 2. **Damage** : The player has a base damage value, which will let the player deal a certain amount of damage to enemies. The higher the players damage, the more damage they deal with attacks. The Drain Attack is also affected by this variable, and is enhanced even more than the basic attacks if the player decides to level up. This Attack is described below in the "Skill System" section of this file.
 
@@ -309,7 +316,13 @@ Again due to certain restrictions, bug testers were limited. Due to living with 
 
 ### Conclusion
 
-All in all the project was incredibly fun to develop and mess around with. I felt that when I was developing the game, new ideas were constantly flowing into my head. I had made a plan as well but as you develop a game, certain parts seem to come together and new ideas can be formed after visualising clearly what has been done in front of you. Especially since this is the first game I have developed, knowing what order to do things in and what should have been added in the development plans originally are much clearer to me now, and I have learned some very valuable lessons from doing this project. I now understand the hardships that are overcome by games developers, and being an avid game player who has criticized the work of other game developer companies I have learned that adding simple ideas into games can actually lead to very daunting tasks. 
+All in all the project was incredibly fun to develop and experiment with. I felt that when I was developing the game, new ideas were constantly flowing into my head. I had made a plan as well but as you develop a game, certain parts seem to come together and new ideas can be formed after visualising clearly what has been done in front of you. Especially since this is the first game I have developed, knowing what order to do things in and what should have been added in the development plans originally are much clearer to me now, and I have learned some very valuable lessons from doing this project. I now understand the hardships that are overcome by games developers, and being an avid game player who has criticized the work of other game developer companies I have learned that adding simple ideas into games can actually lead to very daunting tasks. 
+
+Important items to note that I have learned : 
+1. Developing a suitable HUD (Heads Up Display) and UI/Menu system - Basically the HUD is the interface of the characters screen. It must be user friendly, and making one that accommodated that was important. All of the menus had to be designed nicely too.  
+2. Organizational skills - My files were messy during the first month of development in the project. I quickly adapted to this and had made the file structure extremely organized.  
+3. Timing - It was important to space out the development as taking on too many tasks at once would become difficult.   
+4. Depth - Making a complex application just for the sake of it is not always the main goal. Anything and everything in this application is necessary, and there are no extra items in that would have increased development time but had little to no impact on the application itself. Everything was efficient.  
 
 ### References
 [1] [Map Inspiration](https://elderscrolls.bethesda.net/en/oblivion) - For inspiration on the designed map  
