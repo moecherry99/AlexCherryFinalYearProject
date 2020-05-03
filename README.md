@@ -121,9 +121,9 @@ All of the items will be explained as follows :
 
     4.2. The second item is the **Potion Count Text**. This shows the players potion count, described in the [Potion and Chest System](#potion-and-chest-system) section.   
 
-    4.3. The third item is the players current Health, shown by a health bar. This is described in the [Level and Stat System](#level-and-stat-system) section.   
+    4.3. The third item is the players current **Health**, shown by a health bar. This is described in the [Level and Stat System](#level-and-stat-system) section.   
 
-    4.4. The final item is this area is the Experience value that the player holds. This is explained also in the [Level and Stat System](#level-and-stat-system) section.   
+    4.4. The final item is this area is the **Experience** value that the player holds. This is explained also in the [Level and Stat System](#level-and-stat-system) section.   
 
 
 ### Combat System
