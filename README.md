@@ -29,6 +29,8 @@ Windows/Mac/Linux OS, Unity 2018.4.9f1, Visual Studio 2019+.
 * [Skill System](#skill-system)
 * [Mini-Map System](#mini-map-system)
 * [Quest System](#quest-system)
+* [Testing and Bug Testers](#testing-and-bug-testers)
+* [Known Issues](#known-issues)
 * [Conclusion](#conclusion)
 * [References](#references)
 
@@ -280,6 +282,26 @@ The quest system also makes use of the User Interface elements frequently. Every
 ```
 
 This code basically says if the player hits the '**Enter**' key on their keyboard, they will move with the **Move2()** function which will transport the player. The main thing to note here though is that the **text.GetComponent<UnityEngine.UI.Text>().text** element is being changed in this if statement. This changes two text elements : The objective text and the area text. This is a perfect example of how the UI elements are manipulated by key presses for the quest system.
+
+### Testing and Bug Testers
+
+Testing the code was done in 3 ways : 
+
+1. **Regression Testing :** This type of testing means to confirm that a recent code change has not affected any of the existing features in the application at hand. This form of testing was particularly useful due to the nature of the application. It required excessive testing every time something was added. In particular, adding the health bars in for the player was a very difficult task, as it had to combine effectively with the combat system that was already implemented into the game. However, this type of testing was used for most, if not all, of the functions inside of the application.  
+
+2. **Integration Testing :** This type of testing means to test individual units together as a group to see if they work in synchronization. One example of this type of testing done within the project is the combat system. Firstly, the enemy layers had to be added so that enemies could be registered. Secondly, when the weapon was added to the player, it needed to connect with this enemy layer in order for it to do damage. Then, damage had to be applied to the enemy or the player if the enemy was in range. All of these had to be tested together, as you can not test damaging an enemy if the enemy doesn't exist, or if you have no way of damaging the enemy either. 
+
+3. **System Testing :** This type of testing means to test the system as a whole. This had to be done at the end, as it involves testing the system after it is completed as one large unit. It is mainly for evaluation of the system, and seeing if it meets the standards of the developers and/or the customers. However, I could use this method of testing without developing the main menu scene as that particular scene had no effect on the game itself. This means I could start system testing a slight bit earlier that intended, as the menus did not take up much development time.
+
+Again due to certain restrictions, bug testers were limited. Due to living with my brother, he happily accepted to test the game for me for any bugs several times. Being the developer of the game, it is easy to miss these bugs as I would play the game as it is intended, but using bug testers to play the game means they have no idea what will actually happen in the game. As he did not know the code, this was a "Black Box Testing" method. I sent the application on to a couple of friends but the executable was quite buggy, which is described below in the [Known Issues](#known-issues) section so this did not prove useful, so first-hand testing was necessary.  
+
+### Known Issues
+
+1. Executable : For some reason the .exe does not take a liking to the Mouse Look system. It works fine when actually editting in Unity but the mouse stays on the middle of the screen. Another issue is the camera view in the .exe. Attacking still works and kills enemies, but the sword won't swing the way it is intended to, so the animation looks off.  
+
+2. Multiplayer : The Multiplayer was not working correctly as I had no access to another machine to test the functionality due to COVID-19 restrictions. When duplicating the player, I could not control the other player with a standalone build, which was recommended to use in any tutorial videos I followed and websites I viewed if another machine could not be used. The functionality of Multiplayer was evident, as the player was duplicated and upon using the command in scripts called "PhotonView.IsMine", it was working properly as I had no access to the other players controls. If I removed this component however, I did. So this shows that I had made the Multiplayer properly, but I had no idea where to use the other standalone build to even access the controls as it was not appearing upon developing on a single machine. If another machine had been used and connected through the client, it may have been possible to access this "Unknown Player" as I called it.
+
+3. Health Bars : This issue is not major, but the health bars on the enemies all seem to be connected to the same variable. If one enemy dies, they all die. This is strange as I linked this to the enemys health variable, and without the health bars they all die separately, but putting a functioning bar on them will kill all of them if one is killed. It is not a major issue as the mechanics of the game still work, it just means people have a harder time visualising when an enemy will actually die. They must pay extra attention to how big the enemy is in order to calculate the level of difficulty it holds compared to the previous enemies that have been encountered in the game. 
 
 ### Conclusion
 
