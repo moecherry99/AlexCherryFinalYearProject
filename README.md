@@ -107,7 +107,7 @@ All of the items will be explained as follows :
     4.4. The final item in this area is the **Experience** value that the player holds. This is explained also in the [Level and Stat System](#level-and-stat-system) section.   
     
 ## Game Controls
-The game has many controls such as moving, jumping, attacking and using potions. All of these are described in the upcoming sections. Please refer back to the [Menus and User Interface](#menus-and-user-interface) sections screenshot. 
+The game has many controls such as moving, jumping, attacking and using potions. All of these are described in the upcoming sections. Please refer back to the [Menus and User Interface](#menus-and-user-interface) sections screenshot for exact controls. All controls will be visible in the middle of the screen.  
 
 ### Movement and Looking
 
