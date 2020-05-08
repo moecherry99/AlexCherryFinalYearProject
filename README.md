@@ -333,20 +333,4 @@ Any other references that were used for the actual development of the game are s
 
 [Back to top](#entropy)
 
-```
-public void ToMainMenu()
-{
-    tipMenu.SetActive(false);
-    mainMenu.SetActive(true);
-}
-
-
-
-public void MainGame()
-{
-    // Load main game
-    SceneManager.LoadScene("StarterScene");
-}
-```
-
 
