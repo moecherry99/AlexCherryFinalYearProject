@@ -331,6 +331,8 @@ Important items to note that I have learned :
 
 Any other references that were used for the actual development of the game are shown in the **References** file that is contained in the main page of this repository.
 
+There is a screen cast split into two seconds in this repository that compose the **Demonstration**. This was split due to file sizes permitted by GitHub.
+
 [Back to top](#entropy)
 
 
